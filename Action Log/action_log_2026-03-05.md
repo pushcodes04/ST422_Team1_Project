@@ -29,7 +29,13 @@ This is the single master record of all actions across the entire project. Every
 | A003 | 001     | Establish repository structure, README, data allocation and tracking system | PA    | 2026-02-22 | In Progress | Repository link + README.md           | [To be completed on close] |
 | A004 | 001     | Prepare and upload draft meeting minutes with updated action log            | CS    | 2026-02-22 | In Progress | minutes/2026-02-21.md                 | [To be completed on close] |
 | A005 | 001     | Upload client questions to clarify scope and analytical direction           | YS    | 2026-02-22 | In Progress | client_questions.md                   | [To be completed on close] |
-
+| A006 | 002     | Set up GitHub collaboration workflow (access, branches, PR template)        | YD    | 2026-03-05 | In Progress | Issue # + CONTRIBUTING.md / README.md | [To be completed on close] |
+| A007 | 002     | Confirm collisions date column name + format (historic + 2025 provisional)  | PA    | 2026-03-05 | In Progress | Issue # + notebook cell / script note| [To be completed on close] |
+| A008 | 002     | Build merge pipeline: Collisions + Vehicles + Casualties (1979–latest)      | CS    | 2026-03-05 | In Progress | IPR # + notebooks/merge_pipeline.ipyn| [To be completed on close] |
+| A009 | 002     | Clean merged data: drop <2015 rows, remove unnecessary columns              | ZA    | 2026-03-05 | In Progress | PR # + notebooks/eda_v1.ipynb        | [To be completed on close] |
+| A010 | 002     | Run Python EDA on cleaned 2015+ dataset                                     | PA    | 2026-03-05 | In Progress | Issue # + notebook cell / script note| [To be completed on close] |
+| A011 | 002     | Add data dictionary + “columns to keep” list                                | PA    | 2026-03-05 | In Progress | PR # + docs/data_dictionary.md       | [To be completed on close] |
+| A012 | 002     | Commit GLM last-5-years analysis artefact + short interpretation not        | AS    | 2026-03-05 | In Progress | Issue # + notebook cell / script note| [To be completed on close] |
 ---
 
 ## Blockers
@@ -61,3 +67,4 @@ This table records where one person's output is a direct input to another person
 | Complete    | 0     |
 | Blocked     | 0     |
 | **Total**   | **5** |
+
