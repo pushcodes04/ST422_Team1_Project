@@ -15,11 +15,11 @@ library(here)
 library(readr)
 library(data.table)
 
-casualties <- fread(here("dft-road-casualty-statistics-casualty-1979-latest-published-year.csv"))
+casualties <- fread("dft-road-casualty-statistics-casualty-1979-latest-published-year.csv")[collision_year >= 2015]
 
-collisions <- fread(here("dft-road-casualty-statistics-collision-1979-latest-published-year.csv"))
+collisions <- fread("dft-road-casualty-statistics-collision-1979-latest-published-year.csv")[collision_year >= 2015]
 
-vehicles <- fread(here("dft-road-casualty-statistics-vehicle-1979-latest-published-year.csv"))
+vehicles <- fread("dft-road-casualty-statistics-vehicle-1979-latest-published-year.csv")[collision_year >= 2015]
 
 la_ons_district_names <- read_csv(here("local-authority-ons-district-names.csv"))
 ```
@@ -191,7 +191,7 @@ Test_Map_Coordinates <- ggplot() +
   geom_point(data = ksi_data,                                          
              aes(x = longitude, y = latitude), 
              size = 1.5,
-             alpha = 0.1) 
+             alpha = 0.02) 
 
 Test_Map_Coordinates
             
@@ -222,120 +222,131 @@ top10_la_plot
 ```
 
 ```{r}
-road_user_ksi <- ksi_data |>
+road_user_totals <- ksi_data |>
   filter(!is.na(casualty_type), casualty_type != -1) |>
   group_by(casualty_type) |>
-  summarise(KSI = n()) |>
-  arrange(desc(KSI))
+  summarise(total_KSI = n(), .groups = "drop") |>
+  arrange(desc(total_KSI))
 
-road_user_ksi_plot <- ggplot(road_user_ksi,
-       aes(x = reorder(casualty_type, KSI), y = KSI)) +
-  geom_col(fill = "steelblue") +
-  coord_flip() +
+top5_road_users <- road_user_totals |> slice_head(n = 5)
+top5_road_users
+
+road_user_yearly <- ksi_data |>
+  filter(!is.na(casualty_type), casualty_type != -1,
+         casualty_type %in% top5_road_users$casualty_type) |>
+  group_by(collision_year, casualty_type) |>
+  summarise(KSI = n(), .groups = "drop") |>
+  mutate(casualty_type = factor(casualty_type, levels = top5_road_users$casualty_type))
+
+
+road_user_yearly_plot <- ggplot(road_user_yearly,
+       aes(x = factor(collision_year), y = KSI, fill = casualty_type)) +
+  geom_col(position = "dodge", colour = "black") +
   labs(
-    title = "KSI by Road User Type",
-    x = "Road User Type",
-    y = "Number of KSI"
+    title = "KSI by Road User Type (Top 5) Per Year",
+    x = "Year",
+    y = "Number of KSI",
+    fill = "Road User Type"
   ) +
   theme_minimal()
 
-road_user_ksi_plot
+road_user_yearly_plot
 ```
 
 ```{r}
-urban_rural_ksi <- ksi_data |>
+urban_rural_yearly <- ksi_data |>
   filter(!is.na(urban_or_rural_area), urban_or_rural_area != -1) |>
-  group_by(urban_or_rural_area) |>
-  summarise(KSI = n())
+  group_by(collision_year, urban_or_rural_area) |>
+  summarise(KSI = n(), .groups = "drop")
 
-urban_rural_ksi_plot <- ggplot(urban_rural_ksi,
-       aes(x = factor(urban_or_rural_area), y = KSI)) +
-  geom_col(fill = "darkgreen") +
+urban_rural_yearly_plot <- ggplot(urban_rural_yearly, aes(x = collision_year, y = KSI, colour = factor(urban_or_rural_area))) +
+  geom_line(size = 1) +
+  geom_point() +
   labs(
-    title = "KSI by Urban vs Rural Area",
-    x = "Area Type",
-    y = "Number of KSI"
+    title = "KSI by Urban/Rural Area Over Time",
+    x = "Year",
+    y = "Number of KSI",
+    colour = "Area Type"
   ) +
   theme_minimal()
 
-urban_rural_ksi_plot
+urban_rural_yearly_plot
 ```
 
 ```{r}
-road_class_ksi <- ksi_data |>
+road_class_yearly <- ksi_data |>
   filter(!is.na(first_road_class), first_road_class != -1) |>
-  group_by(first_road_class) |>
-  summarise(KSI = n()) |>
-  arrange(desc(KSI))
+  group_by(collision_year, first_road_class) |>
+  summarise(KSI = n(), .groups = "drop")
 
-road_class_ksi_plot <- ggplot(road_class_ksi,
-       aes(x = reorder(first_road_class, KSI), y = KSI)) +
-  geom_col(fill = "orange") +
-  coord_flip() +
+road_class_yearly_plot <- ggplot(road_class_yearly, aes(x = collision_year, y = KSI, colour = factor(first_road_class))) +
+  geom_line(size = 1) +
+  geom_point() +
   labs(
-    title = "KSI by Road Class",
-    x = "Road Class",
-    y = "Number of KSI"
+    title = "KSI by Road Class Over Time",
+    x = "Year",
+    y = "Number of KSI",
+    colour = "Road Class"
   ) +
   theme_minimal()
 
-road_class_ksi_plot
+road_class_yearly_plot
 ```
 
 ```{r}
-speed_ksi <- ksi_data |>
+speed_yearly <- ksi_data |>
   filter(!is.na(speed_limit), speed_limit != -1) |>
-  group_by(speed_limit) |>
-  summarise(KSI = n()) |>
-  arrange(desc(KSI))
+  group_by(collision_year, speed_limit) |>
+  summarise(KSI = n(), .groups = "drop")
 
-speed_ksi_plot <- ggplot(speed_ksi,
-       aes(x = factor(speed_limit), y = KSI)) +
-  geom_col(fill = "firebrick") +
+speed_yearly_plot <- ggplot(speed_yearly, aes(x = collision_year, y = KSI, colour = factor(speed_limit))) +
+  geom_line(size = 1) +
+  geom_point() +
   labs(
-    title = "KSI by Speed Limit",
-    x = "Speed Limit (mph)",
-    y = "Number of KSI"
+    title = "KSI by Speed Limit Over Time",
+    x = "Year",
+    y = "Number of KSI",
+    colour = "Speed Limit"
   ) +
   theme_minimal()
 
-speed_ksi_plot
+speed_yearly_plot
 ```
 
 ```{r}
-junction_ksi <- ksi_data |>
+junction_yearly <- ksi_data |>
   filter(!is.na(junction_detail), junction_detail != -1) |>
-  group_by(junction_detail) |>
-  summarise(KSI = n()) |>
-  arrange(desc(KSI))
+  group_by(collision_year, junction_detail) |>
+  summarise(KSI = n(), .groups = "drop")
 
-junction_ksi_plot <- ggplot(junction_ksi,
-       aes(x = reorder(junction_detail, KSI), y = KSI)) +
-  geom_col(fill = "purple") +
-  coord_flip() +
+junction_yearly_plot <- ggplot(junction_yearly, aes(x = collision_year, y = KSI, colour = factor(junction_detail))) +
+  geom_line(size = 1) +
+  geom_point() +
   labs(
-    title = "KSI by Junction Type",
-    x = "Junction Type",
-    y = "Number of KSI"
+    title = "KSI by Junction Type Over Time",
+    x = "Year",
+    y = "Number of KSI",
+    colour = "Junction Type"
   ) +
   theme_minimal()
 
-junction_ksi_plot
+junction_yearly_plot
 ```
 
 ```{r}
-day_ksi <- ksi_data |>
+day_yearly <- ksi_data |>
   filter(!is.na(day_of_week), day_of_week != -1) |>
-  group_by(day_of_week) |>
-  summarise(KSI = n())
+  group_by(collision_year, day_of_week) |>
+  summarise(KSI = n(), .groups = "drop")
 
-day_ksi_plot <- ggplot(day_ksi,
-       aes(x = factor(day_of_week), y = KSI)) +
-  geom_col(fill = "dodgerblue") +
+day_ksi_plot <- ggplot(day_yearly,
+       aes(x = factor(day_of_week), y = KSI, fill = factor(collision_year))) +
+  geom_col(position = "dodge") +
   labs(
-    title = "KSI by Day of Week",
+    title = "KSI by Day of Week Per Year",
     x = "Day of Week",
-    y = "Number of KSI"
+    y = "Number of KSI",
+    fill = "Year"
   ) +
   theme_minimal()
 
@@ -343,20 +354,23 @@ day_ksi_plot
 ```
 
 ```{r}
-ksi_data_hour <- as.numeric(substr(ksi_data$time,1,2))
 
-hourly_ksi <- ksi_data |>
+ksi_data <- ksi_data |>
+  mutate(hour = as.numeric(substr(time, 1, 2)))
+
+hour_yearly <- ksi_data |>
   filter(!is.na(hour)) |>
-  group_by(hour) |>
-  summarise(KSI = n())
+  group_by(collision_year, hour) |>
+  summarise(KSI = n(), .groups = "drop")
 
-ksi_data_hour_plot <- ggplot(hourly_ksi, aes(hour, KSI)) +
-  geom_line() +
+ksi_data_hour_plot <- ggplot(hour_yearly, aes(x = hour, y = KSI, colour = factor(collision_year))) +
+  geom_line(size = 1) +
   geom_point() +
   labs(
-    title = "KSI by Time of Day",
+    title = "KSI by Hour of Day Per Year",
     x = "Hour",
-    y = "Number of KSI"
+    y = "Number of KSI",
+    colour = "Year"
   ) +
   theme_minimal()
 
@@ -364,24 +378,35 @@ ksi_data_hour_plot
 ```
 
 ```{r}
-vehicle_ksi <- ksi_data |>
+
+vehicle_totals <- ksi_data |>
   filter(!is.na(vehicle_type), vehicle_type != -1) |>
   group_by(vehicle_type) |>
-  summarise(KSI = n()) |>
-  arrange(desc(KSI))
+  summarise(total_KSI = n(), .groups = "drop") |>
+  arrange(desc(total_KSI))
 
-vehicle_ksi_plot <- ggplot(vehicle_ksi,
-       aes(x = reorder(vehicle_type, KSI), y = KSI)) +
-  geom_col(fill = "brown") +
-  coord_flip() +
+top5_vehicles <- vehicle_totals |> slice_head(n = 5)
+top5_vehicles
+
+vehicle_yearly <- ksi_data |>
+  filter(!is.na(vehicle_type), vehicle_type != -1,
+         vehicle_type %in% top5_vehicles$vehicle_type) |>
+  group_by(collision_year, vehicle_type) |>
+  summarise(KSI = n(), .groups = "drop") |>
+  mutate(vehicle_type = factor(vehicle_type, levels = top5_vehicles$vehicle_type))
+
+vehicle_yearly_plot <- ggplot(vehicle_yearly,
+       aes(x = factor(collision_year), y = KSI, fill = vehicle_type)) +
+  geom_col(position = "dodge", colour = "black") +
   labs(
-    title = "KSI by Vehicle Type",
-    x = "Vehicle Type",
-    y = "Number of KSI"
+    title = "KSI by Vehicle Type (Top 5) Per Year",
+    x = "Year",
+    y = "Number of KSI",
+    fill = "Vehicle Type"
   ) +
   theme_minimal()
 
-vehicle_ksi_plot
+vehicle_yearly_plot
 ```
 
 ```{r}
