@@ -1,0 +1,437 @@
+---
+title: "Dataset Work"
+output: html_document
+date: "2026-03-05"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+knitr::opts_chunk$set(warning = FALSE)
+knitr::opts_chunk$set(message = FALSE)
+```
+
+```{r}
+library(here)
+library(readr)
+library(data.table)
+
+casualties <- fread(here("dft-road-casualty-statistics-casualty-1979-latest-published-year.csv"))
+
+collisions <- fread(here("dft-road-casualty-statistics-collision-1979-latest-published-year.csv"))
+
+vehicles <- fread(here("dft-road-casualty-statistics-vehicle-1979-latest-published-year.csv"))
+
+la_ons_district_names <- read_csv(here("local-authority-ons-district-names.csv"))
+```
+
+```{r}
+library(tidyverse)
+library(stringr)
+library(janitor)
+
+# Select relevant columns and restrict data to 2015 onwards
+
+casualties_1 <- casualties |> 
+  select(collision_index, collision_year, vehicle_reference, casualty_reference, sex_of_casualty, age_of_casualty, casualty_severity, casualty_type) |> 
+  filter(collision_year >= 2015)
+
+collisions_1 <- collisions |> 
+  select(collision_index, collision_year, longitude, latitude, date, day_of_week, time, local_authority_district, local_authority_ons_district, first_road_class, road_type, speed_limit, junction_detail, junction_control, pedestrian_crossing, light_conditions, urban_or_rural_area) |>
+  filter(collision_year >= 2015)
+
+collisions_1 <- collisions_1 |>
+  left_join(
+    la_ons_district_names |> select(code, la_name),
+    by = c("local_authority_ons_district" = "code")
+  )
+
+
+vehicles_1 <- vehicles |> 
+  select(collision_index, collision_year, vehicle_reference, vehicle_type) |> 
+  filter(collision_year >= 2015)
+
+```
+
+```{r}
+# Merge casualty data with collision data
+
+cas_coll <- left_join(casualties_1, collisions_1, by = c("collision_index", "collision_year"))
+
+# Merge vehicle data
+
+full_data <- left_join(cas_coll, vehicles_1, by = c("collision_index", "collision_year", "vehicle_reference"))
+
+```
+
+```{r}
+# Filter dataset to include only fatal or serious casualties
+
+ksi_data <- full_data |> 
+  filter(casualty_severity %in% c(1, 2))
+
+# All casualties
+all_casualties <- full_data
+
+# Fatalities only
+fatalities <- full_data |>
+  filter(casualty_severity == 1)
+
+```
+
+```{r}
+# Replace "-1" values with NA for numeric variables in ksi data
+
+ksi_data <- ksi_data |> 
+  mutate(across(where(is.numeric), ~na_if(., -1)))
+
+# Count missing values in each column
+
+na_summary_ksi_data <- ksi_data |> 
+  summarise(across(everything(), ~sum(is.na(.)))) |> 
+  pivot_longer(everything(), names_to = "column", values_to = "na_count") |> 
+  mutate(
+    total_rows = nrow(ksi_data),
+    na_percent = (na_count / total_rows) * 100
+  )
+
+na_summary_ksi_data
+
+# Replace "-1" values with NA for numeric variables in all casualties data
+
+all_casualties <- all_casualties |> 
+  mutate(across(where(is.numeric), ~na_if(., -1)))
+
+# Count missing values in each column
+
+na_summary_all_casualties <- all_casualties |> 
+  summarise(across(everything(), ~sum(is.na(.)))) |> 
+  pivot_longer(everything(), names_to = "column", values_to = "na_count") |> 
+  mutate(
+    total_rows = nrow(all_casualties),
+    na_percent = (na_count / total_rows) * 100
+  )
+
+na_summary_all_casualties
+
+# Replace "-1" values with NA for numeric variables in fatalities data
+
+fatalities <- fatalities |> 
+  mutate(across(where(is.numeric), ~na_if(., -1)))
+
+# Count missing values in each column
+
+na_summary_fatalities <- fatalities |> 
+  summarise(across(everything(), ~sum(is.na(.)))) |> 
+  pivot_longer(everything(), names_to = "column", values_to = "na_count") |> 
+  mutate(
+    total_rows = nrow(fatalities),
+    na_percent = (na_count / total_rows) * 100
+  )
+
+na_summary_fatalities
+```
+
+
+```{r}
+ksi_trend <- ksi_data |>
+  group_by(collision_year) |>
+  summarise(KSI = n())
+
+ksi_trend
+
+ggplot(ksi_trend, aes(x = collision_year, y = KSI)) +
+  geom_line() +
+  geom_point() +
+  labs(
+    title = "KSI Casualties Over Time",
+    x = "Year",
+    y = "Number of KSI"
+  ) +
+  theme_minimal()
+ 
+fatalities <- fatalities |>
+  group_by(collision_year) |>
+  summarise(fatalities_count = n())
+
+# Fatalities trend
+ggplot(fatalities, aes(x = collision_year, y = fatalities_count)) +
+  geom_line(color = "darkblue", size = 1) +
+  geom_point(color = "darkblue") +
+  labs(
+    title = "Trend of Fatalities Over Years",
+    x = "Year",
+    y = "Number of Fatalities"
+  ) +
+  theme_minimal()
+```
+
+
+```{r}
+library(here)
+library(sf)
+
+# Load UK and Ireland map
+
+uk_ir_shp_df <- bind_rows(
+  st_read(paste0("/vsizip/", here("Ireland_Boundaries-shp.zip"), "/Country_Boundaries.shp"), quiet = TRUE),
+  st_read(paste0("/vsizip/", here("UK_Boundaries-shp.zip"), "/Country_Boundaries.shp"), quiet = TRUE)
+)
+
+# Test Map
+
+Test_Map <- ggplot() +
+  geom_sf(data = uk_ir_shp_df, fill = "lightblue") +
+  theme_minimal(base_size = 15) +
+  ggtitle("UK and Ireland Map")
+
+Test_Map
+
+Test_Map_Coordinates <- ggplot() +
+  geom_sf(data = uk_ir_shp_df, fill = "snow2") +                                  
+  geom_point(data = ksi_data,                                          
+             aes(x = longitude, y = latitude), 
+             size = 1.5,
+             alpha = 0.1) 
+
+Test_Map_Coordinates
+            
+```
+
+
+```{r}
+la_ksi <- ksi_data |>
+  group_by(la_name) |>
+  summarise(KSI = n()) |>
+  arrange(desc(KSI))
+
+top10_la <- la_ksi |>
+  slice_max(KSI, n = 10)
+
+top10_la_plot <- ggplot(top10_la, aes(x = reorder(la_name, KSI), y = KSI)) +
+  geom_col(fill = "steelblue") +
+  coord_flip() +
+  labs(
+    title = "Top 10 Local Authorities by KSI Casualties",
+    x = "Local Authority",
+    y = "Number of KSI"
+  ) +
+  theme_minimal()
+
+top10_la_plot
+
+```
+
+```{r}
+road_user_ksi <- ksi_data |>
+  filter(!is.na(casualty_type), casualty_type != -1) |>
+  group_by(casualty_type) |>
+  summarise(KSI = n()) |>
+  arrange(desc(KSI))
+
+road_user_ksi_plot <- ggplot(road_user_ksi,
+       aes(x = reorder(casualty_type, KSI), y = KSI)) +
+  geom_col(fill = "steelblue") +
+  coord_flip() +
+  labs(
+    title = "KSI by Road User Type",
+    x = "Road User Type",
+    y = "Number of KSI"
+  ) +
+  theme_minimal()
+
+road_user_ksi_plot
+```
+
+```{r}
+urban_rural_ksi <- ksi_data |>
+  filter(!is.na(urban_or_rural_area), urban_or_rural_area != -1) |>
+  group_by(urban_or_rural_area) |>
+  summarise(KSI = n())
+
+urban_rural_ksi_plot <- ggplot(urban_rural_ksi,
+       aes(x = factor(urban_or_rural_area), y = KSI)) +
+  geom_col(fill = "darkgreen") +
+  labs(
+    title = "KSI by Urban vs Rural Area",
+    x = "Area Type",
+    y = "Number of KSI"
+  ) +
+  theme_minimal()
+
+urban_rural_ksi_plot
+```
+
+```{r}
+road_class_ksi <- ksi_data |>
+  filter(!is.na(first_road_class), first_road_class != -1) |>
+  group_by(first_road_class) |>
+  summarise(KSI = n()) |>
+  arrange(desc(KSI))
+
+road_class_ksi_plot <- ggplot(road_class_ksi,
+       aes(x = reorder(first_road_class, KSI), y = KSI)) +
+  geom_col(fill = "orange") +
+  coord_flip() +
+  labs(
+    title = "KSI by Road Class",
+    x = "Road Class",
+    y = "Number of KSI"
+  ) +
+  theme_minimal()
+
+road_class_ksi_plot
+```
+
+```{r}
+speed_ksi <- ksi_data |>
+  filter(!is.na(speed_limit), speed_limit != -1) |>
+  group_by(speed_limit) |>
+  summarise(KSI = n()) |>
+  arrange(desc(KSI))
+
+speed_ksi_plot <- ggplot(speed_ksi,
+       aes(x = factor(speed_limit), y = KSI)) +
+  geom_col(fill = "firebrick") +
+  labs(
+    title = "KSI by Speed Limit",
+    x = "Speed Limit (mph)",
+    y = "Number of KSI"
+  ) +
+  theme_minimal()
+
+speed_ksi_plot
+```
+
+```{r}
+junction_ksi <- ksi_data |>
+  filter(!is.na(junction_detail), junction_detail != -1) |>
+  group_by(junction_detail) |>
+  summarise(KSI = n()) |>
+  arrange(desc(KSI))
+
+junction_ksi_plot <- ggplot(junction_ksi,
+       aes(x = reorder(junction_detail, KSI), y = KSI)) +
+  geom_col(fill = "purple") +
+  coord_flip() +
+  labs(
+    title = "KSI by Junction Type",
+    x = "Junction Type",
+    y = "Number of KSI"
+  ) +
+  theme_minimal()
+
+junction_ksi_plot
+```
+
+```{r}
+day_ksi <- ksi_data |>
+  filter(!is.na(day_of_week), day_of_week != -1) |>
+  group_by(day_of_week) |>
+  summarise(KSI = n())
+
+day_ksi_plot <- ggplot(day_ksi,
+       aes(x = factor(day_of_week), y = KSI)) +
+  geom_col(fill = "dodgerblue") +
+  labs(
+    title = "KSI by Day of Week",
+    x = "Day of Week",
+    y = "Number of KSI"
+  ) +
+  theme_minimal()
+
+day_ksi_plot
+```
+
+```{r}
+ksi_data_hour <- as.numeric(substr(ksi_data$time,1,2))
+
+hourly_ksi <- ksi_data |>
+  filter(!is.na(hour)) |>
+  group_by(hour) |>
+  summarise(KSI = n())
+
+ksi_data_hour_plot <- ggplot(hourly_ksi, aes(hour, KSI)) +
+  geom_line() +
+  geom_point() +
+  labs(
+    title = "KSI by Time of Day",
+    x = "Hour",
+    y = "Number of KSI"
+  ) +
+  theme_minimal()
+
+ksi_data_hour_plot
+```
+
+```{r}
+vehicle_ksi <- ksi_data |>
+  filter(!is.na(vehicle_type), vehicle_type != -1) |>
+  group_by(vehicle_type) |>
+  summarise(KSI = n()) |>
+  arrange(desc(KSI))
+
+vehicle_ksi_plot <- ggplot(vehicle_ksi,
+       aes(x = reorder(vehicle_type, KSI), y = KSI)) +
+  geom_col(fill = "brown") +
+  coord_flip() +
+  labs(
+    title = "KSI by Vehicle Type",
+    x = "Vehicle Type",
+    y = "Number of KSI"
+  ) +
+  theme_minimal()
+
+vehicle_ksi_plot
+```
+
+```{r}
+speed_trend <- ksi_data |>
+  filter(!is.na(speed_limit), speed_limit != -1) |>
+  group_by(speed_limit, collision_year) |>
+  summarise(KSI = n(), .groups = "drop")
+
+speed_trend_plot <- ggplot(speed_trend,
+       aes(collision_year, KSI, colour = factor(speed_limit))) +
+  geom_line() +
+  geom_point() +
+  labs(
+    title = "KSI Trends by Speed Limit",
+    x = "Year",
+    y = "Number of KSI",
+    colour = "Speed Limit"
+  ) +
+  theme_minimal()
+
+speed_trend_plot
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
