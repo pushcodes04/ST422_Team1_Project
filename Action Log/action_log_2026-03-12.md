@@ -3,7 +3,7 @@
 **Module:** ST422 Statistical Consulting  
 **Brief:** Brief 8 — Road Safety Analysis  
 **Team:** Team 1  
-**Last Updated:** 08 March 2026
+**Last Updated:** 12 March 2026
 
 This is the single master record of all actions across the entire project. Every action must have a named owner, a deadline, a status, and a verifiable evidence reference (PR number, commit hash, issue ID, or file path). This document is updated continuously as actions are opened, progressed, and closed.
 
@@ -39,13 +39,18 @@ This is the single master record of all actions across the entire project. Every
 | A013 | 003     | Combine STATS19 collisions, vehicles, and casualties datasets into one dataset | ZA | 2026-03-13 | Open        | notebooks/merge_pipeline.ipynb        | [To be completed on close] |
 | A014 | 003     | Investigate issue preventing export of merged dataset to CSV                | CS    | 2026-03-13 | Open        | Issue # + merge script                | [To be completed on close] |
 | A015 | 003     | Validate merged dataset and confirm readiness for cleaning pipeline         | PA    | 2026-03-14 | Open        | clean_joined.csv + validation log     | [To be completed on close] |
+| A016 | 004     | Identify local authorities that have shown improvement in KSI outcomes and analyse potential contributing factors | ZA | 2026-03-18 | Open | notebooks/hotspot_analysis.ipynb | [To be completed on close] |
+| A017 | 004     | Investigate policy interventions available to local authorities (e.g., speed management, traffic calming, enforcement) | AS | 2026-03-18 | Open | docs/policy_review.md | [To be completed on close] |
+| A018 | 004     | Analyse factors affecting worst-performing local authorities in terms of KSI collisions | CS | 2026-03-18 | Open | notebooks/LA_factor_analysis.ipynb | [To be completed on close] |
+| A019 | 004     | Conduct geographic hotspot analysis for high-KSI locations | CS | 2026-03-18 | Open | notebooks/geographic_hotspots.ipynb | [To be completed on close] |
+| A020 | 004     | Perform hypothesis testing comparing Raw KSI trends vs IBRS-adjusted KSI trends using DfT guidance | CS | 2026-03-18 | Open | notebooks/ksi_adjustment_analysis.ipynb | [To be completed on close] |
 
 ---
 
 ## Blockers
 
-| Action ID        | Blocker Description | Raised By | Resolution | Resolved Date |
-| ---------------- | ------------------- | --------- | ---------- | ------------- |
+| Action ID | Blocker Description | Raised By | Resolution | Resolved Date |
+| --------- | ------------------- | --------- | ---------- | ------------- |
 | A014 | Unable to export merged dataset to CSV after combining STATS19 tables | CS | Investigate export method and test alternative write approaches | [To be completed] |
 
 ---
@@ -66,8 +71,8 @@ This table records where one person's output is a direct input to another person
 
 | Status      | Count |
 | ----------- | ----- |
-| Open        | 3     |
+| Open        | 8     |
 | In Progress | 12    |
 | Complete    | 0     |
 | Blocked     | 0     |
-| **Total**   | **15** |
+| **Total**   | **20** |
