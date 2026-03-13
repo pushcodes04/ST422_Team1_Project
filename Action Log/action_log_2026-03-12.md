@@ -32,19 +32,19 @@ This is the single master record of all actions across the entire project. Every
 | A006 | 002     | Set up GitHub collaboration workflow (access, branches, PR template)        | YD    | 2026-03-05 | In Progress | Issue # + CONTRIBUTING.md / README.md | [To be completed on close] |
 | A007 | 002     | Confirm collisions date column name + format (historic + 2025 provisional)  | PA    | 2026-03-05 | In Progress | Issue # + notebook cell / script note | [To be completed on close] |
 | A008 | 002     | Build merge pipeline: Collisions + Vehicles + Casualties (1979–latest)      | CS    | 2026-03-05 | In Progress | PR # + notebooks/merge_pipeline.ipynb | [To be completed on close] |
-| A009 | 002     | Clean merged data: drop <2015 rows, remove unnecessary columns              | ZA    | 2026-03-05 | Closed      | Data_Prep/ST422_DataPrep              | [To be completed on close] |
+| A009 | 002     | Clean merged data: drop <2015 rows, remove unnecessary columns              | ZA    | 2026-03-05 | Closed      | Data_Prep/ST422_DataPrep              | Data preparation pipeline built and uploaded to GitHub. |
 | A010 | 002     | Run Python EDA on cleaned 2015+ dataset                                     | PA    | 2026-03-05 | In Progress | Issue # + notebook cell / script note | [To be completed on close] |
 | A011 | 002     | Add data dictionary + “columns to keep” list                                | PA    | 2026-03-05 | In Progress | PR # + docs/data_dictionary.md        | [To be completed on close] |
 | A012 | 002     | Commit GLM last-5-years analysis artefact + short interpretation note       | AS    | 2026-03-05 | In Progress | Issue # + notebook cell / script note | [To be completed on close] |
-| A013 | 003     | Combine STATS19 collisions, vehicles, and casualties datasets into one dataset | ZA | 2026-03-13 | Open        | notebooks/merge_pipeline.ipynb        | [To be completed on close] |
+| A013 | 003     | Combine STATS19 collisions, vehicles, and casualties datasets into one dataset | ZA | 2026-03-13 | Closed        | Data_Prep/ST422_DataPrep        |  Four cleaned CSVs produced: collisions_clean.csv, casualties_clean.csv, vehicles_clean.csv, and cas_full.csv covering 2014–2025. |
 | A014 | 003     | Investigate issue preventing export of merged dataset to CSV                | CS    | 2026-03-13 | Open        | Issue # + merge script                | [To be completed on close] |
 | A015 | 003     | Validate merged dataset and confirm readiness for cleaning pipeline         | PA    | 2026-03-14 | Open        | clean_joined.csv + validation log     | [To be completed on close] |
 | A016 | 004     | Identify local authorities that have shown improvement in KSI outcomes and analyse potential contributing factors | ZA | 2026-03-18 | Open | notebooks/hotspot_analysis.ipynb | [To be completed on close] |
 | A017 | 004     | Investigate policy interventions available to local authorities (e.g., speed management, traffic calming, enforcement) | AS | 2026-03-18 | Open | docs/policy_review.md | [To be completed on close] |
 | A018 | 004     | Analyse factors affecting worst-performing local authorities in terms of KSI collisions | CS | 2026-03-18 | Open | notebooks/LA_factor_analysis.ipynb | [To be completed on close] |
 | A019 | 004     | Conduct geographic hotspot analysis for high-KSI locations | CS | 2026-03-18 | Open | notebooks/geographic_hotspots.ipynb | [To be completed on close] |
-| A020 | 004     | Perform hypothesis testing comparing Raw KSI trends vs IBRS-adjusted KSI trends using DfT guidance | CS | 2026-03-18 | Open | notebooks/ksi_adjustment_analysis.ipynb | [To be completed on close] |
-
+| A020 | 004     | Perform hypothesis testing comparing Raw KSI trends vs IBRS-adjusted KSI trends using DfT guidance | CS | 2026-03-18 | Closed | notebooks/ksi_adjustment_analysis.ipynb | Not required |
+| A021 | 005 | Produce and upload Week 10 client update | ZA | 2026-03-13 | Closed | Client Resources/Week10_Client_Update.pdf | Week 10 client update completed. Covers IBRS-adjusted KSI trends, hotspot analysis, rural/urban severity, and road user risk profile with prioritisation recommendations. |
 ---
 
 ## Blockers
