@@ -32,7 +32,7 @@ This is the single master record of all actions across the entire project. Every
 | A006 | 002     | Set up GitHub collaboration workflow (access, branches, PR template)        | YD    | 2026-03-05 | In Progress | Issue # + CONTRIBUTING.md / README.md | [To be completed on close] |
 | A007 | 002     | Confirm collisions date column name + format (historic + 2025 provisional)  | PA    | 2026-03-05 | In Progress | Issue # + notebook cell / script note | [To be completed on close] |
 | A008 | 002     | Build merge pipeline: Collisions + Vehicles + Casualties (1979–latest)      | CS    | 2026-03-05 | In Progress | PR # + notebooks/merge_pipeline.ipynb | [To be completed on close] |
-| A009 | 002     | Clean merged data: drop <2015 rows, remove unnecessary columns              | ZA    | 2026-03-05 | In Progress | PR # + notebooks/eda_v1.ipynb         | [To be completed on close] |
+| A009 | 002     | Clean merged data: drop <2015 rows, remove unnecessary columns              | ZA    | 2026-03-05 | Closed      | Data_Prep/ST422_DataPrep              | [To be completed on close] |
 | A010 | 002     | Run Python EDA on cleaned 2015+ dataset                                     | PA    | 2026-03-05 | In Progress | Issue # + notebook cell / script note | [To be completed on close] |
 | A011 | 002     | Add data dictionary + “columns to keep” list                                | PA    | 2026-03-05 | In Progress | PR # + docs/data_dictionary.md        | [To be completed on close] |
 | A012 | 002     | Commit GLM last-5-years analysis artefact + short interpretation note       | AS    | 2026-03-05 | In Progress | Issue # + notebook cell / script note | [To be completed on close] |
