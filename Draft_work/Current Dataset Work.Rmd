@@ -10,49 +10,79 @@ knitr::opts_chunk$set(warning = FALSE)
 knitr::opts_chunk$set(message = FALSE)
 ```
 
-```{r}
+```{r load datasets}
 library(here)
 library(readr)
 library(data.table)
 
-casualties <- fread("dft-road-casualty-statistics-casualty-1979-latest-published-year.csv")[collision_year >= 2015]
+# Load required datasets/csv files
 
-collisions <- fread("dft-road-casualty-statistics-collision-1979-latest-published-year.csv")[collision_year >= 2015]
+casualties <- fread(
+  "dft-road-casualty-statistics-casualty-1979-latest-published-year.csv",
+  select = c(
+    "collision_index", "collision_year", "vehicle_reference",
+    "casualty_reference", "sex_of_casualty", "age_of_casualty",
+    "casualty_severity", "casualty_type"
+  )
+)[collision_year >= 2015]
 
-vehicles <- fread("dft-road-casualty-statistics-vehicle-1979-latest-published-year.csv")[collision_year >= 2015]
+collisions <- fread(
+  "dft-road-casualty-statistics-collision-1979-latest-published-year.csv",
+  select = c(
+    "collision_index", "collision_year", "longitude", "latitude", "date",
+    "day_of_week", "time", "local_authority_district",
+    "local_authority_ons_district", "first_road_class", "road_type",
+    "speed_limit", "junction_detail", "junction_control",
+    "pedestrian_crossing", "light_conditions", "urban_or_rural_area"
+  )
+)[collision_year >= 2015]
+
+vehicles <- fread(
+  "dft-road-casualty-statistics-vehicle-1979-latest-published-year.csv",
+  select = c(
+    "collision_index", "collision_year", "vehicle_reference", "vehicle_type"
+  )
+)[collision_year >= 2015]
 
 la_ons_district_names <- read_csv(here("local-authority-ons-district-names.csv"))
 ```
 
-```{r}
+```{r packages and selecting dataset columns}
+# Load packages
+
 library(tidyverse)
 library(stringr)
 library(janitor)
+library(scales)
 
-# Select relevant columns and restrict data to 2015 onwards
+# Select only the columns needed
 
-casualties_1 <- casualties |> 
-  select(collision_index, collision_year, vehicle_reference, casualty_reference, sex_of_casualty, age_of_casualty, casualty_severity, casualty_type) |> 
-  filter(collision_year >= 2015)
 
-collisions_1 <- collisions |> 
-  select(collision_index, collision_year, longitude, latitude, date, day_of_week, time, local_authority_district, local_authority_ons_district, first_road_class, road_type, speed_limit, junction_detail, junction_control, pedestrian_crossing, light_conditions, urban_or_rural_area) |>
-  filter(collision_year >= 2015)
+casualties_1 <- casualties |>
+  select(collision_index, collision_year, vehicle_reference, casualty_reference,
+         sex_of_casualty, age_of_casualty, casualty_severity, casualty_type)
 
-collisions_1 <- collisions_1 |>
+collisions_1 <- collisions |>
+  select(collision_index, collision_year, longitude, latitude, date, day_of_week,
+         time, local_authority_district, local_authority_ons_district,
+         first_road_class, road_type, speed_limit, junction_detail,
+         junction_control, pedestrian_crossing, light_conditions,
+         urban_or_rural_area) |>
+# Attach the readable local authority name via the ONS district code
+  
   left_join(
     la_ons_district_names |> select(code, la_name),
     by = c("local_authority_ons_district" = "code")
   )
 
-
-vehicles_1 <- vehicles |> 
-  select(collision_index, collision_year, vehicle_reference, vehicle_type) |> 
-  filter(collision_year >= 2015)
+vehicles_1 <- vehicles |>
+  select(collision_index, collision_year, vehicle_reference, vehicle_type)
 
 ```
 
-```{r}
+
+
+```{r merging datasets}
 # Merge casualty data with collision data
 
 cas_coll <- left_join(casualties_1, collisions_1, by = c("collision_index", "collision_year"))
@@ -63,22 +93,24 @@ full_data <- left_join(cas_coll, vehicles_1, by = c("collision_index", "collisio
 
 ```
 
-```{r}
+```{r ksi dataset}
 # Filter dataset to include only fatal or serious casualties
 
 ksi_data <- full_data |> 
   filter(casualty_severity %in% c(1, 2))
 
 # All casualties
+
 all_casualties <- full_data
 
 # Fatalities only
+
 fatalities <- full_data |>
   filter(casualty_severity == 1)
 
 ```
 
-```{r}
+```{r ksidata set initial clean}
 # Replace "-1" values with NA for numeric variables in ksi data
 
 ksi_data <- ksi_data |> 
@@ -132,7 +164,11 @@ na_summary_fatalities
 ```
 
 
-```{r}
+```{r exploratory plots}
+# Quick exploratory plots to check the overall national trend before the authority-level analysis. These are diagnostic
+
+# Total KSI casualties per year across all authorities
+
 ksi_trend <- ksi_data |>
   group_by(collision_year) |>
   summarise(KSI = n())
@@ -153,7 +189,8 @@ fatalities <- fatalities |>
   group_by(collision_year) |>
   summarise(fatalities_count = n())
 
-# Fatalities trend
+# Fatalities only — a subset of KSI, shown separately to track the most severe end
+
 ggplot(fatalities, aes(x = collision_year, y = fatalities_count)) +
   geom_line(color = "darkblue", size = 1) +
   geom_point(color = "darkblue") +
@@ -166,7 +203,7 @@ ggplot(fatalities, aes(x = collision_year, y = fatalities_count)) +
 ```
 
 
-```{r}
+```{r UK map tests}
 library(here)
 library(sf)
 
@@ -198,16 +235,1161 @@ Test_Map_Coordinates
 ```
 
 
+#PHASE 1 ANALYSIS
+
+```{r phase 1}
+
+# Phase 1: Build two priority lists
+# List A ranks local authorities by total KSI burden across 2015–2024
+# List B flags those with the worst deterioration in recent years (2019 vs 2024)
+
+
+# Count total KSIs per local authority and rank highest to lowest
+
+la_ksi <- ksi_data |>
+  filter(!is.na(la_name)) |>
+  group_by(la_name) |>
+  summarise(KSI = n(), .groups = "drop") |>
+  arrange(desc(KSI))
+
+top10_la    <- la_ksi |> slice_max(KSI, n = 10)
+top3_burden <- la_ksi |> slice_max(KSI, n = 3)
+
+
+# Compare 2019 vs 2024 to measure how each authority's KSI count has changed.
+# We only include authorities with at least 30 KSIs in 2019 to avoid
+# misleading percentages from small baselines.
+
+la_trend <- ksi_data |>
+  filter(!is.na(la_name), collision_year %in% c(2019, 2024)) |>
+  group_by(la_name, collision_year) |>
+  summarise(KSI = n(), .groups = "drop") |>
+  pivot_wider(
+    names_from   = collision_year,
+    values_from  = KSI,
+    names_prefix = "y",
+    values_fill  = 0
+  ) |>
+  mutate(
+    pct_change = (y2024 - y2019) / y2019 * 100,
+    trend_flag = case_when(
+      pct_change >=  15 ~ "Worsening",
+      pct_change <= -15 ~ "Improving",
+      TRUE              ~ "Stable"
+    )
+  ) |>
+  filter(y2019 >= 30)
+
+top3_trend <- la_trend |>
+  slice_max(pct_change, n = 3) |>
+  select(la_name, y2019, y2024, pct_change, trend_flag)
+
+top10_trend <- la_trend |>
+  filter(trend_flag == "Worsening") |>
+  slice_max(pct_change, n = 10) |>
+  select(la_name, y2019, y2024, pct_change, trend_flag)
+
+
+# Take the top 5 high-burden authorities that are also getting worse —
+# these are the ones where the problem is both large and growing
+
+top5_burden <- la_ksi |>
+  left_join(la_trend |> select(la_name, trend_flag), by = "la_name") |>
+  filter(trend_flag == "Worsening") |>
+  slice_max(KSI, n = 5) |>
+  select(la_name, KSI)
+
+
+# Robustness check: does our trend ranking change depending on how we weight
+# absolute rise vs percentage change? We test three schemes (50/50, 60/40, 70/30)
+# to see if the top 5 stays consistent. If it does, the finding holds.
+
+early_warning_base <- la_trend |>
+  filter(trend_flag == "Worsening") |>
+  mutate(
+    absolute_rise = y2024 - y2019,
+    norm_pct      = (pct_change    - min(pct_change))    / (max(pct_change)    - min(pct_change)),
+    norm_abs      = (absolute_rise - min(absolute_rise)) / (max(absolute_rise) - min(absolute_rise))
+  )
+
+weighting_schemes <- list(
+  "50/50" = c(abs_w = 0.5, pct_w = 0.5),
+  "60/40" = c(abs_w = 0.6, pct_w = 0.4),
+  "70/30" = c(abs_w = 0.7, pct_w = 0.3)
+)
+
+robustness_trend <- map_dfr(
+  weighting_schemes,
+  ~ early_warning_base |>
+      mutate(composite_trend = .x["abs_w"] * norm_abs + .x["pct_w"] * norm_pct) |>
+      arrange(desc(composite_trend)) |>
+      mutate(rank = row_number()),
+  .id = "weighting"
+) |>
+  select(weighting, la_name, y2019, y2024, absolute_rise, pct_change,
+         composite_trend, rank)
+
+# Pivot wide so we can easily compare each authority's rank side by side
+
+robustness_trend_wide <- robustness_trend |>
+  filter(rank <= 10) |>
+  select(weighting, rank, la_name) |>
+  pivot_wider(names_from = weighting, values_from = la_name) |>
+  rename(
+    `Rank`  = rank,
+    `50/50` = `50/50`,
+    `60/40` = `60/40`,
+    `70/30` = `70/30`
+  )
+
+# Flag any authority whose rank moves 3 or more places across schemes. Those are the ones where the weighting choice actually matters
+
+rank_stability <- robustness_trend |>
+  filter(rank <= 10) |>
+  group_by(la_name) |>
+  summarise(
+    min_rank   = min(rank),
+    max_rank   = max(rank),
+    rank_range = max_rank - min_rank,
+    stable     = rank_range < 3,
+    .groups    = "drop"
+  ) |>
+  arrange(min_rank)
+
+# Use 60/40 as the primary weighting — this reflects the client's stated priority
+# (Q4/Q10) of reducing total serious harm, so absolute rise matters more than % alone
+
+early_warning <- early_warning_base |>
+  mutate(composite_trend = 0.6 * norm_abs + 0.4 * norm_pct) |>
+  arrange(desc(composite_trend)) |>
+  mutate(rank_60_40 = row_number()) |>
+  slice_head(n = 10) |>
+  select(la_name, y2019, y2024, absolute_rise,
+         pct_change, composite_trend, rank_60_40, trend_flag)
+
+top5_trend <- early_warning |> slice_head(n = 5)
+top3_trend <- early_warning |> slice_head(n = 3)
+
+
+# Combine both lists. Authorities appearing on both get flagged as highest priority.
+
+immediate_attention <- bind_rows(
+  top5_burden |> mutate(list_source = "High burden"),
+  top5_trend  |>
+    select(la_name) |>
+    left_join(la_ksi, by = "la_name") |>
+    mutate(list_source = "Worsening trend")
+) |>
+  group_by(la_name) |>
+  summarise(
+    KSI = first(KSI),
+    list_source = case_when(
+      n() > 1 ~ "Both lists — highest priority",
+      TRUE    ~ first(list_source)
+    ),
+    .groups = "drop"
+  ) |>
+  left_join(
+    la_trend |> select(la_name, y2019, y2024, pct_change, trend_flag),
+    by = "la_name"
+  ) |>
+  left_join(
+    early_warning |> select(la_name, absolute_rise, composite_trend, rank_60_40),
+    by = "la_name"
+  ) |>
+  arrange(desc(KSI))
+
+immediate_attention_names <- immediate_attention |> pull(la_name)
+
+
+# Bump chart showing how each authority's rank shifts as the weighting changes.
+# Bold lines = rank moved 3+ places (sensitive to weighting); faded = stable.
+
+
+right_labels <- robustness_trend |>
+  filter(rank <= 10, weighting == "60/40") |>
+  arrange(rank) |>
+  select(la_name, rank)
+
+robustness_bump_plot <- robustness_trend |>
+  filter(la_name %in% (robustness_trend |>
+                         filter(rank <= 10) |>
+                         pull(la_name) |>
+                         unique())) |>
+  mutate(
+    weighting  = factor(weighting, levels = c("50/50", "60/40", "70/30")),
+    stable     = la_name %in% (rank_stability |> filter(stable)  |> pull(la_name)),
+    line_alpha = if_else(stable, 0.25, 1),      
+    line_width = if_else(stable, 0.7, 1.4)        
+  ) |>
+  ggplot(aes(x = weighting, y = rank, group = la_name, colour = la_name)) +
+  geom_line(aes(alpha = line_alpha, linewidth = line_width)) +
+  geom_point(aes(alpha = line_alpha), size = 3) +
+
+  # Left labels: only authorities that are unstable, to reduce clutter
+  geom_text(
+    data = ~ filter(.x, weighting == "50/50", !stable),
+    aes(label = la_name),
+    hjust = 1.15, size = 2.8, fontface = "bold"
+  ) +
+
+  # Right labels: all authorities, positioned at their 60/40 rank to avoid stacking
+  geom_text(
+    data = ~ filter(.x, weighting == "70/30"),
+    aes(label = la_name),
+    hjust = -0.1, size = 2.8
+  ) +
+
+  # Vertical reference line to draw the eye to the primary 60/40 scheme
+  geom_vline(xintercept = 2, linetype = "dashed",
+             colour = "grey50", linewidth = 0.5) +
+  annotate("text", x = 2, y = 10.8, label = "Primary scheme",
+           size = 2.8, colour = "grey50", hjust = 0.5) +
+
+  scale_y_reverse(
+    breaks = 1:10,
+    name   = "Rank (1 = worst)",
+    expand = expansion(add = c(0.5, 1.5))  
+  ) +
+  scale_x_discrete(expand = expansion(add = c(0.5, 0.6))) +  
+  scale_alpha_identity() +
+  scale_linewidth_identity() +
+  scale_colour_manual(
+    values = c(
+      setNames(
+        RColorBrewer::brewer.pal(
+          n    = sum(!rank_stability$stable),
+          name = "Dark2"
+        ),
+        rank_stability |> filter(!stable) |> pull(la_name)
+      ),
+      setNames(
+        rep("grey70", sum(rank_stability$stable)),
+        rank_stability |> filter(stable) |> pull(la_name)
+      )
+    ),
+    guide = "none"
+  ) +
+  labs(
+    title    = "Robustness check: trend ranking stability across weighting schemes",
+    subtitle = "Bold coloured lines shift 3+ places depending on weighting — these authorities are sensitive to methodology.\nGrey lines are stable across all three schemes.",
+    x        = "Weighting scheme (absolute rise / % change)",
+    caption  = "Primary analysis uses 60/40 weighting. Dashed line marks the chosen scheme."
+  ) +
+  theme_minimal(base_size = 11) +
+  theme(
+    panel.grid.major.x = element_blank(),
+    panel.grid.minor   = element_blank(),
+    plot.subtitle      = element_text(size = 9),
+    plot.margin        = margin(t = 10, r = 80, b = 10, l = 80)  
+  )
+
+# Final priority table: top 10 by total burden, annotated with trend direction and whether each authority made either priority list
+
+top10_la_annotated <- top10_la |>
+  left_join(
+    la_trend |> select(la_name, y2019, y2024, pct_change, trend_flag),
+    by = "la_name"
+  ) |>
+  left_join(
+    immediate_attention |> select(la_name, list_source),
+    by = "la_name"
+  ) |>
+  mutate(
+    trend_flag    = replace_na(trend_flag, "Insufficient data"),
+    list_source   = replace_na(list_source, "—"),
+    absolute_rise = y2024 - y2019
+  )
+
+# Outputs check
+
+robustness_trend_wide
+rank_stability
+robustness_bump_plot
+immediate_attention
+early_warning
+top10_la_annotated
+```
+
+
+#PHASE 2 ANALYSIS
+```{r phase 2}
+# Phase 2 analysis: Year-on-year line plots
+# Fig A shows the three authorities with the highest total KSI casualties
+# Fig B shows the three with the worst deterioration since 2019
+# Both charts cover 2015–2024 and shade the pandemic period to give context
+
+
+# Pull annual KSI counts for just the priority authorities identified in Phase 1
+
+la_ksi_annual <- ksi_data |>
+  filter(!is.na(la_name),
+         la_name %in% immediate_attention_names) |>
+  group_by(la_name, collision_year) |>
+  summarise(KSI = n(), .groups = "drop")
+
+
+# Define the pandemic shading 
+
+pandemic_rect <- annotate(
+  "rect",
+  xmin = 2020.25, xmax = 2021.95,
+  ymin = -Inf,    ymax = Inf,
+  fill = "grey80", alpha = 0.4
+)
+
+pandemic_label <- annotate(
+  "text",
+  x = 2021.1, y = Inf,   # centred between 2020.25 and 2021.95
+  label = "Covid-19", vjust = 1.5,
+  size = 3, colour = "grey50"
+)
+
+
+# Fig A: KSI over time for the three highest-burden authorities
+
+top3_burden_names <- top3_burden |> pull(la_name)
+
+fig_A_burden_trend <- la_ksi_annual |>
+  filter(la_name %in% top3_burden_names) |>
+  ggplot(aes(x = collision_year, y = KSI,
+             colour = la_name, group = la_name)) +
+  pandemic_rect +
+  pandemic_label +
+  geom_line(linewidth = 1.2) +
+  geom_point(size = 2.5) +
+  scale_colour_manual(
+    values = c(
+      "Birmingham" = "firebrick3",   
+      "Leeds"      = "steelblue3",  
+      "Cornwall"   = "seagreen4"     
+    ),
+    name = NULL
+  ) +
+  scale_x_continuous(breaks = 2015:2024) +
+  labs(
+    title    = "Fig A — KSI trend: highest burden authorities (2015–2024)",
+    x        = NULL,
+    y        = "KSI casualties",
+    caption  = "Source: STATS19, DfT. Shaded band = Covid-19 pandemic period (reduced travel)."
+  ) +
+  theme_minimal(base_size = 11) +
+  theme(
+    legend.position   = "bottom",
+    panel.grid.minor  = element_blank(),
+    axis.text.x       = element_text(angle = 45, hjust = 1)
+  )
+
+fig_A_burden_trend
+
+
+# Fig B: KSI over time for the three fastest-deteriorating authorities.
+# We add a dashed baseline at each authority's 2019 count so it's clear that post-pandemic rises aren't just a return to normal, they overshoot it.
+
+top3_trend_names <- top3_trend |> pull(la_name)
+
+# Store each authority's 2019 count separately so we can draw the baseline as a horizontal reference line
+
+baseline_2019 <- la_ksi_annual |>
+  filter(la_name %in% top3_trend_names,
+         collision_year == 2019) |>
+  select(la_name, baseline = KSI)
+
+fig_B_trend_trend <- la_ksi_annual |>
+  filter(la_name %in% top3_trend_names) |>
+  left_join(baseline_2019, by = "la_name") |>
+  ggplot(aes(x = collision_year, y = KSI,
+             colour = la_name, group = la_name)) +
+  pandemic_rect +
+  pandemic_label +
+  geom_hline(
+    data = baseline_2019,
+    aes(yintercept = baseline, colour = la_name),
+    linetype = "dashed", linewidth = 0.6, alpha = 0.5   # dashed = baseline reference
+  ) +
+  geom_line(linewidth = 1.2) +
+  geom_point(size = 2.5) +
+  scale_colour_manual(
+    values = c(
+      "Bradford"   = "mediumpurple3", 
+      "Manchester" = "darkorange2",   
+      "Wakefield"  = "firebrick3"     
+    ),
+    name = NULL
+  ) +
+  scale_x_continuous(breaks = 2015:2024) +
+  labs(
+    title    = "Fig B — KSI trend: fastest deteriorating authorities (2015–2024)",
+    x        = NULL,
+    y        = "KSI casualties",
+    caption  = "Source: STATS19, DfT. Ranked by composite score: 60% absolute rise, 40% % change (2019 vs 2024)."
+  ) +
+  theme_minimal(base_size = 11) +
+  theme(
+    legend.position  = "bottom",
+    panel.grid.minor = element_blank(),
+    axis.text.x      = element_text(angle = 45, hjust = 1)
+  )
+
+fig_B_trend_trend
+```
+
+#PHASE 3 ANALYSIS PREP
+```{r phase 3 prep}
+
+# Lookup tables for joining readable labels onto the raw STATS19 numeric codes.
+# Each table maps the coded integer value to a readable description.
+
+casualty_type_lookup <- tibble(
+  casualty_type = c(-1, 0, 1, 2, 3, 4, 5, 8, 9, 10, 11, 16, 17, 18, 19, 20, 21, 22, 23, 90, 97, 98, 99),
+  casualty_type_label = c(
+    "NA",
+    "Pedestrian",
+    "Cyclist",
+    "Motorcycle ≤50cc rider/passenger",
+    "Motorcycle ≤125cc rider/passenger",
+    "Motorcycle 125–500cc rider/passenger",
+    "Motorcycle >500cc rider/passenger",
+    "Taxi/Private hire car occupant",
+    "Car occupant",
+    "Minibus occupant",
+    "Bus/coach occupant",
+    "Horse rider",
+    "Agricultural vehicle occupant",
+    "Tram occupant",
+    "Van/goods ≤3.5t occupant",
+    "Goods >3.5t–7.5t occupant",
+    "Goods ≥7.5t occupant",
+    "Mobility scooter rider",
+    "Electric motorcycle rider/passenger",
+    "Other vehicle occupant",
+    "Motorcycle – unknown cc",
+    "Goods vehicle – unknown weight",
+    "Unknown vehicle type")
+  )
+
+road_type_lookup <- tibble(
+  road_type = c(-1, 1, 2, 3, 6, 7, 9),
+  road_type_label = c(
+    "NA",
+    "Roundabout",
+    "One way street",
+    "Dual carriageway",
+    "Single carriageway",
+    "Slip road",
+    "Unknown")
+  )
+
+junction_lookup <- tibble(
+  junction_detail = c(-1, 0, 13, 16, 17, 18, 99),
+  junction_detail_label = c(
+    "NA",
+    "Not at junction",
+    "T or staggered",
+    "Crossroads",
+    "Junction 4+ arms",
+    "Private drive/entrance",
+    "Unknown")
+)
+
+urban_rural_lookup <- tibble(
+  urban_or_rural_area = c(-1, 1, 2, 3),
+  urban_or_rural_area_label = c(
+    "NA",
+    "Urban",
+    "Rural",
+    "Unallocated")
+)
+
+# Factor levels for speed limit — ensures charts display in ascending order
+
+speed_order <- c("20 mph", "30 mph", "40 mph", "50 mph", "60 mph", "70 mph")
+
+# Maps detailed casualty types up to broader road user groups for summary analysis.
+# Motorcycles are considered regardless of engine size, goods vehicles regardless of weight.
+
+road_user_group_lookup <- tibble(
+  casualty_type_label = c(
+    "Pedestrian",
+    "Cyclist",
+    "Motorcycle ≤50cc rider/passenger",
+    "Motorcycle ≤125cc rider/passenger",
+    "Motorcycle 125–500cc rider/passenger",
+    "Motorcycle >500cc rider/passenger",
+    "Motorcycle – unknown cc",
+    "Electric motorcycle rider/passenger",
+    "Taxi/Private hire car occupant",
+    "Car occupant",
+    "Minibus occupant",
+    "Bus/coach occupant",
+    "Van/goods ≤3.5t occupant",
+    "Goods >3.5t–7.5t occupant",
+    "Goods ≥7.5t occupant",
+    "Goods vehicle – unknown weight",
+    "Horse rider",
+    "Agricultural vehicle occupant",
+    "Tram occupant",
+    "Mobility scooter rider",
+    "Other vehicle occupant",
+    "Unknown vehicle type",
+    "NA"
+  ),
+  road_user_group_label = c(
+    "Pedestrian",
+    "Cyclist",
+    "Motorcyclist",
+    "Motorcyclist",
+    "Motorcyclist",
+    "Motorcyclist",
+    "Motorcyclist",
+    "Motorcyclist",
+    "Car occupant",
+    "Car occupant",
+    "Car occupant",
+    "Bus/coach occupant",
+    "Van/goods occupant",
+    "Van/goods occupant",
+    "Van/goods occupant",
+    "Van/goods occupant",
+    "Other",
+    "Other",
+    "Other",
+    "Other",
+    "Other",
+    "Other",
+    NA_character_
+  )
+)
+
+# Display order for road user group charts. Most vulnerable users first
+
+road_user_group_order <- c(
+  "Pedestrian", "Cyclist", "Motorcyclist",
+  "Car occupant", "Bus/coach occupant", "Van/goods occupant", "Other"
+)
+
+
+road_user_group_colours <- c(
+  "Pedestrian"         = "firebrick3",      
+  "Cyclist"            = "darkorange2",    
+  "Motorcyclist"       = "mediumpurple3",   
+  "Car occupant"       = "steelblue3",     
+  "Bus/coach occupant" = "seagreen4",      
+  "Van/goods occupant" = "cadetblue4",      
+  "Other"              = "grey60"           
+)
+
+
+# Subset ksi_data to the priority authorities and attach all the lookup labels.
+
+ksi_immediate <- ksi_data |>
+  filter(la_name %in% immediate_attention_names) |>
+  left_join(casualty_type_lookup,    by = "casualty_type") |>
+  left_join(road_user_group_lookup,  by = "casualty_type_label") |>
+  left_join(road_type_lookup,        by = "road_type") |>
+  left_join(junction_lookup,         by = "junction_detail") |>
+  left_join(urban_rural_lookup,      by = "urban_or_rural_area") |>
+  mutate(
+    road_user_group_label     = replace_na(road_user_group_label, "Other"),
+    road_type_label           = na_if(road_type_label, "NA"),        
+    road_type_label           = na_if(road_type_label, "Unknown"),
+    junction_detail_label     = na_if(junction_detail_label, "NA"),
+    junction_detail_label     = na_if(junction_detail_label, "Unknown"),
+    urban_or_rural_area_label = na_if(urban_or_rural_area_label, "NA"),
+    urban_or_rural_area_label = na_if(urban_or_rural_area_label, "Unallocated"),
+    speed_label    = factor(paste0(speed_limit, " mph"), levels = speed_order),
+    hour           = as.integer(substr(time, 1, 2)),
+    authority_tier = case_when(
+      la_name %in% c("Birmingham", "Leeds") ~ "1 — Both lists",
+      la_name %in% top5_burden$la_name      ~ "2 — H burden",
+      TRUE                                  ~ "3 — Worsening"
+    )
+  )
+```
+
+#PHASE 3 ANALYSIS
+```{r phase 3}
+# Phase 3 analysis: Casualty profile breakdowns for the immediate attention authorities
+# Figs C–G each slice the same set of authorities by a different dimension (road user type, speed limit, road type, junction type, hour of day) to help identify where interventions would have the most impact.
+
+
+# Narrow the immediate attention pool to worsening authorities
+
+immediate_attention <- immediate_attention |>
+  filter(trend_flag == "Worsening") |>
+  arrange(desc(KSI))
+
+immediate_attention_names <- immediate_attention |> pull(la_name)
+
+
+# Fig C: What types of road user are being killed or seriously injured?
+# Bars show each authority's KSI split by road user group as a percentage.
+# Labels are suppressed for segments below 5% to avoid clutter.
+
+fig_C_road_user <- ksi_immediate |>
+  filter(!is.na(road_user_group_label)) |>
+  group_by(la_name, authority_tier, road_user_group_label) |>
+  summarise(KSI = n(), .groups = "drop") |>
+  group_by(la_name) |>
+  mutate(
+    pct                   = KSI / sum(KSI),
+    road_user_group_label = factor(road_user_group_label,
+                                   levels = road_user_group_order)
+  ) |>
+  ggplot(aes(
+    x    = reorder(la_name, KSI, sum),
+    y    = pct,
+    fill = road_user_group_label
+  )) +
+  geom_col() +
+  geom_text(
+    aes(label = ifelse(pct >= 0.05, scales::percent(pct, accuracy = 1), "")),
+    position = position_stack(vjust = 0.5),
+    size = 2.8, colour = "white", fontface = "bold"
+  ) +
+  coord_flip() +
+  scale_y_continuous(labels = scales::percent_format()) +
+  scale_fill_manual(values = road_user_group_colours, name = "Road user") +
+  facet_grid(authority_tier ~ ., scales = "free_y", space = "free_y") +
+  labs(
+    title   = "Fig C — KSI by road user type: immediate attention authorities",
+    x       = NULL,
+    y       = "Share of KSI casualties",
+    caption = "Source: STATS19, DfT. Authorities grouped by priority tier."
+  ) +
+  theme_minimal(base_size = 11) +
+  theme(
+    legend.position  = "bottom",
+    strip.text       = element_text(size = 9, face = "bold"),
+    panel.grid.minor = element_blank()
+  )
+
+fig_C_road_user
+
+
+# Fig D: Where on the speed network are casualties happening?
+# An authority with a high share in 20–30 mph zones points to urban interventions
+# A high share in 60–70 mph points to rural or trunk road issues.
+
+fig_D_speed <- ksi_immediate |>
+  filter(!is.na(speed_label), speed_limit %in% c(20, 30, 40, 50, 60, 70)) |>
+  group_by(la_name, authority_tier, speed_label) |>
+  summarise(KSI = n(), .groups = "drop") |>
+  group_by(la_name) |>
+  mutate(pct = KSI / sum(KSI)) |>
+  ggplot(aes(
+    x    = reorder(la_name, KSI, sum),
+    y    = pct,
+    fill = speed_label
+  )) +
+  geom_col() +
+  geom_text(
+    aes(label = ifelse(pct >= 0.05, scales::percent(pct, accuracy = 1), "")),
+    position = position_stack(vjust = 0.5),
+    size = 2.8, colour = "white", fontface = "bold"
+  ) +
+  coord_flip() +
+  scale_y_continuous(labels = scales::percent_format()) +
+  scale_fill_brewer(palette = "Oranges", direction = 1, name = "Speed limit") +
+  facet_grid(authority_tier ~ ., scales = "free_y", space = "free_y") +
+  labs(
+    title   = "Fig D — KSI by speed limit zone: immediate attention authorities",
+    x       = NULL,
+    y       = "Share of KSI casualties",
+    caption = "Source: STATS19, DfT."
+  ) +
+  theme_minimal(base_size = 11) +
+  theme(
+    legend.position  = "bottom",
+    strip.text       = element_text(size = 9, face = "bold"),
+    panel.grid.minor = element_blank()
+  )
+
+fig_D_speed
+
+
+# Fig E: Which road types see the most casualties?
+# Helps distinguish whether the problem is concentrated on main roads, side streets, roundabouts, etc.
+
+fig_E_road_type <- ksi_immediate |>
+  filter(!is.na(road_type_label)) |>
+  group_by(la_name, authority_tier, road_type_label) |>
+  summarise(KSI = n(), .groups = "drop") |>
+  group_by(la_name) |>
+  mutate(pct = KSI / sum(KSI)) |>
+  ggplot(aes(
+    x    = reorder(la_name, KSI, sum),
+    y    = pct,
+    fill = road_type_label
+  )) +
+  geom_col() +
+  geom_text(
+    aes(label = ifelse(pct >= 0.05, scales::percent(pct, accuracy = 1), "")),
+    position = position_stack(vjust = 0.5),
+    size = 2.8, colour = "white", fontface = "bold"
+  ) +
+  coord_flip() +
+  scale_y_continuous(labels = scales::percent_format()) +
+  scale_fill_brewer(palette = "Set2", name = "Road type") +
+  facet_grid(authority_tier ~ ., scales = "free_y", space = "free_y") +
+  labs(
+    title   = "Fig E — KSI by road type: immediate attention authorities",
+    x       = NULL,
+    y       = "Share of KSI casualties",
+    caption = "Source: STATS19, DfT."
+  ) +
+  theme_minimal(base_size = 11) +
+  theme(
+    legend.position  = "bottom",
+    strip.text       = element_text(size = 9, face = "bold"),
+    panel.grid.minor = element_blank()
+  )
+
+fig_E_road_type
+
+
+# Fig F: Are casualties clustered at junctions?
+# A high "not at junction" share suggests mid road speeding or loss of control;
+# A high crossroads or T-junction share points to intersection safety problems.
+
+fig_F_junction <- ksi_immediate |>
+  filter(!is.na(junction_detail_label)) |>
+  group_by(la_name, authority_tier, junction_detail_label) |>
+  summarise(KSI = n(), .groups = "drop") |>
+  group_by(la_name) |>
+  mutate(pct = KSI / sum(KSI)) |>
+  ggplot(aes(
+    x    = reorder(la_name, KSI, sum),
+    y    = pct,
+    fill = junction_detail_label
+  )) +
+  geom_col() +
+  geom_text(
+    aes(label = ifelse(pct >= 0.05, scales::percent(pct, accuracy = 1), "")),
+    position = position_stack(vjust = 0.5),
+    size = 2.8, colour = "white", fontface = "bold"
+  ) +
+  coord_flip() +
+  scale_y_continuous(labels = scales::percent_format()) +
+  scale_fill_brewer(palette = "Paired", name = "Junction type") +
+  facet_grid(authority_tier ~ ., scales = "free_y", space = "free_y") +
+  labs(
+    title   = "Fig F — KSI by junction type: immediate attention authorities",
+    x       = NULL,
+    y       = "Share of KSI casualties",
+    caption = "Source: STATS19, DfT."
+  ) +
+  theme_minimal(base_size = 11) +
+  theme(
+    legend.position  = "bottom",
+    strip.text       = element_text(size = 9, face = "bold"),
+    panel.grid.minor = element_blank()
+  )
+
+fig_F_junction
+
+
+# Fig G: When during the day are casualties happening?
+# Each cell shows that hour's share of the authority's total KSI. We're comparing time patterns, not raw volumes, which keeps large and small authorities on an equal terms. Darker = higher share of casualties.
+
+fig_G_hour <- ksi_immediate |>
+  filter(!is.na(hour)) |>
+  group_by(la_name, authority_tier, hour) |>
+  summarise(KSI = n(), .groups = "drop") |>
+  group_by(la_name) |>
+  mutate(pct = KSI / sum(KSI)) |>
+  ggplot(aes(
+    x    = hour,
+    y    = reorder(la_name, KSI, sum),
+    fill = pct
+  )) +
+  geom_tile(colour = "white", linewidth = 0.3) +
+  scale_fill_gradient(
+    low    = "aliceblue",
+    high   = "midnightblue",
+    name   = "Share of\ndaily KSI",
+    labels = scales::percent_format(accuracy = 0.1)
+  ) +
+  scale_x_continuous(
+    breaks = seq(0, 23, 2),
+    labels = paste0(seq(0, 23, 2), ":00")
+  ) +
+  facet_grid(authority_tier ~ ., scales = "free_y", space = "free_y") +
+  labs(
+    title   = "Fig G — KSI by hour of day: immediate attention authorities",
+    x       = "Hour of day",
+    y       = NULL,
+    caption = "Source: STATS19, DfT. Colour shows share of each authority's total KSI, not absolute count."
+  ) +
+  theme_minimal(base_size = 11) +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1),
+    strip.text  = element_text(size = 9, face = "bold"),
+    panel.grid  = element_blank()
+  )
+
+fig_G_hour
+```
+
+#PHASE 4 ANALYSIS
+```{r phase 4}
+# Phase 4: Deep dive into the three authorities with the worst deterioration since 2019.
+# These are drawn directly from the top 3 of the 60/40 composite trend ranking computed in Phase 1, so this section updates automatically if the underlying data changes.
+# Figs H–J break down their KSI trends by road user group, speed zone, and junction type to identify what's actually driving the rise in each place.
+
+
+deep_dive_names <- top3_trend |> pull(la_name)
+
+ksi_deep_dive <- ksi_immediate |>
+  filter(la_name %in% deep_dive_names)
+
+deep_dive_colours <- road_user_group_colours
+
+# Fig H: Is the post-pandemic rise driven by one type of road user, or is it broad based?
+# Each panel is one authority and lines track each road user group year by year.
+
+ksi_deep_dive_annual <- ksi_deep_dive |>
+  filter(!is.na(road_user_group_label)) |>
+  group_by(la_name, collision_year, road_user_group_label) |>
+  summarise(KSI = n(), .groups = "drop") |>
+  mutate(
+    road_user_group_label = factor(road_user_group_label,
+                                   levels = road_user_group_order)
+  )
+
+fig_H_trend_by_user <- ksi_deep_dive_annual |>
+  ggplot(aes(x = collision_year, y = KSI,
+             colour = road_user_group_label,
+             group  = road_user_group_label)) +
+  pandemic_rect +
+  pandemic_label +
+  geom_line(linewidth = 1.1) +
+  geom_point(size = 2) +
+  scale_colour_manual(values = deep_dive_colours, name = "Road user") +
+  scale_x_continuous(breaks = 2015:2024) +
+  facet_wrap(~ la_name, ncol = 1, scales = "free_y") +
+  labs(
+    title    = "Fig H — KSI trend by road user group (2015–2024)",
+    subtitle = "Identifies whether the post-pandemic rise is driven by a specific group or is broad-based",
+    x        = NULL,
+    y        = "KSI casualties",
+    caption  = "Source: STATS19, DfT."
+  ) +
+  theme_minimal(base_size = 11) +
+  theme(
+    legend.position  = "bottom",
+    panel.grid.minor = element_blank(),
+    axis.text.x      = element_text(angle = 45, hjust = 1),
+    strip.text       = element_text(size = 10, face = "bold")
+  )
+
+fig_H_trend_by_user
+
+
+# Fig I: Which speed environments are seeing the most growth?
+# Plotting absolute counts (not shares) so we can see which zone is actually adding casualties rather than just changing as a proportion of the total.
+
+fig_I_speed_trend <- ksi_deep_dive |>
+  filter(
+    !is.na(speed_label),
+    speed_limit %in% c(20, 30, 40, 50, 60, 70)
+  ) |>
+  group_by(la_name, collision_year, speed_label) |>
+  summarise(KSI = n(), .groups = "drop") |>
+  ggplot(aes(x = collision_year, y = KSI,
+             colour = speed_label, group = speed_label)) +
+  pandemic_rect +
+  pandemic_label +
+  geom_line(linewidth = 1.1) +
+  geom_point(size = 2) +
+  scale_colour_brewer(palette = "Oranges", direction = 1, name = "Speed limit") +
+  scale_x_continuous(breaks = 2015:2024) +
+  facet_wrap(~ la_name, ncol = 1, scales = "free_y") +
+  labs(
+    title    = "Fig I — KSI by speed zone over time",
+    subtitle = "Absolute counts show which speed environment is driving the post-pandemic rise",
+    x        = NULL,
+    y        = "KSI casualties",
+    caption  = "Source: STATS19, DfT."
+  ) +
+  theme_minimal(base_size = 11) +
+  theme(
+    legend.position  = "bottom",
+    panel.grid.minor = element_blank(),
+    axis.text.x      = element_text(angle = 45, hjust = 1),
+    strip.text       = element_text(size = 10, face = "bold")
+  )
+
+fig_I_speed_trend
+
+
+# Fig J: Is the rise happening at junctions or away from them?
+# A growing "not at junction" line suggests mid-road risk (speeding, loss of control)
+# Rising T-junction or crossroads lines make a stronger case for engineering interventions.
+
+fig_J_junction_trend <- ksi_deep_dive |>
+  filter(!is.na(junction_detail_label)) |>
+  group_by(la_name, collision_year, junction_detail_label) |>
+  summarise(KSI = n(), .groups = "drop") |>
+  ggplot(aes(x = collision_year, y = KSI,
+             colour = junction_detail_label,
+             group  = junction_detail_label)) +
+  pandemic_rect +
+  pandemic_label +
+  geom_line(linewidth = 1.1) +
+  geom_point(size = 2) +
+  scale_colour_brewer(palette = "Paired", name = "Junction type") +
+  scale_x_continuous(breaks = 2015:2024) +
+  facet_wrap(~ la_name, ncol = 1, scales = "free_y") +
+  labs(
+    title    = "Fig J — KSI by junction type over time",
+    subtitle = "Rising 'not at junction' = mid-road risk; rising T-junction or crossroads = engineering case",
+    x        = NULL,
+    y        = "KSI casualties",
+    caption  = "Source: STATS19, DfT."
+  ) +
+  theme_minimal(base_size = 11) +
+  theme(
+    legend.position  = "bottom",
+    panel.grid.minor = element_blank(),
+    axis.text.x      = element_text(angle = 45, hjust = 1),
+    strip.text       = element_text(size = 10, face = "bold")
+  )
+
+fig_J_junction_trend
+```
+
+#PHASE 4b ANALYSIS
+```{r phase 4b}
+# Phase 4b/4c: Sub-group deep dives driven by the data from Fig H
+# Rather than hardcoding which authority to focus on for each road user group,
+# we compute which group rose the most in each authority between 2019 and 2024
+# and use that to determine the focus of each sub-section automatically.
+
+
+# Find the road user group with the largest absolute KSI rise per authority.
+# This is what's actually driving the deterioration in each place.
+
+dominant_rising_group <- ksi_deep_dive_annual |>
+  filter(collision_year %in% c(2019, 2024)) |>
+  pivot_wider(names_from  = collision_year, values_from = KSI,
+              names_prefix = "y", values_fill = 0) |>
+  mutate(absolute_rise = y2024 - y2019) |>
+  group_by(la_name) |>
+  slice_max(absolute_rise, n = 1) |>
+  select(la_name, dominant_group = road_user_group_label)
+
+# Split authorities by their dominant group so each sub-section focuses only on the places where that group is the primary concern
+
+ped_focus_names <- dominant_rising_group |>
+  filter(dominant_group == "Pedestrian") |>
+  pull(la_name)
+
+car_focus_names <- dominant_rising_group |>
+  filter(dominant_group == "Car occupant") |>
+  pull(la_name)
+
+
+# Phase 4b: Pedestrian deep dive
+# Focuses on whichever authorities have pedestrians as their dominant rising group.
+# All three authorities are shown for context, but the interpretation is anchored on those in ped_focus_names.
+
+ksi_ped_deep <- ksi_deep_dive |>
+  filter(road_user_group_label == "Pedestrian")
+
+fig_K_ped_trend <- ksi_ped_deep |>
+  group_by(la_name, collision_year) |>
+  summarise(KSI = n(), .groups = "drop") |>
+  ggplot(aes(x = collision_year, y = KSI,
+             colour = la_name, group = la_name)) +
+  pandemic_rect +
+  pandemic_label +
+  geom_line(linewidth = 1.2) +
+  geom_point(size = 2.5) +
+  scale_colour_manual(
+    values = setNames(
+      c("mediumpurple3", "darkorange2", "firebrick3"),
+      deep_dive_names   
+    ),
+    name = NULL
+  ) +
+  scale_x_continuous(breaks = 2015:2024) +
+  labs(
+    title   = "Fig K — Pedestrian KSI trend (2015–2024)",
+    x       = NULL,
+    y       = "Pedestrian KSI casualties",
+    caption = "Source: STATS19, DfT."
+  ) +
+  theme_minimal(base_size = 11) +
+  theme(
+    legend.position  = "bottom",
+    panel.grid.minor = element_blank(),
+    axis.text.x      = element_text(angle = 45, hjust = 1)
+  )
+
+fig_K_ped_trend
+
+
+# Phase 4c: Car occupant deep dive
+# Focuses on whichever authorities have car occupants as their dominant rising group.
+# Figs L and M dig into where those collisions are happening, by speed zone and road type respectively, to point toward the right intervention.
+
+ksi_car_deep <- ksi_deep_dive |>
+  filter(road_user_group_label == "Car occupant")
+
+
+# Fig L: Are car occupant casualties rising in lower speed urban zones or on faster roads?
+
+fig_L_car_speed <- ksi_car_deep |>
+  filter(
+    !is.na(speed_label),
+    speed_limit %in% c(20, 30, 40, 50, 60, 70)
+  ) |>
+  group_by(la_name, collision_year, speed_label) |>
+  summarise(KSI = n(), .groups = "drop") |>
+  ggplot(aes(x = collision_year, y = KSI,
+             colour = speed_label, group = speed_label)) +
+  pandemic_rect +
+  pandemic_label +
+  geom_line(linewidth = 1.1) +
+  geom_point(size = 2) +
+  scale_colour_brewer(palette = "Oranges", direction = 1, name = "Speed limit") +
+  scale_x_continuous(breaks = 2015:2024) +
+  facet_wrap(~ la_name, ncol = 1, scales = "free_y") +
+  labs(
+    title   = "Fig L — Car occupant KSI by speed zone",
+    x       = NULL,
+    y       = "Car occupant KSI casualties",
+    caption = "Source: STATS19, DfT."
+  ) +
+  theme_minimal(base_size = 11) +
+  theme(
+    legend.position  = "bottom",
+    panel.grid.minor = element_blank(),
+    axis.text.x      = element_text(angle = 45, hjust = 1),
+    strip.text       = element_text(size = 10, face = "bold")
+  )
+
+fig_L_car_speed
+
+
+# Fig M: Which road types are seeing the car occupant rise?
+# Single carriageways dominating would suggest rural risk
+# Dual carriageway or slip road growth would point toward strategic road network issues.
+
+fig_M_car_road <- ksi_car_deep |>
+  filter(!is.na(road_type_label)) |>
+  group_by(la_name, collision_year, road_type_label) |>
+  summarise(KSI = n(), .groups = "drop") |>
+  ggplot(aes(x = collision_year, y = KSI,
+             colour = road_type_label, group = road_type_label)) +
+  pandemic_rect +
+  pandemic_label +
+  geom_line(linewidth = 1.1) +
+  geom_point(size = 2) +
+  scale_colour_brewer(palette = "Set2", name = "Road type") +
+  scale_x_continuous(breaks = 2015:2024) +
+  facet_wrap(~ la_name, ncol = 1, scales = "free_y") +
+  labs(
+    title   = "Fig M — Car occupant KSI by road type",
+    x       = NULL,
+    y       = "Car occupant KSI casualties",
+    caption = "Source: STATS19, DfT."
+  ) +
+  theme_minimal(base_size = 11) +
+  theme(
+    legend.position  = "bottom",
+    panel.grid.minor = element_blank(),
+    axis.text.x      = element_text(angle = 45, hjust = 1),
+    strip.text       = element_text(size = 10, face = "bold")
+  )
+
+fig_M_car_road
+```
+
+```{r summary stats}
+# Summary statistics table covering all immediate attention authorities.
+# One row per authority. Columns cover overall KSI burden, the 2019–2024 change, and breakdowns for the two dominant rising groups (pedestrians and car occupants), plus the key environmental characteristics (speed zone, road type, junction).
+# This is designed to feed directly into the written recommendations.
+
+summary_stats <- ksi_immediate |>
+  mutate(
+    authority_tier = case_when(
+      la_name %in% deep_dive_names          ~ "1 — Immediate action",
+      la_name %in% immediate_attention_names ~ "2 — Sustained high burden",
+      TRUE                                   ~ "3 — Monitor closely"
+    )
+  ) |>
+  group_by(la_name, authority_tier) |>
+  summarise(
+    ksi_total       = n(),
+    ksi_2019        = sum(collision_year == 2019),
+    ksi_2024        = sum(collision_year == 2024),
+    pct_change_1924 = (ksi_2024 - ksi_2019) / ksi_2019 * 100,  # % change 2019 to 2024
+    abs_rise_1924   = ksi_2024 - ksi_2019,                      # raw count change
+
+    # Pedestrian sub-totals — overall share and 2019 vs 2024 trend
+    
+    ped_ksi         = sum(road_user_group_label == "Pedestrian", na.rm = TRUE),
+    ped_pct         = ped_ksi / ksi_total * 100,
+    ped_2019        = sum(collision_year == 2019 &
+                            road_user_group_label == "Pedestrian", na.rm = TRUE),
+    ped_2024        = sum(collision_year == 2024 &
+                            road_user_group_label == "Pedestrian", na.rm = TRUE),
+    ped_pct_change  = (ped_2024 - ped_2019) / ped_2019 * 100,
+
+    # Car occupant sub-totals — overall share and 2019 vs 2024 trend
+    
+    car_ksi         = sum(road_user_group_label == "Car occupant", na.rm = TRUE),
+    car_pct         = car_ksi / ksi_total * 100,
+    car_2019        = sum(collision_year == 2019 &
+                            road_user_group_label == "Car occupant", na.rm = TRUE),
+    car_2024        = sum(collision_year == 2024 &
+                            road_user_group_label == "Car occupant", na.rm = TRUE),
+    car_pct_change  = (car_2024 - car_2019) / car_2019 * 100,
+
+    # Environmental characteristics — used to identify intervention type
+    
+    ksi_30mph_pct   = sum(speed_limit == 30,
+                          na.rm = TRUE) / ksi_total * 100,           # urban street exposure
+    ksi_single_carr = sum(road_type_label == "Single carriageway",
+                          na.rm = TRUE) / ksi_total * 100,           # rural/local road exposure
+    ksi_not_junc    = sum(junction_detail_label == "Not at junction",
+                          na.rm = TRUE) / ksi_total * 100,           # mid-road vs junction risk
+
+    # Most common hour for KSI collisions in this authority
+    
+    peak_hour = {
+      h <- hour[!is.na(hour)]
+      as.integer(names(which.max(table(h))))
+    },
+    .groups = "drop"
+  ) |>
+  mutate(across(where(is.double), ~ round(.x, 1))) |>
+  arrange(authority_tier, desc(ksi_total))
+
+summary_stats
+```
+
+
+
+
+
+
+
+
+
+#PRELIM ANALYSIS
 ```{r}
 la_ksi <- ksi_data |>
   group_by(la_name) |>
   summarise(KSI = n()) |>
   arrange(desc(KSI))
 
-top10_la <- la_ksi |>
-  slice_max(KSI, n = 10)
+top5_la <- la_ksi |>
+  slice_max(KSI, n = 5)
 
-top10_la_plot <- ggplot(top10_la, aes(x = reorder(la_name, KSI), y = KSI)) +
+top5_la_plot <- ggplot(top5_la, aes(x = reorder(la_name, KSI), y = KSI)) +
   geom_col(fill = "steelblue") +
   coord_flip() +
   labs(
@@ -217,9 +1399,11 @@ top10_la_plot <- ggplot(top10_la, aes(x = reorder(la_name, KSI), y = KSI)) +
   ) +
   theme_minimal()
 
-top10_la_plot
+top5_la_plot
 
 ```
+
+
 
 ```{r}
 road_user_totals <- ksi_data |>
