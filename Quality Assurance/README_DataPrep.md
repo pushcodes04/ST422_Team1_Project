@@ -152,4 +152,3 @@ pip install pandas numpy jupyter
 
 ---
 
-*End of README*
