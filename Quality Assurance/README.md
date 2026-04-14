@@ -1,6 +1,6 @@
 # ST422 Brief 8 — Data Preparation: README
 
-**Author:** [Your Name] | **Student ID:** u2211111  
+**Author:** Akeel Shah | **Student ID:** u2211111  
 **Notebook:** `ST422_DataPrep.ipynb`  
 **Date run:** April 2026  
 
