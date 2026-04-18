@@ -11,13 +11,13 @@ evaluating whether recent policy changes are working.
 
 ```
 ST422/
-├── ST422_DataPrep.ipynb       ← Step 1: data cleaning and merging
-├── ST422_Analysis.ipynb       ← Step 2: full analysis pipeline
-├── requirements.txt           ← Python dependencies
-├── README.md                  ← this file
-├── Data/                      ← raw DfT STATS19 CSVs (see below)
-├── Cleaned/                   ← produced by ST422_DataPrep.ipynb
-└── outputs/                   ← figures and tables produced by ST422_Analysis.ipynb
+├── ST422_DataPrep.ipynb         ← Step 1: data cleaning and merging
+├── ST422_Analysis_v2.ipynb      ← Step 2: full analysis pipeline
+├── requirements.txt             ← Python dependencies
+├── README.md                    ← this file
+├── Data/                        ← raw DfT STATS19 CSVs (see below)
+├── Cleaned/                     ← produced by ST422_DataPrep.ipynb
+└── outputs/                     ← figures and tables produced by ST422_Analysis_v2.ipynb
 ```
 
 > `Data/` and `Cleaned/` are not committed to Git — files are too large.
@@ -82,7 +82,7 @@ This produces four cleaned CSV files in `Cleaned/`:
 
 ### Step 2 — Analysis
 
-Open and run `ST422_Analysis.ipynb` top to bottom.
+Open and run `ST422_Analysis_v2.ipynb` top to bottom.
 
 This reads from `Data/` and `Cleaned/` and writes all outputs to `outputs/`:
 
@@ -96,12 +96,17 @@ This reads from `Data/` and `Cleaned/` and writes all outputs to `outputs/`:
 | `fig_04_raw_vs_adjusted.png` | Raw vs IBRS-adjusted KSI series |
 | `fig_05_road_user_severity.png` | Casualty profile by road user type |
 | `fig_06_la_hotspots.png` | KSI by local authority (count and rate) |
+| `fig_06b_choropleth.png` | KSI choropleth map by local authority |
 | `fig_07_speed_road_type.png` | KSI by speed limit and road type |
 | `fig_08_time_patterns.png` | KSI by day and hour |
-| `fig_09_worsening_las.png` | Top worsening LA trends with 95% CIs |
-| `fig_10_improving_las.png` | Top improving LA trends with 95% CIs |
-| `fig_11_robustness_trend.png` | Robustness check: raw vs adjusted trend |
-| `fig_12_ols_residuals.png` | OLS residual diagnostics |
+| `fig_09_junction_type.png` | KSI by junction type |
+| `fig_10_worsening_las.png` | Top worsening LA trends with 95% CIs |
+| `fig_11_improving_las.png` | Top improving LA trends with 95% CIs |
+| `fig_12_robustness_trend.png` | Robustness check: raw vs adjusted trend |
+| `fig_13_ols_residuals.png` | OLS residual diagnostics |
+| `fig_14_20mph_policy.png` | 20mph vs 30mph KSI trend — Liverpool vs Southwark |
+| `fig_15_liverpool_southwark.png` | Overall KSI trend comparison — Liverpool vs Southwark |
+| `fig_16_material_change.png` | Material change flags by local authority |
 
 **Tables (`outputs/tab_*.csv`)**
 
@@ -111,9 +116,11 @@ This reads from `Data/` and `Cleaned/` and writes all outputs to `outputs/`:
 | `tab_raw_vs_adjusted_ksi.csv` | Raw vs adjusted KSI comparison |
 | `tab_road_user_severity.csv` | KSI rates by road user type |
 | `tab_urban_rural.csv` | Urban vs rural severity breakdown |
+| `tab_junction_type.csv` | KSI by junction type |
 | `tab_la_hotspots.csv` | LA-level KSI count and rate |
 | `tab_la_ols_results.csv` | OLS results per LA with CIs |
 | `tab_covid_influence.csv` | COVID influence on LA slope estimates |
+| `tab_material_change_flagged.csv` | LAs flagged for intervention review |
 
 ---
 
@@ -137,7 +144,7 @@ All dependencies are listed in `requirements.txt`. Install with:
 pip install -r requirements.txt
 ```
 
-Core packages: `pandas`, `numpy`, `matplotlib`, `scipy`
+Core packages: `pandas`, `numpy`, `matplotlib`, `scipy`, `geopandas`
 
 ---
 
