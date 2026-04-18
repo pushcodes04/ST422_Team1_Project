@@ -51,14 +51,20 @@ This is the single master record of all actions across the entire project. Every
 | A025 | 004     | Build Week 10 worsening LA analysis notebook with 3-year average comparison and robustness checks | ZA | 2026-03-16 | Closed | Draft_work/Week10_Worsening_Analysis.ipynb | Top 5 worsening LAs identified with completeness filter and robustness checks across three weighting schemes. |
 | A026 | 004     | Add boundary reorganisation completeness filter to data prep pipeline and update README | ZA | 2026-03-16 | Closed | Data_Prep/ST422_DataPrep.ipynb | Filter removes 53 LAs with incomplete data across analysis windows. README updated with reproducibility notes. |
 | A027 | 004     | Build Week 10 road safety report notebook in client-facing format           | ZA    | 2026-03-16 | Closed      | Draft_work/Week10_Road_Safety.ipynb   | Week 10 report notebook completed with findings and recommendations in plain English. |
-| A028 | 004     | Investigate policy interventions available to local authorities (e.g., speed management, traffic calming, enforcement) | AS | 2026-03-18 | Open | docs/policy_review.md | [To be completed on close] |
-| A029 | 004     | Analyse factors affecting worst-performing local authorities in terms of KSI collisions | CS | 2026-03-18 | Open | notebooks/LA_factor_analysis.ipynb | [To be completed on close] |
+| A028 | 004     | Investigate policy interventions available to local authorities              | AS    | 2026-03-18 | Open        | docs/policy_review.md                 | [To be completed on close] |
+| A029 | 004     | Analyse factors affecting worst-performing local authorities                 | CS    | 2026-03-18 | Open        | notebooks/LA_factor_analysis.ipynb    | [To be completed on close] |
 | A030 | 004     | Conduct geographic hotspot analysis for high-KSI locations                  | CS    | 2026-03-18 | Open        | notebooks/geographic_hotspots.ipynb   | [To be completed on close] |
-| A031 | 004     | Perform hypothesis testing comparing Raw KSI trends vs IBRS-adjusted KSI trends using DfT guidance | CS | 2026-03-18 | Closed | notebooks/ksi_adjustment_analysis.ipynb | Not required |
-| A032 | 005     | Reproduce DataPrep notebook on local machine — update hardcoded paths to local directory and verify all four output CSVs generated correctly | AS | 2026-04-14 | Closed | Quality_Assurance/README_DataPrep.md | DataPrep notebook run successfully after updating DATA_DIR and OUTPUT_DIR to C:/Users/u2211111/ST422. All four output files confirmed present: cas_full.csv (682.2 MB), casualties_clean.csv (199.7 MB), collisions_clean.csv (409.7 MB), vehicles_clean.csv (297.6 MB). |
-| A033 | 005     | Write and run QA notebook to verify DataPrep outputs are correct, complete, and ready for analysis | AS | 2026-04-14 | Closed | Quality_Assurance/QA_DataLoad.ipynb | QA notebook run. 31 of 32 checks passed. One known issue: collisions_clean.csv contains 2,771 duplicate rows — confirmed as a known STATS19 raw data issue, does not affect cas_full.csv which passed all checks. Data confirmed ready for analysis. |
-| A034 | 005     | Create Quality Assurance folder in repo and upload QA evidence files        | AS    | 2026-04-14 | Closed      | Quality_Assurance/                    | Quality Assurance folder created in repo. QA_DataLoad.ipynb and README_DataPrep.md uploaded. README.md added to repo root for visibility. |
-| A035 | 005     | Build supplementary analysis notebook covering analyses identified as missing from Weeks 8–10: time patterns, road user priority ranking, fatalities by LA, geographic choropleth map, material change threshold, 20mph policy evaluation, and top 3 LA prioritisation | AS | 2026-04-14 | Closed | Draft_work/Week11_Missing_Analysis.ipynb | Notebook built covering all 7 missing analyses with 12 figures. Figures saved as PNGs to outputs/figures/. Full references included. |
+| A031 | 004     | Perform hypothesis testing comparing Raw KSI trends vs IBRS-adjusted KSI trends | CS | 2026-03-18 | Closed | notebooks/ksi_adjustment_analysis.ipynb | Not required |
+| A032 | 005     | Reproduce DataPrep notebook on local machine and verify all four output CSVs | AS   | 2026-04-14 | Closed      | Quality_Assurance/README_DataPrep.md  | DataPrep notebook run successfully. All four output files confirmed present and correct. |
+| A033 | 005     | Write and run QA notebook to verify DataPrep outputs                        | AS    | 2026-04-14 | Closed      | Quality_Assurance/QA_DataLoad.ipynb   | 31 of 32 checks passed. One known issue documented. Data confirmed ready for analysis. |
+| A034 | 005     | Create Quality Assurance folder and upload QA evidence files to repo        | AS    | 2026-04-14 | Closed      | Quality_Assurance/                    | QA folder created. QA notebook and README uploaded to repo. |
+| A035 | 005     | Build supplementary analysis notebook covering analyses missing from Weeks 8–10 | AS | 2026-04-14 | Closed | Draft_work/Week11_Missing_Analysis.ipynb | Notebook built covering 7 missing analyses with 12 figures saved to outputs/. |
+| A036 | 006     | Fix hardcoded paths across all notebooks to use relative paths              | AS    | 2026-04-18 | Closed      | ST422_Analysis_v2.ipynb               | All notebooks updated to use os.getcwd(). No hardcoded paths remain. |
+| A037 | 006     | Combine weekly analysis notebooks into a single reproducible pipeline       | AS    | 2026-04-18 | Closed      | ST422_Analysis_v2.ipynb               | Combined notebook built and tested. Runs clean top to bottom. |
+| A038 | 006     | Add missing analysis sections identified from template review               | AS    | 2026-04-18 | Closed      | ST422_Analysis_v2.ipynb               | Junction type, factor breakdowns, 20mph evaluation, and material change threshold added. |
+| A039 | 006     | Add uncertainty quantification to LA trend models                           | AS    | 2026-04-18 | Closed      | ST422_Analysis_v2.ipynb               | 95% confidence intervals added to all per-LA OLS slopes. |
+| A040 | 006     | Add choropleth map to hotspot analysis                                      | AS    | 2026-04-18 | Closed      | ST422_Analysis_v2.ipynb               | Choropleth map added using geopandas. geopandas added to requirements.txt. |
+| A041 | 006     | Update repo documentation to reflect combined notebook                      | AS    | 2026-04-18 | Closed      | README.md, Quality_Assurance/README_DataPrep.md | README and DataPrep README updated. All new figures and tables listed. |
 
 ---
 
@@ -77,7 +83,8 @@ This is the single master record of all actions across the entire project. Every
 | H001 | Clean STATS19 dataset   | ZA (Data Steward)   | PA (Analysis Lead)  | Analysis cannot begin until data freeze v1 is complete | 2026-03-13        | [To be completed] | Data_Prep/ST422_DataPrep.ipynb |
 | H002 | Core figures and tables | PA (Analysis Lead)  | CS (Reporting Lead) | Report drafting cannot begin until figures are locked  | [To be completed] | [To be completed] | [To be completed]        |
 | H003 | Full draft report v1    | CS (Reporting Lead) | AS (QA Lead)        | QA review requires a stable draft                      | [To be completed] | [To be completed] | [To be completed]        |
-| H004 | QA_DataLoad.ipynb + README_DataPrep.md | AS (QA Lead) | All team members | QA sign-off confirms data is ready for analysis. All analysis notebooks must use cas_full.csv from Cleaned/ directory. | 2026-04-14 | AS | Quality_Assurance/QA_DataLoad.ipynb |
+| H004 | QA_DataLoad.ipynb + README_DataPrep.md | AS (QA Lead) | All team members | QA sign-off confirms data is ready for analysis. | 2026-04-14 | AS | Quality_Assurance/QA_DataLoad.ipynb |
+| H005 | ST422_Analysis_v2.ipynb | AS (QA Lead)        | All team members    | Combined notebook replaces individual weekly notebooks for submission. | 2026-04-18 | AS | ST422_Analysis_v2.ipynb |
 
 ---
 
@@ -86,7 +93,7 @@ This is the single master record of all actions across the entire project. Every
 | Status      | Count |
 | ----------- | ----- |
 | Open        | 5     |
-| In Progress | 7     |
-| Closed      | 23    |
+| In Progress | 6     |
+| Closed      | 32    |
 | Blocked     | 0     |
-| **Total**   | **35** |
+| **Total**   | **43** |
