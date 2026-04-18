@@ -14,20 +14,13 @@
 
 ## Changes made before running
 
-The original notebook was written by a teammate with hardcoded local paths pointing to their machine:
+The original notebook was written with hardcoded local paths. These have been updated to use relative paths via `os.getcwd()` so the notebook runs on any machine without editing:
 
 ```python
-# Original (teammate's machine — will not run on any other computer)
-DATA_DIR   = '/Users/zahidahmed/Documents/Stats/ST422/Data'
-OUTPUT_DIR = '/Users/zahidahmed/Documents/Stats/ST422/Cleaned'
-```
-
-These were updated to point to the correct directories on this machine:
-
-```python
-# Updated (this machine)
-DATA_DIR   = 'C:/Users/u2211111/ST422/Data'
-OUTPUT_DIR = 'C:/Users/u2211111/ST422/Cleaned'
+# Updated — no path editing required
+import os
+DATA_DIR   = os.path.join(os.getcwd(), 'Data')
+OUTPUT_DIR = os.path.join(os.getcwd(), 'Cleaned')
 ```
 
 No other changes were made to the notebook. All logic, merges, and cleaning steps are identical to the original.
@@ -36,7 +29,7 @@ No other changes were made to the notebook. All logic, merges, and cleaning step
 
 ## Data files required
 
-The following six raw CSV files must be present in `DATA_DIR` before running:
+The following files must be present in the `Data/` folder before running:
 
 | File | Description |
 |------|-------------|
@@ -55,21 +48,18 @@ https://www.gov.uk/government/statistical-data-sets/road-safety-open-data
 
 ## How to run
 
-1. Download all data files listed above into your `Data` folder
-2. Open `ST422_DataPrep.ipynb` in Jupyter
-3. Update the two lines at the top of **Cell 1**:
-   ```python
-   DATA_DIR   = 'YOUR/PATH/TO/Data'
-   OUTPUT_DIR = 'YOUR/PATH/TO/Cleaned'
-   ```
-4. Run all cells in order (**Kernel → Restart & Run All**)
-5. Check the `Cleaned` folder for the four output files
+1. Download all data files listed above into the `Data/` folder
+2. Install dependencies: `pip install -r requirements.txt`
+3. Open `ST422_DataPrep.ipynb` in Jupyter
+4. No path editing required — paths are set automatically relative to the project root using `os.getcwd()`
+5. Run all cells in order (**Kernel → Restart & Run All**)
+6. Check the `Cleaned/` folder for the four output files
 
 ---
 
 ## Expected outputs
 
-After a successful run, the following four files should appear in `OUTPUT_DIR`:
+After a successful run, the following four files should appear in `Cleaned/`:
 
 | File | Description | Expected rows (approx.) |
 |------|-------------|--------------------------|
@@ -82,73 +72,52 @@ After a successful run, the following four files should appear in `OUTPUT_DIR`:
 
 ## Quality assurance checks performed
 
-After running the notebook, the following checks were carried out to confirm the output was correct:
+After running the notebook, the following checks were carried out via `QA_DataLoad.ipynb` to confirm the output was correct. 31 of 32 checks passed.
 
 ### 1. Output files exist
-Confirmed all four CSV files were present in the `Cleaned` folder after the run completed.
+Confirmed all four CSV files were present in the `Cleaned/` folder after the run completed.
 
 ### 2. Row counts checked
-```python
-import pandas as pd
-cas_full = pd.read_csv('C:/Users/u2211111/ST422/Cleaned/cas_full.csv')
-print(f'cas_full rows: {len(cas_full):,}')
-print(f'cas_full cols: {cas_full.shape[1]}')
-```
-Output confirmed a plausible row count consistent with GB-wide STATS19 data.
+Output confirmed a plausible row count consistent with GB-wide STATS19 data. `cas_full` row count matches `casualties_clean` exactly — confirming the join did not create duplicates.
 
 ### 3. Year range confirmed
-```python
-print(cas_full['collision_year'].min(), cas_full['collision_year'].max())
-```
-Confirmed data runs from the expected start year through to 2025 (provisional).
+Data runs from 2014 through to 2025 (provisional Jan–Jun). No unexpected year gaps.
 
-### 4. No duplicate rows
-```python
-print('Duplicates:', cas_full.duplicated().sum())
-```
-Result: 0 duplicates confirmed.
+### 4. Duplicate rows
+`cas_full.csv` — 0 duplicates confirmed. `collisions_clean.csv` — 2,771 duplicate rows found. This is a known issue in the raw DfT STATS19 collision file and does not affect `cas_full.csv`. All analysis notebooks use `cas_full` directly and are unaffected.
 
 ### 5. Key columns present and not fully missing
-```python
-key_cols = ['collision_year', 'casualty_severity', 
-            'local_authority_ons_district', 'road_user', 'speed_limit']
-for c in key_cols:
-    pct = cas_full[c].isna().mean() * 100
-    print(f'{c}: {pct:.1f}% missing')
-```
-All key columns present. Known missingness in `road_user` and deprivation fields is consistent with STATS19 documentation.
+All key columns present. Known missingness in deprivation fields is consistent with STATS19 documentation.
 
 ### 6. Severity codes valid
-```python
-print(cas_full['casualty_severity'].value_counts().sort_index())
-```
 Only codes 1 (Fatal), 2 (Serious), and 3 (Slight) present — no invalid codes.
 
-### 7. Rerun test
+### 7. Join integrity confirmed
+All expected collision-level columns (`speed_limit`, `road_type`, `latitude`, `longitude`, `urban_or_rural_area`) present in `cas_full` — join completed successfully.
+
+### 8. Geographic coverage
+393 unique local authorities present. All valid coordinates fall within the GB bounding box (49.5–61.0N, -8.0–2.0E).
+
+### 9. Rerun test
 The notebook was run a second time from **Kernel → Restart & Run All** to confirm full reproducibility. All four output files were regenerated and row counts matched the first run exactly.
 
 ---
 
 ## Known issues and caveats
 
-- `DATA_DIR` and `OUTPUT_DIR` must be updated manually by each analyst — this is the only required edit before running.
 - The raw data files are large (collision history file ~1.4GB). Allow 10–15 minutes for the full pipeline to run.
-- The `local-authority-ons-district-names.csv` lookup file was shared by the team and is not available from the standard DfT download page. It is included in the repo under `data/lookups/`.
+- The `local-authority-ons-district-names.csv` lookup file is included in the repo under `Data/`.
+- `collisions_clean.csv` contains 2,771 duplicate rows originating from the raw DfT source file. This does not affect `cas_full.csv` which has zero duplicates and is the sole input to all analysis notebooks.
 
 ---
 
 ## Dependencies
 
-```
-pandas
-numpy
-jupyter
+All dependencies are listed in `requirements.txt`. Install with:
+
+```bash
+pip install -r requirements.txt
 ```
 
-Install with:
-```
-pip install pandas numpy jupyter
-```
-
----
+Core packages: `pandas`, `numpy`, `matplotlib`, `scipy`, `geopandas`
 
