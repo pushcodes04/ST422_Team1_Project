@@ -1,0 +1,12 @@
+# Core dependencies
+pandas>=2.0
+numpy>=1.24
+matplotlib>=3.7
+scipy>=1.9
+statsmodels>=0.14
+
+# Optional — faster data loading (recommended)
+pyarrow>=15.0
+
+# Optional — choropleth map only (Section 5)
+# geopandas>=1.0
