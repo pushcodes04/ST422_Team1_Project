@@ -1,0 +1,10 @@
+Data/dft-road-casualty-statistics-*.csv
+
+Cleaned/*
+!Cleaned/.gitkeep
+outputs/*
+!outputs/.gitkeep
+
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
