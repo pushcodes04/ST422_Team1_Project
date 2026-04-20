@@ -65,6 +65,11 @@ This is the single master record of all actions across the entire project. Every
 | A039 | 006     | Add uncertainty quantification to LA trend models                           | AS    | 2026-04-18 | Closed      | ST422_Analysis_v2.ipynb               | 95% confidence intervals added to all per-LA OLS slopes. |
 | A040 | 006     | Add choropleth map to hotspot analysis                                      | AS    | 2026-04-18 | Closed      | ST422_Analysis_v2.ipynb               | Choropleth map added using geopandas. geopandas added to requirements.txt. |
 | A041 | 006     | Update repo documentation to reflect combined notebook                      | AS    | 2026-04-18 | Closed      | README.md, Quality_Assurance/README_DataPrep.md | README and DataPrep README updated. All new figures and tables listed. |
+| A042 | 007     | Add AIC/BIC model comparison to analysis notebook                           | AS    | 2026-04-20 | Closed      | ST422_Analysis_v2.ipynb section 10    | AIC/BIC comparison run for null, linear OLS, and quadratic models. Linear OLS confirmed as preferred model. |
+| A043 | 007     | Add time-series decomposition to analysis notebook                          | AS    | 2026-04-20 | Closed      | ST422_Analysis_v2.ipynb section 10    | Additive STL decomposition fitted to monthly KSI series 2014–2024. Trend, seasonal, and residual components extracted. statsmodels added to requirements.txt. |
+| A044 | 007     | Add MLE vs OLS comparison to justify estimation procedure                   | AS    | 2026-04-20 | Closed      | ST422_Analysis_v2.ipynb section 10    | MLE fitted via numerical optimisation. Confirmed identical point estimates to OLS for normal linear model. OLS retained on grounds of interpretability. |
+| A045 | 007     | Add bootstrap confidence intervals as non-parametric uncertainty check      | AS    | 2026-04-20 | Closed      | ST422_Analysis_v2.ipynb section 10    | 1000-iteration bootstrap run for raw and adjusted KSI slopes. Bootstrap CIs match analytical OLS CIs confirming assumptions are reasonable. |
+| A046 | 007     | Add threats to validity, alternatives considered, and traceability sections | AS    | 2026-04-20 | Closed      | ST422_Analysis_v2.ipynb               | External validity, construct validity, failure modes, and alternative approaches documented. Traceability table added mapping all client claims to output files. |
 
 ---
 
@@ -84,7 +89,7 @@ This is the single master record of all actions across the entire project. Every
 | H002 | Core figures and tables | PA (Analysis Lead)  | CS (Reporting Lead) | Report drafting cannot begin until figures are locked  | [To be completed] | [To be completed] | [To be completed]        |
 | H003 | Full draft report v1    | CS (Reporting Lead) | AS (QA Lead)        | QA review requires a stable draft                      | [To be completed] | [To be completed] | [To be completed]        |
 | H004 | QA_DataLoad.ipynb + README_DataPrep.md | AS (QA Lead) | All team members | QA sign-off confirms data is ready for analysis. | 2026-04-14 | AS | Quality_Assurance/QA_DataLoad.ipynb |
-| H005 | ST422_Analysis_v2.ipynb | AS (QA Lead)        | All team members    | Combined notebook replaces individual weekly notebooks for submission. | 2026-04-18 | AS | ST422_Analysis_v2.ipynb |
+| H005 | ST422_Analysis_v2.ipynb | AS (QA Lead)        | All team members    | Combined notebook replaces individual weekly notebooks for submission. | 2026-04-20 | AS | ST422_Analysis_v2.ipynb |
 
 ---
 
@@ -94,6 +99,6 @@ This is the single master record of all actions across the entire project. Every
 | ----------- | ----- |
 | Open        | 5     |
 | In Progress | 6     |
-| Closed      | 32    |
+| Closed      | 37    |
 | Blocked     | 0     |
-| **Total**   | **43** |
+| **Total**   | **48** |
