@@ -12,7 +12,7 @@ evaluating whether recent policy changes are working.
 ```
 ST422/
 ├── ST422_DataPrep.ipynb              ← Step 1: data cleaning and merging
-├── ST422_Analysis_v2.ipynb           ← Step 2: full analysis pipeline
+├── analysis_notebook_practice.ipynb           ← Step 2: full analysis pipeline
 ├── requirements.txt                  ← Python dependencies
 ├── README.md                         ← this file
 ├── Data/                             ← raw DfT STATS19 CSVs (see below)
@@ -91,7 +91,7 @@ This produces four cleaned CSV files in `Cleaned/`:
 
 ### Step 2 — Analysis
 
-Open and run `ST422_Analysis_v2.ipynb` top to bottom.
+Open and run `analysis_notebook_practice.ipynb` top to bottom.
 
 This reads from `Data/` and `Cleaned/` and writes all outputs to `outputs/`:
 
@@ -185,7 +185,7 @@ The analysis covers 2014–2024 (confirmed) and January–June 2025 (provisional
 COVID years (2020–2021) are retained in the cleaned data but excluded from
 trend fitting and flagged throughout. To change the year window, edit
 `YEAR_START` and `YEAR_END` in the config cell at the top of
-`ST422_Analysis_v2.ipynb`.
+`analysis_notebook_practice.ipynb`.
 
 ---
 
