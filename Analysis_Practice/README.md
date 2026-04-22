@@ -12,7 +12,7 @@ evaluating whether recent policy changes are working.
 ```
 ST422/
 ├── ST422_DataPrep.ipynb              ← Optional: data cleaning and merging
-├── ST422_Analysis_v2.ipynb           ← Main analysis pipeline (self-contained)
+├── analysis_notebook_practice.ipynb           ← Main analysis pipeline (self-contained)
 ├── requirements.txt                  ← Python dependencies
 ├── README.md                         ← this file
 ├── Data/                             ← raw DfT STATS19 CSVs (see below)
@@ -78,7 +78,7 @@ will run on any machine without changes.
 
 ### Analysis notebook (required)
 
-Open and run `ST422_Analysis_v2.ipynb` top to bottom.
+Open and run `analysis_notebook_practice.ipynb` top to bottom.
 
 This reads directly from `Data/` and writes all outputs to `outputs/`.
 It is fully self-contained — `ST422_DataPrep.ipynb` does not need to be
@@ -162,7 +162,7 @@ includes the model name depending on the overdispersion check result.
 - Always restart the kernel before a full re-run
 - The analysis notebook is fully self-contained — no prerequisite notebooks
 - All paths are relative to project root — no local path editing needed
-- No random sampling is used — all outputs are fully deterministic given
+- Bootstrap CI validation uses a fixed seed (np.random.seed(42)); all other outputs are fully deterministic given
   the same input CSVs
 - `collision_index` is loaded as string throughout to preserve leading zeros
 - Historical files are year-filtered at load time (2014 onwards) using
@@ -195,7 +195,7 @@ The analysis covers 2014–2024 (confirmed) and January–June 2025 (provisional
 COVID years (2020–2021) are retained in the cleaned data but excluded from
 trend fitting and flagged throughout. To change the year window, edit
 `YEAR_START` and `YEAR_END` in the config cell at the top of
-`ST422_Analysis_v2.ipynb`.
+`analysis_notebook_practice.ipynb`.
 
 ---
 
