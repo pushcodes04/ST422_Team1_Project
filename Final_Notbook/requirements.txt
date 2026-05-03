@@ -1,8 +1,6 @@
 geopandas==1.1.3
 matplotlib==3.10.6
-matplotlib-inline @ file:///C:/miniconda3/conda-bld/matplotlib-inline_1762779276169/work
-numpy @ file:///C:/miniconda3/conda-bld/numpy_and_numpy_base_1763980694785/work/dist/numpy-2.3.5-cp313-cp313-win_amd64.whl#sha256=242110f8490d8f1e8ed7b1fb286cc718d5e96f1ba89bee9e7f807ccf5cbe59e6
-numpydoc @ file:///C:/b/abs_e63bcy53_z/croot/numpydoc_1750958653347/work
-pandas @ file:///C:/miniconda3/conda-bld/pandas_1762332401545/work/dist/pandas-2.3.3-cp313-cp313-win_amd64.whl#sha256=9d93408ded21463dc4a0cce0d61428cd756d3f130f78ca53bfb6d1c81fedaa66
-scipy @ file:///C:/miniconda3/conda-bld/scipy_1762194988805/work/dist/scipy-1.16.3-cp313-cp313-win_amd64.whl#sha256=3cec51386c90cf8f9f27291f357385537f0c33b68c680a306702b0829fc58fc2
-statsmodels @ file:///C:/b/abs_6f5u1m2ygp/croot/statsmodels_1753363817829/work
+numpy==2.3.5
+pandas==2.3.3
+scipy==1.16.3
+statsmodels==0.14.0
