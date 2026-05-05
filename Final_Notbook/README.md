@@ -5,6 +5,9 @@ Consulting. This repo contains the full data preparation and analysis pipeline
 for Brief 8: identifying road safety hotspots, contributory factors, and
 evaluating whether recent policy changes are working.
 
+> **Note: the choropleth map (Section 5 of the analysis notebook) requires an
+> active internet connection to fetch ONS boundary data from the ArcGIS REST API.**
+
 ---
 
 ## Folder Structure
@@ -95,15 +98,15 @@ This reads from `Data/` and `Cleaned/` and writes all outputs to `outputs/`:
 | `fig_03_ksi_trend.png` | KSI and fatal trend 2014–2024 |
 | `fig_04_raw_vs_adjusted.png` | Raw vs IBRS-adjusted KSI series |
 | `fig_05_road_user_severity.png` | Casualty profile by road user type |
-| `fig_06_la_hotspots.png` | KSI by local authority (count and rate) |
+| `fig_06_la_hotspots.png` | KSI by local authority — count and rate bar charts |
 | `fig_06b_choropleth.png` | KSI choropleth map by local authority |
 | `fig_07_speed_road_type.png` | KSI by speed limit and road type |
 | `fig_08_time_patterns.png` | KSI by day and hour |
 | `fig_09_junction_type.png` | KSI by junction type |
 | `fig_10_worsening_las.png` | Top worsening LA trends with 95% CIs |
 | `fig_11_improving_las.png` | Top improving LA trends with 95% CIs |
-| `fig_12_robustness_trend.png` | Robustness check: raw vs adjusted trend |
-| `fig_13_ols_residuals.png` | OLS residual diagnostics |
+| `fig_12_robustness_trend.png` | Robustness check: raw vs adjusted trend direction |
+| `fig_13_ols_residuals.png` | OLS residual diagnostics — top 5 worsening LAs |
 | `fig_14_20mph_policy.png` | 20mph vs 30mph KSI — Liverpool vs Southwark |
 | `fig_15_liverpool_southwark.png` | Overall KSI trend — Liverpool vs Southwark |
 | `fig_16_material_change.png` | Material change flags by local authority |
@@ -130,11 +133,12 @@ This reads from `Data/` and `Cleaned/` and writes all outputs to `outputs/`:
 - Always restart the kernel before a full re-run
 - Run Step 1 before Step 2 — the analysis notebook reads `cas_full.csv`
   produced by the data prep notebook
-- All paths are relative to project root — no local path editing needed
+- All paths are relative to the project root — no local path editing needed
 - No random sampling is used except in the bootstrap CI cell (seed set to 42)
 - `collision_index` is loaded as string throughout to preserve leading zeros
-- The choropleth map (Section 5) requires an internet connection to fetch
-  ONS boundary data from the ArcGIS REST API at runtime
+- The choropleth map (Section 5) requires an active internet connection to
+  fetch ONS boundary data from the ArcGIS REST API at runtime; all other
+  sections run fully offline
 
 ---
 
