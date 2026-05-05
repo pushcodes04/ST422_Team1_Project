@@ -112,6 +112,9 @@ for inspection or team use. It is not required for the analysis notebook.
 | `fig_06_la_hotspots.png` | KSI by local authority — count and rate, recent window |
 | `fig_06b_choropleth.png` | KSI choropleth map by local authority (requires geopandas) |
 | `fig_06c_count_vs_rate_rank.png` | Robustness check: burden rank vs severity rate rank, full window |
+| `fig_06d_pedestrian_hotspots.png` | Top LAs by pedestrian KSI count and rate |
+| `fig_06d_cyclist_hotspots.png` | Top LAs by cyclist KSI count and rate |
+| `fig_06d_motorcyclist_hotspots.png` | Top LAs by motorcyclist KSI count and rate |
 | `fig_07_speed_road_type.png` | KSI by speed limit and road type |
 | `fig_08_time_patterns.png` | KSI by day and hour |
 | `fig_09_junction_type.png` | KSI by junction type |
@@ -119,7 +122,10 @@ for inspection or team use. It is not required for the analysis notebook.
 | `fig_11_improving_las.png` | Top improving LA trends with 95% CIs |
 | `fig_12_robustness_trend.png` | Robustness check: raw vs adjusted trend direction |
 | `fig_13_ols_residuals.png` | OLS residual diagnostics — top worsening LAs |
-| `fig_14_model_rate_ratios_*.png` | Poisson or Negative Binomial rate ratio forest plot |
+| `fig_14a_glm_stepwise_aic.png` | Stepwise model comparison by AIC |
+| `fig_14b_glm_best_model_rr.png` | Best-model rate ratio forest plot |
+| `fig_14c_glm_year_trend.png` | Year coefficients from best GLM model |
+| `fig_14d_glm_interaction_speed_roaduser.png` | Speed × road user interaction rate ratios |
 | `fig_15_20mph_policy.png` | 20mph vs 30mph KSI trend — policy evaluation LAs |
 | `fig_16_policy_comparison.png` | Overall KSI trend comparison — policy evaluation LAs |
 | `fig_17_material_change.png` | Material change flags by local authority |
@@ -127,8 +133,6 @@ for inspection or team use. It is not required for the analysis notebook.
 | `fig_factor_improving_*.png` | KSI share and count base vs recent — top improving LAs |
 
 Note: `fig_06b_choropleth.png` is only produced if `geopandas` is installed.
-Note: `fig_14` filename includes the model name (`poisson` or `negative_binomial`)
-depending on the overdispersion check result.
 
 **Tables (`outputs/tab_*.csv`)**
 
@@ -149,11 +153,16 @@ depending on the overdispersion check result.
 | `tab_composite_weighting_sensitivity.csv` | Trend ranking stability across composite weighting schemes |
 | `tab_bootstrap_ci_comparison.csv` | Bootstrap vs analytical CI comparison — top worsening LAs |
 | `tab_material_change_flagged.csv` | LAs flagged for intervention review (exceeding threshold) |
-| `tab_model_results_*.csv` | Poisson or NB rate ratios with 95% CIs |
+| `tab_glm_best_model_rr.csv` | Best GLM rate ratios with 95% CIs |
+| `tab_glm_stepwise_comparison.csv` | Stepwise model AIC comparison |
+| `tab_glm_lr_tests.csv` | Likelihood ratio tests for stepwise model sequence |
+| `tab_targeted_rate_ratios.csv` | Selected rate ratios for client report |
+| `tab_road_user_hotspots.csv` | Top LAs by KSI count and rate per road user group |
+| `tab_road_user_hotspot_overlap.csv` | Overlap check across road user hotspot rankings |
+| `model_agg.csv` | Authority-year aggregation used for GLM input |
 
 Note: `tab_three_way_exposure_robustness.csv` only produced if
-`ons_la_population_2024.csv` is present. `tab_model_results_*.csv` filename
-includes the model name depending on the overdispersion check result.
+`ons_la_population_2024.csv` is present.
 
 ---
 
