@@ -1,0 +1,22 @@
+la_name,Pedestrian,Cyclist,Motorcyclist,n_groups
+Birmingham,YES,YES,YES,3
+Westminster,YES,YES,YES,3
+Leeds,YES,YES,YES,3
+Lambeth,YES,YES,YES,3
+Wandsworth,,YES,YES,2
+"Kingston upon Hull, City of",,YES,,1
+Southwark,,YES,,1
+Sheffield,YES,,,1
+Manchester,YES,,,1
+Liverpool,YES,,,1
+Islington,,YES,,1
+Bradford,YES,,,1
+Hackney,,YES,,1
+Glasgow City,YES,,,1
+East Riding of Yorkshire,,,YES,1
+Croydon,,,YES,1
+County Durham,,,YES,1
+Cornwall,,,YES,1
+City of Edinburgh,YES,,,1
+Brighton and Hove,,YES,,1
+Wiltshire,,,YES,1

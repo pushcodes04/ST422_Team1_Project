@@ -1,0 +1,7 @@
+comparison,LR_stat,df_diff,p_value,significant,AIC_improves
+M1 — Year only -> M2 — + Urban/Rural,1578.2,2,0.0,True,True
+M2 — + Urban/Rural -> M3 — + Road type + Speed,21832.24,8,0.0,True,True
+M3 — + Road type + Speed -> M4 — + Road user,11301.28,6,0.0,True,True
+M4 — + Road user -> M5 — + Speed x Road user,4606.55,18,0.0,True,True
+M5 — + Speed x Road user -> M6 — + Road type x Urban/Rural,377.95,9,0.0,True,True
+M6 — + Road type x Urban/Rural -> M7 — + Road user x Urban/Rural,1076.36,11,0.0,True,True

@@ -1,0 +1,1177 @@
+la_name,ksi_casualties,total_casualties,fatals,ksi_pct,fatal_pct,road_user
+Aberdeen City,195,395,15,49.4,3.8,Pedestrian
+Aberdeenshire,138,253,23,54.5,9.09,Pedestrian
+Adur,78,202,6,38.6,2.97,Pedestrian
+Allerdale,94,306,10,30.7,3.27,Pedestrian
+Amber Valley,101,394,10,25.6,2.54,Pedestrian
+Angus,70,180,9,38.9,5.0,Pedestrian
+Argyll and Bute,49,150,7,32.7,4.67,Pedestrian
+Arun,150,437,14,34.3,3.2,Pedestrian
+Ashfield,123,417,10,29.5,2.4,Pedestrian
+Ashford,104,349,9,29.8,2.58,Pedestrian
+Aylesbury Vale,54,225,4,24.0,1.78,Pedestrian
+Babergh,49,181,9,27.1,4.97,Pedestrian
+Barking and Dagenham,238,1141,10,20.9,0.88,Pedestrian
+Barnet,490,2080,26,23.6,1.25,Pedestrian
+Barnsley,306,851,25,36.0,2.94,Pedestrian
+Barrow-in-Furness,64,262,4,24.4,1.53,Pedestrian
+Basildon,184,497,11,37.0,2.21,Pedestrian
+Basingstoke and Deane,92,314,6,29.3,1.91,Pedestrian
+Bassetlaw,108,322,13,33.5,4.04,Pedestrian
+Bath and North East Somerset,85,463,6,18.4,1.3,Pedestrian
+Bedford,193,687,10,28.1,1.46,Pedestrian
+Bexley,209,992,14,21.1,1.41,Pedestrian
+Birmingham,1852,6642,100,27.9,1.51,Pedestrian
+Blaby,54,160,6,33.8,3.75,Pedestrian
+Blackburn with Darwen,295,940,9,31.4,0.96,Pedestrian
+Blackpool,307,946,10,32.5,1.06,Pedestrian
+Blaenau Gwent,44,138,4,31.9,2.9,Pedestrian
+Bolsover,58,194,7,29.9,3.61,Pedestrian
+Bolton,328,1027,31,31.9,3.02,Pedestrian
+Boston,83,327,6,25.4,1.83,Pedestrian
+Bournemouth,127,423,8,30.0,1.89,Pedestrian
+"Bournemouth, Christchurch and Poole",217,663,15,32.7,2.26,Pedestrian
+Bracknell Forest,34,173,3,19.7,1.73,Pedestrian
+Bradford,887,2994,48,29.6,1.6,Pedestrian
+Braintree,128,383,7,33.4,1.83,Pedestrian
+Breckland,96,278,10,34.5,3.6,Pedestrian
+Brent,462,2154,25,21.4,1.16,Pedestrian
+Brentwood,74,217,8,34.1,3.69,Pedestrian
+Bridgend,102,317,11,32.2,3.47,Pedestrian
+Brighton and Hove,533,1614,24,33.0,1.49,Pedestrian
+"Bristol, City of",362,2018,29,17.9,1.44,Pedestrian
+Broadland,67,226,4,29.6,1.77,Pedestrian
+Bromley,283,1440,17,19.7,1.18,Pedestrian
+Bromsgrove,66,210,8,31.4,3.81,Pedestrian
+Broxbourne,74,288,10,25.7,3.47,Pedestrian
+Broxtowe,84,291,6,28.9,2.06,Pedestrian
+Buckinghamshire,107,516,13,20.7,2.52,Pedestrian
+Burnley,181,501,8,36.1,1.6,Pedestrian
+Bury,154,515,18,29.9,3.5,Pedestrian
+Caerphilly,114,359,10,31.8,2.79,Pedestrian
+Calderdale,257,919,13,28.0,1.41,Pedestrian
+Cambridge,111,413,2,26.9,0.48,Pedestrian
+Camden,476,2250,19,21.2,0.84,Pedestrian
+Cannock Chase,49,220,4,22.3,1.82,Pedestrian
+Canterbury,137,658,12,20.8,1.82,Pedestrian
+Cardiff,213,955,11,22.3,1.15,Pedestrian
+Carlisle,119,399,17,29.8,4.26,Pedestrian
+Carmarthenshire,129,377,11,34.2,2.92,Pedestrian
+Castle Point,109,291,8,37.5,2.75,Pedestrian
+Central Bedfordshire,199,686,22,29.0,3.21,Pedestrian
+Ceredigion,59,193,6,30.6,3.11,Pedestrian
+Charnwood,114,361,9,31.6,2.49,Pedestrian
+Chelmsford,154,448,19,34.4,4.24,Pedestrian
+Cheltenham,122,319,6,38.2,1.88,Pedestrian
+Cherwell,102,303,12,33.7,3.96,Pedestrian
+Cheshire East,260,1046,29,24.9,2.77,Pedestrian
+Cheshire West and Chester,209,906,19,23.1,2.1,Pedestrian
+Chesterfield,102,383,13,26.6,3.39,Pedestrian
+Chichester,103,312,8,33.0,2.56,Pedestrian
+Chiltern,41,133,4,30.8,3.01,Pedestrian
+Chorley,127,342,7,37.1,2.05,Pedestrian
+Christchurch,14,58,1,24.1,1.72,Pedestrian
+City of Edinburgh,645,2122,41,30.4,1.93,Pedestrian
+City of London,246,840,8,29.3,0.95,Pedestrian
+Clackmannanshire,29,96,5,30.2,5.21,Pedestrian
+Colchester,159,541,18,29.4,3.33,Pedestrian
+Comhairle nan Eilean Siar,10,28,4,35.7,14.29,Pedestrian
+Conwy,116,372,6,31.2,1.61,Pedestrian
+Copeland,53,190,0,27.9,0.0,Pedestrian
+Corby,55,130,7,42.3,5.38,Pedestrian
+Cornwall,424,1602,35,26.5,2.18,Pedestrian
+Cotswold,77,172,7,44.8,4.07,Pedestrian
+County Durham,484,1386,47,34.9,3.39,Pedestrian
+Coventry,381,1333,28,28.6,2.1,Pedestrian
+Craven,39,148,5,26.4,3.38,Pedestrian
+Crawley,122,403,5,30.3,1.24,Pedestrian
+Croydon,482,2320,28,20.8,1.21,Pedestrian
+Cumberland,53,194,1,27.3,0.52,Pedestrian
+Dacorum,108,368,12,29.3,3.26,Pedestrian
+Darlington,120,339,11,35.4,3.24,Pedestrian
+Dartford,119,459,8,25.9,1.74,Pedestrian
+Daventry,42,93,11,45.2,11.83,Pedestrian
+Denbighshire,106,358,9,29.6,2.51,Pedestrian
+Derby,309,1199,13,25.8,1.08,Pedestrian
+Derbyshire Dales,73,212,10,34.4,4.72,Pedestrian
+Doncaster,452,1234,44,36.6,3.57,Pedestrian
+Dorset (excluding Christchurch),146,446,17,32.7,3.81,Pedestrian
+Dover,120,456,12,26.3,2.63,Pedestrian
+Dudley,329,1090,30,30.2,2.75,Pedestrian
+Dumfries and Galloway,83,243,9,34.2,3.7,Pedestrian
+Dundee City,183,454,8,40.3,1.76,Pedestrian
+Ealing,511,2156,29,23.7,1.35,Pedestrian
+East Ayrshire,103,253,4,40.7,1.58,Pedestrian
+East Cambridgeshire,48,129,8,37.2,6.2,Pedestrian
+East Devon,93,324,14,28.7,4.32,Pedestrian
+East Dorset,17,63,1,27.0,1.59,Pedestrian
+East Dunbartonshire,67,166,10,40.4,6.02,Pedestrian
+East Hampshire,83,225,15,36.9,6.67,Pedestrian
+East Hertfordshire,97,347,4,28.0,1.15,Pedestrian
+East Lindsey,135,519,16,26.0,3.08,Pedestrian
+East Lothian,85,231,8,36.8,3.46,Pedestrian
+East Northamptonshire,33,111,1,29.7,0.9,Pedestrian
+East Renfrewshire,64,186,4,34.4,2.15,Pedestrian
+East Riding of Yorkshire,230,777,14,29.6,1.8,Pedestrian
+East Staffordshire,86,317,10,27.1,3.15,Pedestrian
+East Suffolk,68,234,4,29.1,1.71,Pedestrian
+Eastbourne,156,487,9,32.0,1.85,Pedestrian
+Eastleigh,103,311,9,33.1,2.89,Pedestrian
+Eden,33,127,9,26.0,7.09,Pedestrian
+Elmbridge,111,398,6,27.9,1.51,Pedestrian
+Enfield,403,1928,35,20.9,1.82,Pedestrian
+Epping Forest,138,417,19,33.1,4.56,Pedestrian
+Epsom and Ewell,95,305,5,31.1,1.64,Pedestrian
+Erewash,74,350,9,21.1,2.57,Pedestrian
+Exeter,132,457,7,28.9,1.53,Pedestrian
+Falkirk,117,304,5,38.5,1.64,Pedestrian
+Fareham,74,238,6,31.1,2.52,Pedestrian
+Fenland,85,278,8,30.6,2.88,Pedestrian
+Fife,250,650,30,38.5,4.62,Pedestrian
+Flintshire,111,349,14,31.8,4.01,Pedestrian
+Forest Heath,19,78,1,24.4,1.28,Pedestrian
+Forest of Dean,48,146,5,32.9,3.42,Pedestrian
+Fylde,83,233,4,35.6,1.72,Pedestrian
+Gateshead,198,702,18,28.2,2.56,Pedestrian
+Gedling,91,322,5,28.3,1.55,Pedestrian
+Glasgow City,1023,2784,90,36.7,3.23,Pedestrian
+Gloucester,136,404,8,33.7,1.98,Pedestrian
+Gosport,78,203,3,38.4,1.48,Pedestrian
+Gravesham,103,484,7,21.3,1.45,Pedestrian
+Great Yarmouth,108,383,6,28.2,1.57,Pedestrian
+Greenwich,295,1334,27,22.1,2.02,Pedestrian
+Guildford,198,562,20,35.2,3.56,Pedestrian
+Gwynedd,110,308,7,35.7,2.27,Pedestrian
+Hackney,486,2030,22,23.9,1.08,Pedestrian
+Halton,97,335,8,29.0,2.39,Pedestrian
+Hambleton,31,130,4,23.8,3.08,Pedestrian
+Hammersmith and Fulham,353,1479,18,23.9,1.22,Pedestrian
+Harborough,43,110,11,39.1,10.0,Pedestrian
+Haringey,448,2045,19,21.9,0.93,Pedestrian
+Harlow,83,225,4,36.9,1.78,Pedestrian
+Harrogate,97,356,8,27.2,2.25,Pedestrian
+Harrow,256,1107,12,23.1,1.08,Pedestrian
+Hart,80,204,11,39.2,5.39,Pedestrian
+Hartlepool,97,245,8,39.6,3.27,Pedestrian
+Hastings,155,519,9,29.9,1.73,Pedestrian
+Havant,121,330,6,36.7,1.82,Pedestrian
+Havering,254,1000,26,25.4,2.6,Pedestrian
+"Herefordshire, County of ",124,407,15,30.5,3.69,Pedestrian
+Hertsmere,100,406,8,24.6,1.97,Pedestrian
+High Peak,60,304,6,19.7,1.97,Pedestrian
+Highland,130,331,25,39.3,7.55,Pedestrian
+Hillingdon,354,1435,24,24.7,1.67,Pedestrian
+Hinckley and Bosworth,47,188,3,25.0,1.6,Pedestrian
+Horsham,82,259,9,31.7,3.47,Pedestrian
+Hounslow,411,1577,29,26.1,1.84,Pedestrian
+Huntingdonshire,72,292,12,24.7,4.11,Pedestrian
+Hyndburn,134,433,8,30.9,1.85,Pedestrian
+Inverclyde,67,198,7,33.8,3.54,Pedestrian
+Ipswich,140,559,2,25.0,0.36,Pedestrian
+Isle of Anglesey,58,139,11,41.7,7.91,Pedestrian
+Isle of Wight,146,472,6,30.9,1.27,Pedestrian
+Isles of Scilly,0,2,0,0.0,0.0,Pedestrian
+Islington,336,1560,7,21.5,0.45,Pedestrian
+Kensington and Chelsea,368,1611,17,22.8,1.06,Pedestrian
+Kettering,56,163,2,34.4,1.23,Pedestrian
+King's Lynn and West Norfolk,108,343,16,31.5,4.66,Pedestrian
+"Kingston upon Hull, City of",390,1374,17,28.4,1.24,Pedestrian
+Kingston upon Thames,166,614,10,27.0,1.63,Pedestrian
+Kirklees,503,1777,31,28.3,1.74,Pedestrian
+Knowsley,135,456,8,29.6,1.75,Pedestrian
+Lambeth,557,2529,30,22.0,1.19,Pedestrian
+Lancaster,188,501,11,37.5,2.2,Pedestrian
+Leeds,1147,3649,85,31.4,2.33,Pedestrian
+Leicester,444,1678,22,26.5,1.31,Pedestrian
+Lewes,147,386,9,38.1,2.33,Pedestrian
+Lewisham,383,1807,24,21.2,1.33,Pedestrian
+Lichfield,48,178,13,27.0,7.3,Pedestrian
+Lincoln,121,552,3,21.9,0.54,Pedestrian
+Liverpool,941,3217,53,29.3,1.65,Pedestrian
+London Airport (Heathrow),12,46,2,26.1,4.35,Pedestrian
+Luton,290,1155,17,25.1,1.47,Pedestrian
+Maidstone,153,626,13,24.4,2.08,Pedestrian
+Maldon,44,114,2,38.6,1.75,Pedestrian
+Malvern Hills,60,182,12,33.0,6.59,Pedestrian
+Manchester,721,2170,80,33.2,3.69,Pedestrian
+Mansfield,101,439,12,23.0,2.73,Pedestrian
+Medway,342,1301,17,26.3,1.31,Pedestrian
+Melton,31,120,2,25.8,1.67,Pedestrian
+Mendip,47,208,4,22.6,1.92,Pedestrian
+Merthyr Tydfil,42,141,8,29.8,5.67,Pedestrian
+Merton,238,1026,23,23.2,2.24,Pedestrian
+Mid Devon,47,162,4,29.0,2.47,Pedestrian
+Mid Suffolk,35,117,4,29.9,3.42,Pedestrian
+Mid Sussex,125,402,6,31.1,1.49,Pedestrian
+Middlesbrough,160,526,6,30.4,1.14,Pedestrian
+Midlothian,74,204,5,36.3,2.45,Pedestrian
+Milton Keynes,136,505,19,26.9,3.76,Pedestrian
+Mole Valley,62,222,4,27.9,1.8,Pedestrian
+Monmouthshire,48,119,12,40.3,10.08,Pedestrian
+Moray,52,98,8,53.1,8.16,Pedestrian
+Neath Port Talbot,49,212,5,23.1,2.36,Pedestrian
+New Forest,156,447,16,34.9,3.58,Pedestrian
+Newark and Sherwood,89,295,11,30.2,3.73,Pedestrian
+Newcastle upon Tyne,437,1567,25,27.9,1.6,Pedestrian
+Newcastle-under-Lyme,62,207,9,30.0,4.35,Pedestrian
+Newham,480,2160,19,22.2,0.88,Pedestrian
+Newport,134,431,16,31.1,3.71,Pedestrian
+North Ayrshire,120,308,11,39.0,3.57,Pedestrian
+North Devon,68,278,5,24.5,1.8,Pedestrian
+North Dorset,14,58,0,24.1,0.0,Pedestrian
+North East Derbyshire,66,210,9,31.4,4.29,Pedestrian
+North East Lincolnshire,184,721,9,25.5,1.25,Pedestrian
+North Hertfordshire,104,319,13,32.6,4.08,Pedestrian
+North Kesteven,60,207,12,29.0,5.8,Pedestrian
+North Lanarkshire,301,834,26,36.1,3.12,Pedestrian
+North Lincolnshire,175,504,14,34.7,2.78,Pedestrian
+North Norfolk,76,251,10,30.3,3.98,Pedestrian
+North Northamptonshire,88,266,10,33.1,3.76,Pedestrian
+North Somerset,95,484,14,19.6,2.89,Pedestrian
+North Tyneside,196,617,8,31.8,1.3,Pedestrian
+North Warwickshire,54,176,9,30.7,5.11,Pedestrian
+North West Leicestershire,72,201,10,35.8,4.98,Pedestrian
+North Yorkshire,94,316,12,29.7,3.8,Pedestrian
+Northampton,146,559,15,26.1,2.68,Pedestrian
+Northumberland,247,837,27,29.5,3.23,Pedestrian
+Norwich,162,678,7,23.9,1.03,Pedestrian
+Nottingham,500,2053,23,24.4,1.12,Pedestrian
+Nuneaton and Bedworth,145,443,12,32.7,2.71,Pedestrian
+Oadby and Wigston,27,130,5,20.8,3.85,Pedestrian
+Oldham,257,826,28,31.1,3.39,Pedestrian
+Orkney Islands,10,31,1,32.3,3.23,Pedestrian
+Oxford,131,495,3,26.5,0.61,Pedestrian
+Pembrokeshire,125,353,6,35.4,1.7,Pedestrian
+Pendle,149,431,8,34.6,1.86,Pedestrian
+Perth and Kinross,106,249,13,42.6,5.22,Pedestrian
+Peterborough,193,638,16,30.3,2.51,Pedestrian
+Plymouth,243,983,15,24.7,1.53,Pedestrian
+Poole,69,198,6,34.8,3.03,Pedestrian
+Portsmouth,283,982,9,28.8,0.92,Pedestrian
+Powys,91,268,7,34.0,2.61,Pedestrian
+Preston,292,888,10,32.9,1.13,Pedestrian
+Purbeck,29,68,4,42.6,5.88,Pedestrian
+Reading,169,690,20,24.5,2.9,Pedestrian
+Redbridge,358,1570,23,22.8,1.46,Pedestrian
+Redcar and Cleveland,108,302,10,35.8,3.31,Pedestrian
+Redditch,55,184,2,29.9,1.09,Pedestrian
+Reigate and Banstead,145,482,6,30.1,1.24,Pedestrian
+Renfrewshire,207,493,23,42.0,4.67,Pedestrian
+Rhondda Cynon Taf,152,601,21,25.3,3.49,Pedestrian
+Ribble Valley,64,166,6,38.6,3.61,Pedestrian
+Richmond upon Thames,187,786,9,23.8,1.15,Pedestrian
+Richmondshire,31,104,5,29.8,4.81,Pedestrian
+Rochdale,219,645,28,34.0,4.34,Pedestrian
+Rochford,76,211,7,36.0,3.32,Pedestrian
+Rossendale,98,276,9,35.5,3.26,Pedestrian
+Rother,115,339,12,33.9,3.54,Pedestrian
+Rotherham,328,885,26,37.1,2.94,Pedestrian
+Rugby ,93,318,8,29.2,2.52,Pedestrian
+Runnymede,67,236,5,28.4,2.12,Pedestrian
+Rushcliffe,81,237,10,34.2,4.22,Pedestrian
+Rushmoor,106,303,5,35.0,1.65,Pedestrian
+Rutland,9,44,2,20.5,4.55,Pedestrian
+Ryedale,35,123,10,28.5,8.13,Pedestrian
+Salford,247,764,23,32.3,3.01,Pedestrian
+Sandwell,484,1590,39,30.4,2.45,Pedestrian
+Scarborough,85,335,6,25.4,1.79,Pedestrian
+Scottish Borders,69,170,8,40.6,4.71,Pedestrian
+Sedgemoor,68,329,10,20.7,3.04,Pedestrian
+Sefton,284,965,18,29.4,1.87,Pedestrian
+Selby,33,135,6,24.4,4.44,Pedestrian
+Sevenoaks,105,353,19,29.7,5.38,Pedestrian
+Sheffield,814,2460,50,33.1,2.03,Pedestrian
+Shepway,122,451,6,27.1,1.33,Pedestrian
+Shetland Islands,10,23,5,43.5,21.74,Pedestrian
+Shropshire,200,636,19,31.4,2.99,Pedestrian
+Slough,140,643,15,21.8,2.33,Pedestrian
+Solihull,142,539,12,26.3,2.23,Pedestrian
+Somerset,58,225,7,25.8,3.11,Pedestrian
+South Ayrshire,102,250,7,40.8,2.8,Pedestrian
+South Bucks,29,86,6,33.7,6.98,Pedestrian
+South Cambridgeshire,74,172,14,43.0,8.14,Pedestrian
+South Derbyshire,67,232,14,28.9,6.03,Pedestrian
+South Gloucestershire,88,434,11,20.3,2.53,Pedestrian
+South Hams,49,186,4,26.3,2.15,Pedestrian
+South Holland,64,228,3,28.1,1.32,Pedestrian
+South Kesteven,109,397,9,27.5,2.27,Pedestrian
+South Lakeland,85,297,11,28.6,3.7,Pedestrian
+South Lanarkshire,282,767,34,36.8,4.43,Pedestrian
+South Norfolk,87,264,16,33.0,6.06,Pedestrian
+South Northamptonshire,19,59,5,32.2,8.47,Pedestrian
+South Oxfordshire,65,220,6,29.5,2.73,Pedestrian
+South Ribble,138,359,10,38.4,2.79,Pedestrian
+South Somerset,51,313,7,16.3,2.24,Pedestrian
+South Staffordshire,48,157,9,30.6,5.73,Pedestrian
+South Tyneside,114,449,10,25.4,2.23,Pedestrian
+Southampton ,376,1139,15,33.0,1.32,Pedestrian
+Southend-on-Sea,254,742,11,34.2,1.48,Pedestrian
+Southwark,482,2099,23,23.0,1.1,Pedestrian
+Spelthorne,107,362,9,29.6,2.49,Pedestrian
+St Albans,101,333,6,30.3,1.8,Pedestrian
+St Edmundsbury,42,165,8,25.5,4.85,Pedestrian
+St. Helens,194,677,14,28.7,2.07,Pedestrian
+Stafford,74,258,8,28.7,3.1,Pedestrian
+Staffordshire Moorlands,56,218,13,25.7,5.96,Pedestrian
+Stevenage,84,224,2,37.5,0.89,Pedestrian
+Stirling,67,183,8,36.6,4.37,Pedestrian
+Stockport,241,624,19,38.6,3.04,Pedestrian
+Stockton-on-Tees,146,437,9,33.4,2.06,Pedestrian
+Stoke-on-Trent,207,896,15,23.1,1.67,Pedestrian
+Stratford-on-Avon,121,302,13,40.1,4.3,Pedestrian
+Stroud,67,217,9,30.9,4.15,Pedestrian
+Suffolk Coastal,28,132,4,21.2,3.03,Pedestrian
+Sunderland,271,936,14,29.0,1.5,Pedestrian
+Surrey Heath,60,263,7,22.8,2.66,Pedestrian
+Sutton,220,826,14,26.6,1.69,Pedestrian
+Swale,128,544,12,23.5,2.21,Pedestrian
+Swansea,151,591,15,25.5,2.54,Pedestrian
+Swindon,175,634,17,27.6,2.68,Pedestrian
+Tameside,201,624,25,32.2,4.01,Pedestrian
+Tamworth,54,177,7,30.5,3.95,Pedestrian
+Tandridge,82,289,5,28.4,1.73,Pedestrian
+Taunton Deane,25,148,8,16.9,5.41,Pedestrian
+Teignbridge,87,339,9,25.7,2.65,Pedestrian
+Telford and Wrekin,103,328,6,31.4,1.83,Pedestrian
+Tendring,138,455,9,30.3,1.98,Pedestrian
+Test Valley,89,220,19,40.5,8.64,Pedestrian
+Tewkesbury,61,160,7,38.1,4.38,Pedestrian
+Thanet,208,817,11,25.5,1.35,Pedestrian
+Three Rivers,66,195,7,33.8,3.59,Pedestrian
+Thurrock,143,431,4,33.2,0.93,Pedestrian
+Tonbridge and Malling,82,346,9,23.7,2.6,Pedestrian
+Torbay,162,653,9,24.8,1.38,Pedestrian
+Torfaen,55,158,7,34.8,4.43,Pedestrian
+Torridge,33,123,0,26.8,0.0,Pedestrian
+Tower Hamlets,527,2161,30,24.4,1.39,Pedestrian
+Trafford,177,524,23,33.8,4.39,Pedestrian
+Tunbridge Wells,125,400,6,31.2,1.5,Pedestrian
+Uttlesford,48,151,2,31.8,1.32,Pedestrian
+Vale of Glamorgan,69,219,7,31.5,3.2,Pedestrian
+Vale of White Horse,76,230,11,33.0,4.78,Pedestrian
+Wakefield,387,1216,28,31.8,2.3,Pedestrian
+Walsall,314,1085,17,28.9,1.57,Pedestrian
+Waltham Forest,291,1447,15,20.1,1.04,Pedestrian
+Wandsworth,424,1906,19,22.2,1.0,Pedestrian
+Warrington,160,632,14,25.3,2.22,Pedestrian
+Warwick,104,375,13,27.7,3.47,Pedestrian
+Watford,116,402,5,28.9,1.24,Pedestrian
+Waveney,37,207,3,17.9,1.45,Pedestrian
+Waverley,105,385,12,27.3,3.12,Pedestrian
+Wealden,146,389,13,37.5,3.34,Pedestrian
+Wellingborough,40,161,4,24.8,2.48,Pedestrian
+Welwyn Hatfield,94,321,8,29.3,2.49,Pedestrian
+West Berkshire,67,279,13,24.0,4.66,Pedestrian
+West Devon,32,97,3,33.0,3.09,Pedestrian
+West Dorset,34,134,4,25.4,2.99,Pedestrian
+West Dunbartonshire,103,233,15,44.2,6.44,Pedestrian
+West Lancashire,90,293,6,30.7,2.05,Pedestrian
+West Lindsey,60,204,9,29.4,4.41,Pedestrian
+West Lothian,140,394,20,35.5,5.08,Pedestrian
+West Northamptonshire,128,382,11,33.5,2.88,Pedestrian
+West Oxfordshire,62,196,8,31.6,4.08,Pedestrian
+West Somerset,4,43,0,9.3,0.0,Pedestrian
+West Suffolk,54,145,7,37.2,4.83,Pedestrian
+Westminster,951,4249,37,22.4,0.87,Pedestrian
+Westmorland and Furness,35,149,2,23.5,1.34,Pedestrian
+Weymouth and Portland,45,129,7,34.9,5.43,Pedestrian
+Wigan,317,795,27,39.9,3.4,Pedestrian
+Wiltshire,298,1216,38,24.5,3.12,Pedestrian
+Winchester,92,305,8,30.2,2.62,Pedestrian
+Windsor and Maidenhead,97,354,9,27.4,2.54,Pedestrian
+Wirral,326,1077,17,30.3,1.58,Pedestrian
+Woking,105,359,5,29.2,1.39,Pedestrian
+Wokingham,84,311,10,27.0,3.22,Pedestrian
+Wolverhampton,312,1158,18,26.9,1.55,Pedestrian
+Worcester,85,310,6,27.4,1.94,Pedestrian
+Worthing,147,455,5,32.3,1.1,Pedestrian
+Wrexham,115,386,10,29.8,2.59,Pedestrian
+Wychavon,70,228,11,30.7,4.82,Pedestrian
+Wycombe,74,309,5,23.9,1.62,Pedestrian
+Wyre,130,332,16,39.2,4.82,Pedestrian
+Wyre Forest,75,303,8,24.8,2.64,Pedestrian
+York,128,632,8,20.3,1.27,Pedestrian
+Aberdeen City,90,239,1,37.7,0.42,Cyclist
+Aberdeenshire,55,116,4,47.4,3.45,Cyclist
+Adur,84,283,0,29.7,0.0,Cyclist
+Allerdale,44,146,5,30.1,3.42,Cyclist
+Amber Valley,42,225,2,18.7,0.89,Cyclist
+Angus,34,91,3,37.4,3.3,Cyclist
+Argyll and Bute,36,76,5,47.4,6.58,Cyclist
+Arun,189,621,2,30.4,0.32,Cyclist
+Ashfield,64,274,1,23.4,0.36,Cyclist
+Ashford,84,306,5,27.5,1.63,Cyclist
+Aylesbury Vale,52,270,2,19.3,0.74,Cyclist
+Babergh,46,152,5,30.3,3.29,Cyclist
+Barking and Dagenham,77,469,0,16.4,0.0,Cyclist
+Barnet,140,852,0,16.4,0.0,Cyclist
+Barnsley,121,356,9,34.0,2.53,Cyclist
+Barrow-in-Furness,41,220,0,18.6,0.0,Cyclist
+Basildon,92,293,1,31.4,0.34,Cyclist
+Basingstoke and Deane,109,307,2,35.5,0.65,Cyclist
+Bassetlaw,94,301,7,31.2,2.33,Cyclist
+Bath and North East Somerset,54,422,2,12.8,0.47,Cyclist
+Bedford,128,644,2,19.9,0.31,Cyclist
+Bexley,81,414,3,19.6,0.72,Cyclist
+Birmingham,565,2711,13,20.8,0.48,Cyclist
+Blaby,38,165,4,23.0,2.42,Cyclist
+Blackburn with Darwen,93,306,2,30.4,0.65,Cyclist
+Blackpool,143,519,0,27.6,0.0,Cyclist
+Blaenau Gwent,16,48,1,33.3,2.08,Cyclist
+Bolsover,30,114,7,26.3,6.14,Cyclist
+Bolton,121,424,4,28.5,0.94,Cyclist
+Boston,58,300,3,19.3,1.0,Cyclist
+Bournemouth,97,574,0,16.9,0.0,Cyclist
+"Bournemouth, Christchurch and Poole",197,999,1,19.7,0.1,Cyclist
+Bracknell Forest,29,194,4,14.9,2.06,Cyclist
+Bradford,270,1087,6,24.8,0.55,Cyclist
+Braintree,79,231,6,34.2,2.6,Cyclist
+Breckland,49,198,4,24.7,2.02,Cyclist
+Brent,153,1062,1,14.4,0.09,Cyclist
+Brentwood,33,119,1,27.7,0.84,Cyclist
+Bridgend,28,132,5,21.2,3.79,Cyclist
+Brighton and Hove,485,1763,1,27.5,0.06,Cyclist
+"Bristol, City of",268,2738,5,9.8,0.18,Cyclist
+Broadland,56,274,4,20.4,1.46,Cyclist
+Bromley,193,1031,1,18.7,0.1,Cyclist
+Bromsgrove,44,183,4,24.0,2.19,Cyclist
+Broxbourne,32,223,2,14.3,0.9,Cyclist
+Broxtowe,64,287,2,22.3,0.7,Cyclist
+Buckinghamshire,89,412,3,21.6,0.73,Cyclist
+Burnley,55,173,1,31.8,0.58,Cyclist
+Bury,64,256,2,25.0,0.78,Cyclist
+Caerphilly,46,139,5,33.1,3.6,Cyclist
+Calderdale,113,373,5,30.3,1.34,Cyclist
+Cambridge,416,1929,5,21.6,0.26,Cyclist
+Camden,389,2659,8,14.6,0.3,Cyclist
+Cannock Chase,24,118,0,20.3,0.0,Cyclist
+Canterbury,115,505,6,22.8,1.19,Cyclist
+Cardiff,104,877,4,11.9,0.46,Cyclist
+Carlisle,46,261,2,17.6,0.77,Cyclist
+Carmarthenshire,88,259,3,34.0,1.16,Cyclist
+Castle Point,51,145,2,35.2,1.38,Cyclist
+Central Bedfordshire,134,549,6,24.4,1.09,Cyclist
+Ceredigion,50,114,2,43.9,1.75,Cyclist
+Charnwood,83,372,3,22.3,0.81,Cyclist
+Chelmsford,133,483,1,27.5,0.21,Cyclist
+Cheltenham,100,434,2,23.0,0.46,Cyclist
+Cherwell,97,363,6,26.7,1.65,Cyclist
+Cheshire East,272,1324,19,20.5,1.44,Cyclist
+Cheshire West and Chester,186,996,4,18.7,0.4,Cyclist
+Chesterfield,26,156,1,16.7,0.64,Cyclist
+Chichester,171,497,5,34.4,1.01,Cyclist
+Chiltern,23,87,1,26.4,1.15,Cyclist
+Chorley,90,276,3,32.6,1.09,Cyclist
+Christchurch,29,118,1,24.6,0.85,Cyclist
+City of Edinburgh,422,1767,9,23.9,0.51,Cyclist
+City of London,236,1124,4,21.0,0.36,Cyclist
+Clackmannanshire,17,44,0,38.6,0.0,Cyclist
+Colchester,138,546,2,25.3,0.37,Cyclist
+Comhairle nan Eilean Siar,1,6,0,16.7,0.0,Cyclist
+Conwy,71,195,0,36.4,0.0,Cyclist
+Copeland,32,123,1,26.0,0.81,Cyclist
+Corby,22,99,1,22.2,1.01,Cyclist
+Cornwall,242,839,3,28.8,0.36,Cyclist
+Cotswold,65,148,2,43.9,1.35,Cyclist
+County Durham,184,678,4,27.1,0.59,Cyclist
+Coventry,181,830,4,21.8,0.48,Cyclist
+Craven,56,159,7,35.2,4.4,Cyclist
+Crawley,98,369,2,26.6,0.54,Cyclist
+Croydon,179,1101,2,16.3,0.18,Cyclist
+Cumberland,22,56,0,39.3,0.0,Cyclist
+Dacorum,83,268,4,31.0,1.49,Cyclist
+Darlington,60,284,2,21.1,0.7,Cyclist
+Dartford,37,208,1,17.8,0.48,Cyclist
+Daventry,24,74,3,32.4,4.05,Cyclist
+Denbighshire,55,171,2,32.2,1.17,Cyclist
+Derby,153,912,7,16.8,0.77,Cyclist
+Derbyshire Dales,59,185,6,31.9,3.24,Cyclist
+Doncaster,199,722,1,27.6,0.14,Cyclist
+Dorset (excluding Christchurch),122,418,5,29.2,1.2,Cyclist
+Dover,58,253,2,22.9,0.79,Cyclist
+Dudley,86,365,3,23.6,0.82,Cyclist
+Dumfries and Galloway,49,145,4,33.8,2.76,Cyclist
+Dundee City,44,155,1,28.4,0.65,Cyclist
+Ealing,213,1365,2,15.6,0.15,Cyclist
+East Ayrshire,26,81,2,32.1,2.47,Cyclist
+East Cambridgeshire,51,181,2,28.2,1.1,Cyclist
+East Devon,65,249,1,26.1,0.4,Cyclist
+East Dorset,34,99,1,34.3,1.01,Cyclist
+East Dunbartonshire,24,101,2,23.8,1.98,Cyclist
+East Hampshire,102,214,6,47.7,2.8,Cyclist
+East Hertfordshire,60,251,1,23.9,0.4,Cyclist
+East Lindsey,86,308,8,27.9,2.6,Cyclist
+East Lothian,58,185,0,31.4,0.0,Cyclist
+East Northamptonshire,25,92,1,27.2,1.09,Cyclist
+East Renfrewshire,49,132,0,37.1,0.0,Cyclist
+East Riding of Yorkshire,243,1054,6,23.1,0.57,Cyclist
+East Staffordshire,40,225,1,17.8,0.44,Cyclist
+East Suffolk,66,263,3,25.1,1.14,Cyclist
+Eastbourne,86,347,2,24.8,0.58,Cyclist
+Eastleigh,118,407,0,29.0,0.0,Cyclist
+Eden,28,83,3,33.7,3.61,Cyclist
+Elmbridge,225,856,3,26.3,0.35,Cyclist
+Enfield,111,741,1,15.0,0.13,Cyclist
+Epping Forest,94,287,3,32.8,1.05,Cyclist
+Epsom and Ewell,94,310,3,30.3,0.97,Cyclist
+Erewash,67,367,2,18.3,0.54,Cyclist
+Exeter,116,554,4,20.9,0.72,Cyclist
+Falkirk,48,157,3,30.6,1.91,Cyclist
+Fareham,169,542,3,31.2,0.55,Cyclist
+Fenland,51,209,5,24.4,2.39,Cyclist
+Fife,102,276,6,37.0,2.17,Cyclist
+Flintshire,89,264,3,33.7,1.14,Cyclist
+Forest Heath,16,66,2,24.2,3.03,Cyclist
+Forest of Dean,17,62,0,27.4,0.0,Cyclist
+Fylde,70,230,1,30.4,0.43,Cyclist
+Gateshead,86,430,1,20.0,0.23,Cyclist
+Gedling,60,232,1,25.9,0.43,Cyclist
+Glasgow City,315,1298,4,24.3,0.31,Cyclist
+Gloucester,121,453,5,26.7,1.1,Cyclist
+Gosport,116,427,0,27.2,0.0,Cyclist
+Gravesham,54,237,2,22.8,0.84,Cyclist
+Great Yarmouth,61,269,0,22.7,0.0,Cyclist
+Greenwich,170,1031,2,16.5,0.19,Cyclist
+Guildford,186,642,2,29.0,0.31,Cyclist
+Gwynedd,55,159,5,34.6,3.14,Cyclist
+Hackney,434,2916,7,14.9,0.24,Cyclist
+Halton,52,333,2,15.6,0.6,Cyclist
+Hambleton,73,210,2,34.8,0.95,Cyclist
+Hammersmith and Fulham,298,1934,5,15.4,0.26,Cyclist
+Harborough,36,92,2,39.1,2.17,Cyclist
+Haringey,228,1524,1,15.0,0.07,Cyclist
+Harlow,27,147,0,18.4,0.0,Cyclist
+Harrogate,136,437,5,31.1,1.14,Cyclist
+Harrow,71,414,3,17.1,0.72,Cyclist
+Hart,71,221,2,32.1,0.9,Cyclist
+Hartlepool,48,206,3,23.3,1.46,Cyclist
+Hastings,86,273,2,31.5,0.73,Cyclist
+Havant,134,474,1,28.3,0.21,Cyclist
+Havering,80,459,5,17.4,1.09,Cyclist
+"Herefordshire, County of ",109,439,6,24.8,1.37,Cyclist
+Hertsmere,46,213,3,21.6,1.41,Cyclist
+High Peak,65,187,3,34.8,1.6,Cyclist
+Highland,65,223,6,29.1,2.69,Cyclist
+Hillingdon,118,665,2,17.7,0.3,Cyclist
+Hinckley and Bosworth,38,165,2,23.0,1.21,Cyclist
+Horsham,131,340,5,38.5,1.47,Cyclist
+Hounslow,203,1304,2,15.6,0.15,Cyclist
+Huntingdonshire,99,364,6,27.2,1.65,Cyclist
+Hyndburn,32,125,0,25.6,0.0,Cyclist
+Inverclyde,15,43,0,34.9,0.0,Cyclist
+Ipswich,110,656,2,16.8,0.3,Cyclist
+Isle of Anglesey,39,93,3,41.9,3.23,Cyclist
+Isle of Wight,120,300,2,40.0,0.67,Cyclist
+Isles of Scilly,1,2,0,50.0,0.0,Cyclist
+Islington,440,2717,5,16.2,0.18,Cyclist
+Kensington and Chelsea,322,1818,4,17.7,0.22,Cyclist
+Kettering,24,98,1,24.5,1.02,Cyclist
+King's Lynn and West Norfolk,78,271,3,28.8,1.11,Cyclist
+"Kingston upon Hull, City of",456,2302,15,19.8,0.65,Cyclist
+Kingston upon Thames,152,868,0,17.5,0.0,Cyclist
+Kirklees,170,700,4,24.3,0.57,Cyclist
+Knowsley,84,348,2,24.1,0.57,Cyclist
+Lambeth,591,3631,7,16.3,0.19,Cyclist
+Lancaster,178,490,5,36.3,1.02,Cyclist
+Leeds,694,2923,18,23.7,0.62,Cyclist
+Leicester,210,1186,6,17.7,0.51,Cyclist
+Lewes,78,225,0,34.7,0.0,Cyclist
+Lewisham,249,1782,5,14.0,0.28,Cyclist
+Lichfield,26,134,1,19.4,0.75,Cyclist
+Lincoln,76,448,2,17.0,0.45,Cyclist
+Liverpool,418,1889,3,22.1,0.16,Cyclist
+London Airport (Heathrow),6,21,0,28.6,0.0,Cyclist
+Luton,89,450,1,19.8,0.22,Cyclist
+Maidstone,76,281,3,27.0,1.07,Cyclist
+Maldon,36,94,1,38.3,1.06,Cyclist
+Malvern Hills,48,154,1,31.2,0.65,Cyclist
+Manchester,383,1828,15,21.0,0.82,Cyclist
+Mansfield,43,217,2,19.8,0.92,Cyclist
+Medway,103,523,2,19.7,0.38,Cyclist
+Melton,18,64,3,28.1,4.69,Cyclist
+Mendip,29,125,0,23.2,0.0,Cyclist
+Merthyr Tydfil,15,54,0,27.8,0.0,Cyclist
+Merton,177,988,2,17.9,0.2,Cyclist
+Mid Devon,22,93,1,23.7,1.08,Cyclist
+Mid Suffolk,46,132,3,34.8,2.27,Cyclist
+Mid Sussex,125,370,3,33.8,0.81,Cyclist
+Middlesbrough,83,432,2,19.2,0.46,Cyclist
+Midlothian,37,105,1,35.2,0.95,Cyclist
+Milton Keynes,87,499,2,17.4,0.4,Cyclist
+Mole Valley,196,575,4,34.1,0.7,Cyclist
+Monmouthshire,49,118,1,41.5,0.85,Cyclist
+Moray,23,56,1,41.1,1.79,Cyclist
+Neath Port Talbot,27,148,4,18.2,2.7,Cyclist
+New Forest,224,609,7,36.8,1.15,Cyclist
+Newark and Sherwood,109,405,5,26.9,1.23,Cyclist
+Newcastle upon Tyne,175,944,3,18.5,0.32,Cyclist
+Newcastle-under-Lyme,21,140,1,15.0,0.71,Cyclist
+Newham,182,1216,2,15.0,0.16,Cyclist
+Newport,75,254,5,29.5,1.97,Cyclist
+North Ayrshire,60,138,5,43.5,3.62,Cyclist
+North Devon,37,182,3,20.3,1.65,Cyclist
+North Dorset,5,27,0,18.5,0.0,Cyclist
+North East Derbyshire,42,145,3,29.0,2.07,Cyclist
+North East Lincolnshire,209,1053,6,19.8,0.57,Cyclist
+North Hertfordshire,73,314,4,23.2,1.27,Cyclist
+North Kesteven,58,242,3,24.0,1.24,Cyclist
+North Lanarkshire,61,202,2,30.2,0.99,Cyclist
+North Lincolnshire,139,523,5,26.6,0.96,Cyclist
+North Norfolk,41,143,1,28.7,0.7,Cyclist
+North Northamptonshire,45,172,2,26.2,1.16,Cyclist
+North Somerset,82,514,3,16.0,0.58,Cyclist
+North Tyneside,106,538,2,19.7,0.37,Cyclist
+North Warwickshire,39,123,4,31.7,3.25,Cyclist
+North West Leicestershire,31,125,3,24.8,2.4,Cyclist
+North Yorkshire,71,237,5,30.0,2.11,Cyclist
+Northampton,82,348,4,23.6,1.15,Cyclist
+Northumberland,164,560,6,29.3,1.07,Cyclist
+Norwich,213,1027,4,20.7,0.39,Cyclist
+Nottingham,300,1474,5,20.4,0.34,Cyclist
+Nuneaton and Bedworth,47,287,2,16.4,0.7,Cyclist
+Oadby and Wigston,23,140,0,16.4,0.0,Cyclist
+Oldham,79,270,5,29.3,1.85,Cyclist
+Orkney Islands,3,14,0,21.4,0.0,Cyclist
+Oxford,271,1562,6,17.3,0.38,Cyclist
+Pembrokeshire,64,164,1,39.0,0.61,Cyclist
+Pendle,57,142,6,40.1,4.23,Cyclist
+Perth and Kinross,68,137,3,49.6,2.19,Cyclist
+Peterborough,147,762,4,19.3,0.52,Cyclist
+Plymouth,165,687,3,24.0,0.44,Cyclist
+Poole,83,336,0,24.7,0.0,Cyclist
+Portsmouth,373,1640,4,22.7,0.24,Cyclist
+Powys,76,180,2,42.2,1.11,Cyclist
+Preston,163,555,3,29.4,0.54,Cyclist
+Purbeck,33,72,2,45.8,2.78,Cyclist
+Reading,118,809,3,14.6,0.37,Cyclist
+Redbridge,102,673,2,15.2,0.3,Cyclist
+Redcar and Cleveland,62,226,2,27.4,0.88,Cyclist
+Redditch,35,122,0,28.7,0.0,Cyclist
+Reigate and Banstead,121,425,3,28.5,0.71,Cyclist
+Renfrewshire,49,178,1,27.5,0.56,Cyclist
+Rhondda Cynon Taf,48,199,1,24.1,0.5,Cyclist
+Ribble Valley,70,155,2,45.2,1.29,Cyclist
+Richmond upon Thames,393,1607,4,24.5,0.25,Cyclist
+Richmondshire,46,108,3,42.6,2.78,Cyclist
+Rochdale,62,225,3,27.6,1.33,Cyclist
+Rochford,54,157,3,34.4,1.91,Cyclist
+Rossendale,36,151,1,23.8,0.66,Cyclist
+Rother,76,183,7,41.5,3.83,Cyclist
+Rotherham,106,394,3,26.9,0.76,Cyclist
+Rugby ,79,315,4,25.1,1.27,Cyclist
+Runnymede,133,422,2,31.5,0.47,Cyclist
+Rushcliffe,88,299,3,29.4,1.0,Cyclist
+Rushmoor,64,225,0,28.4,0.0,Cyclist
+Rutland,12,50,1,24.0,2.0,Cyclist
+Ryedale,32,108,2,29.6,1.85,Cyclist
+Salford,147,577,4,25.5,0.69,Cyclist
+Sandwell,125,508,2,24.6,0.39,Cyclist
+Scarborough,38,216,1,17.6,0.46,Cyclist
+Scottish Borders,35,97,1,36.1,1.03,Cyclist
+Sedgemoor,40,290,5,13.8,1.72,Cyclist
+Sefton,201,914,6,22.0,0.66,Cyclist
+Selby,41,216,3,19.0,1.39,Cyclist
+Sevenoaks,100,349,4,28.7,1.15,Cyclist
+Sheffield,424,1454,5,29.2,0.34,Cyclist
+Shepway,58,232,3,25.0,1.29,Cyclist
+Shetland Islands,5,8,0,62.5,0.0,Cyclist
+Shropshire,165,608,6,27.1,0.99,Cyclist
+Slough,67,530,1,12.6,0.19,Cyclist
+Solihull,95,398,6,23.9,1.51,Cyclist
+Somerset,21,152,1,13.8,0.66,Cyclist
+South Ayrshire,34,108,0,31.5,0.0,Cyclist
+South Bucks,37,113,1,32.7,0.88,Cyclist
+South Cambridgeshire,156,489,7,31.9,1.43,Cyclist
+South Derbyshire,51,213,3,23.9,1.41,Cyclist
+South Gloucestershire,91,712,3,12.8,0.42,Cyclist
+South Hams,43,129,3,33.3,2.33,Cyclist
+South Holland,47,257,4,18.3,1.56,Cyclist
+South Kesteven,70,308,5,22.7,1.62,Cyclist
+South Lakeland,90,268,4,33.6,1.49,Cyclist
+South Lanarkshire,80,219,2,36.5,0.91,Cyclist
+South Norfolk,82,268,6,30.6,2.24,Cyclist
+South Northamptonshire,24,79,1,30.4,1.27,Cyclist
+South Oxfordshire,92,356,8,25.8,2.25,Cyclist
+South Ribble,113,360,1,31.4,0.28,Cyclist
+South Somerset,30,186,0,16.1,0.0,Cyclist
+South Staffordshire,26,128,4,20.3,3.12,Cyclist
+South Tyneside,72,349,1,20.6,0.29,Cyclist
+Southampton ,285,1176,5,24.2,0.43,Cyclist
+Southend-on-Sea,127,484,2,26.2,0.41,Cyclist
+Southwark,613,3740,6,16.4,0.16,Cyclist
+Spelthorne,130,526,1,24.7,0.19,Cyclist
+St Albans,88,377,2,23.3,0.53,Cyclist
+St Edmundsbury,22,138,1,15.9,0.72,Cyclist
+St. Helens,113,366,4,30.9,1.09,Cyclist
+Stafford,42,222,2,18.9,0.9,Cyclist
+Staffordshire Moorlands,28,101,0,27.7,0.0,Cyclist
+Stevenage,25,139,1,18.0,0.72,Cyclist
+Stirling,49,145,4,33.8,2.76,Cyclist
+Stockport,115,486,0,23.7,0.0,Cyclist
+Stockton-on-Tees,95,427,2,22.2,0.47,Cyclist
+Stoke-on-Trent,69,386,3,17.9,0.78,Cyclist
+Stratford-on-Avon,84,296,6,28.4,2.03,Cyclist
+Stroud,79,228,4,34.6,1.75,Cyclist
+Suffolk Coastal,30,185,1,16.2,0.54,Cyclist
+Sunderland,132,476,5,27.7,1.05,Cyclist
+Surrey Heath,65,232,0,28.0,0.0,Cyclist
+Sutton,73,447,1,16.3,0.22,Cyclist
+Swale,86,346,4,24.9,1.16,Cyclist
+Swansea,52,302,1,17.2,0.33,Cyclist
+Swindon,101,692,1,14.6,0.14,Cyclist
+Tameside,66,287,2,23.0,0.7,Cyclist
+Tamworth,18,95,3,18.9,3.16,Cyclist
+Tandridge,105,261,2,40.2,0.77,Cyclist
+Taunton Deane,22,198,0,11.1,0.0,Cyclist
+Teignbridge,74,287,2,25.8,0.7,Cyclist
+Telford and Wrekin,67,291,3,23.0,1.03,Cyclist
+Tendring,86,273,5,31.5,1.83,Cyclist
+Test Valley,134,331,4,40.5,1.21,Cyclist
+Tewkesbury,69,215,4,32.1,1.86,Cyclist
+Thanet,108,463,4,23.3,0.86,Cyclist
+Three Rivers,34,145,0,23.4,0.0,Cyclist
+Thurrock,66,242,1,27.3,0.41,Cyclist
+Tonbridge and Malling,70,287,1,24.4,0.35,Cyclist
+Torbay,61,253,0,24.1,0.0,Cyclist
+Torfaen,21,69,1,30.4,1.45,Cyclist
+Torridge,35,78,1,44.9,1.28,Cyclist
+Tower Hamlets,431,3185,6,13.5,0.19,Cyclist
+Trafford,131,580,6,22.6,1.03,Cyclist
+Tunbridge Wells,77,243,1,31.7,0.41,Cyclist
+Uttlesford,54,134,1,40.3,0.75,Cyclist
+Vale of Glamorgan,37,159,5,23.3,3.14,Cyclist
+Vale of White Horse,99,366,6,27.0,1.64,Cyclist
+Wakefield,212,731,8,29.0,1.09,Cyclist
+Walsall,100,473,4,21.1,0.85,Cyclist
+Waltham Forest,171,1350,0,12.7,0.0,Cyclist
+Wandsworth,550,3284,5,16.7,0.15,Cyclist
+Warrington,139,830,2,16.7,0.24,Cyclist
+Warwick,105,485,4,21.6,0.82,Cyclist
+Watford,50,313,1,16.0,0.32,Cyclist
+Waveney,57,243,1,23.5,0.41,Cyclist
+Waverley,102,325,3,31.4,0.92,Cyclist
+Wealden,118,323,7,36.5,2.17,Cyclist
+Wellingborough,34,118,3,28.8,2.54,Cyclist
+Welwyn Hatfield,74,313,4,23.6,1.28,Cyclist
+West Berkshire,86,339,3,25.4,0.88,Cyclist
+West Devon,37,82,2,45.1,2.44,Cyclist
+West Dorset,35,108,4,32.4,3.7,Cyclist
+West Dunbartonshire,25,58,3,43.1,5.17,Cyclist
+West Lancashire,107,285,4,37.5,1.4,Cyclist
+West Lindsey,52,168,5,31.0,2.98,Cyclist
+West Lothian,59,188,2,31.4,1.06,Cyclist
+West Northamptonshire,73,292,2,25.0,0.68,Cyclist
+West Oxfordshire,67,238,6,28.2,2.52,Cyclist
+West Somerset,5,30,0,16.7,0.0,Cyclist
+West Suffolk,37,118,1,31.4,0.85,Cyclist
+Westminster,786,4381,8,17.9,0.18,Cyclist
+Westmorland and Furness,29,59,3,49.2,5.08,Cyclist
+Weymouth and Portland,15,81,1,18.5,1.23,Cyclist
+Wigan,107,397,1,27.0,0.25,Cyclist
+Wiltshire,239,1079,22,22.2,2.04,Cyclist
+Winchester,142,373,5,38.1,1.34,Cyclist
+Windsor and Maidenhead,95,502,2,18.9,0.4,Cyclist
+Wirral,231,843,5,27.4,0.59,Cyclist
+Woking,101,498,3,20.3,0.6,Cyclist
+Wokingham,77,428,2,18.0,0.47,Cyclist
+Wolverhampton,104,590,1,17.6,0.17,Cyclist
+Worcester,53,261,1,20.3,0.38,Cyclist
+Worthing,146,634,0,23.0,0.0,Cyclist
+Wrexham,83,271,3,30.6,1.11,Cyclist
+Wychavon,71,251,6,28.3,2.39,Cyclist
+Wycombe,57,183,2,31.1,1.09,Cyclist
+Wyre,135,355,1,38.0,0.28,Cyclist
+Wyre Forest,57,201,0,28.4,0.0,Cyclist
+York,175,1529,5,11.4,0.33,Cyclist
+Aberdeen City,113,216,6,52.3,2.78,Motorcyclist
+Aberdeenshire,245,338,27,72.5,7.99,Motorcyclist
+Adur,108,275,1,39.3,0.36,Motorcyclist
+Allerdale,90,182,6,49.5,3.3,Motorcyclist
+Amber Valley,142,337,12,42.1,3.56,Motorcyclist
+Angus,100,144,12,69.4,8.33,Motorcyclist
+Argyll and Bute,196,270,32,72.6,11.85,Motorcyclist
+Arun,180,467,15,38.5,3.21,Motorcyclist
+Ashfield,135,355,8,38.0,2.25,Motorcyclist
+Ashford,172,422,18,40.8,4.27,Motorcyclist
+Aylesbury Vale,98,232,12,42.2,5.17,Motorcyclist
+Babergh,115,258,10,44.6,3.88,Motorcyclist
+Barking and Dagenham,193,820,16,23.5,1.95,Motorcyclist
+Barnet,373,2329,14,16.0,0.6,Motorcyclist
+Barnsley,270,576,18,46.9,3.12,Motorcyclist
+Barrow-in-Furness,41,130,2,31.5,1.54,Motorcyclist
+Basildon,183,449,6,40.8,1.34,Motorcyclist
+Basingstoke and Deane,188,452,12,41.6,2.65,Motorcyclist
+Bassetlaw,168,351,11,47.9,3.13,Motorcyclist
+Bath and North East Somerset,90,344,11,26.2,3.2,Motorcyclist
+Bedford,155,466,6,33.3,1.29,Motorcyclist
+Bexley,191,820,3,23.3,0.37,Motorcyclist
+Birmingham,718,1959,42,36.7,2.14,Motorcyclist
+Blaby,69,182,6,37.9,3.3,Motorcyclist
+Blackburn with Darwen,139,353,6,39.4,1.7,Motorcyclist
+Blackpool,155,417,9,37.2,2.16,Motorcyclist
+Blaenau Gwent,35,70,2,50.0,2.86,Motorcyclist
+Bolsover,99,202,8,49.0,3.96,Motorcyclist
+Bolton,182,405,17,44.9,4.2,Motorcyclist
+Boston,79,235,14,33.6,5.96,Motorcyclist
+Bournemouth,68,317,3,21.5,0.95,Motorcyclist
+"Bournemouth, Christchurch and Poole",229,859,14,26.7,1.63,Motorcyclist
+Bracknell Forest,80,249,7,32.1,2.81,Motorcyclist
+Bradford,343,876,22,39.2,2.51,Motorcyclist
+Braintree,201,417,15,48.2,3.6,Motorcyclist
+Breckland,196,384,22,51.0,5.73,Motorcyclist
+Brent,406,2960,15,13.7,0.51,Motorcyclist
+Brentwood,74,176,2,42.0,1.14,Motorcyclist
+Bridgend,54,179,3,30.2,1.68,Motorcyclist
+Brighton and Hove,382,1284,6,29.8,0.47,Motorcyclist
+"Bristol, City of",270,1541,18,17.5,1.17,Motorcyclist
+Broadland,152,363,8,41.9,2.2,Motorcyclist
+Bromley,283,1358,14,20.8,1.03,Motorcyclist
+Bromsgrove,84,183,6,45.9,3.28,Motorcyclist
+Broxbourne,67,234,2,28.6,0.85,Motorcyclist
+Broxtowe,106,274,9,38.7,3.28,Motorcyclist
+Buckinghamshire,180,471,19,38.2,4.03,Motorcyclist
+Burnley,100,210,8,47.6,3.81,Motorcyclist
+Bury,79,191,4,41.4,2.09,Motorcyclist
+Caerphilly,105,228,9,46.1,3.95,Motorcyclist
+Calderdale,164,395,7,41.5,1.77,Motorcyclist
+Cambridge,98,331,1,29.6,0.3,Motorcyclist
+Camden,275,2224,8,12.4,0.36,Motorcyclist
+Cannock Chase,71,213,7,33.3,3.29,Motorcyclist
+Canterbury,154,504,7,30.6,1.39,Motorcyclist
+Cardiff,139,488,12,28.5,2.46,Motorcyclist
+Carlisle,52,181,4,28.7,2.21,Motorcyclist
+Carmarthenshire,253,512,20,49.4,3.91,Motorcyclist
+Castle Point,82,202,7,40.6,3.47,Motorcyclist
+Central Bedfordshire,310,723,22,42.9,3.04,Motorcyclist
+Ceredigion,114,209,12,54.5,5.74,Motorcyclist
+Charnwood,113,290,9,39.0,3.1,Motorcyclist
+Chelmsford,231,553,8,41.8,1.45,Motorcyclist
+Cheltenham,78,190,5,41.1,2.63,Motorcyclist
+Cherwell,180,399,9,45.1,2.26,Motorcyclist
+Cheshire East,397,1005,34,39.5,3.38,Motorcyclist
+Cheshire West and Chester,384,986,29,38.9,2.94,Motorcyclist
+Chesterfield,96,258,4,37.2,1.55,Motorcyclist
+Chichester,277,568,25,48.8,4.4,Motorcyclist
+Chiltern,46,97,4,47.4,4.12,Motorcyclist
+Chorley,137,315,8,43.5,2.54,Motorcyclist
+Christchurch,17,64,0,26.6,0.0,Motorcyclist
+City of Edinburgh,243,711,5,34.2,0.7,Motorcyclist
+City of London,100,498,2,20.1,0.4,Motorcyclist
+Clackmannanshire,21,45,3,46.7,6.67,Motorcyclist
+Colchester,225,645,9,34.9,1.4,Motorcyclist
+Comhairle nan Eilean Siar,16,36,1,44.4,2.78,Motorcyclist
+Conwy,191,348,24,54.9,6.9,Motorcyclist
+Copeland,70,156,7,44.9,4.49,Motorcyclist
+Corby,26,56,1,46.4,1.79,Motorcyclist
+Cornwall,812,1897,55,42.8,2.9,Motorcyclist
+Cotswold,164,288,22,56.9,7.64,Motorcyclist
+County Durham,448,809,52,55.4,6.43,Motorcyclist
+Coventry,192,486,16,39.5,3.29,Motorcyclist
+Craven,157,286,27,54.9,9.44,Motorcyclist
+Crawley,126,359,3,35.1,0.84,Motorcyclist
+Croydon,441,2563,17,17.2,0.66,Motorcyclist
+Cumberland,45,101,4,44.6,3.96,Motorcyclist
+Dacorum,114,282,4,40.4,1.42,Motorcyclist
+Darlington,71,140,2,50.7,1.43,Motorcyclist
+Dartford,171,545,10,31.4,1.83,Motorcyclist
+Daventry,79,137,15,57.7,10.95,Motorcyclist
+Denbighshire,181,327,14,55.4,4.28,Motorcyclist
+Derby,204,621,11,32.9,1.77,Motorcyclist
+Derbyshire Dales,228,409,23,55.7,5.62,Motorcyclist
+Doncaster,302,637,22,47.4,3.45,Motorcyclist
+Dorset (excluding Christchurch),332,710,21,46.8,2.96,Motorcyclist
+Dover,141,353,9,39.9,2.55,Motorcyclist
+Dudley,211,508,11,41.5,2.17,Motorcyclist
+Dumfries and Galloway,176,283,20,62.2,7.07,Motorcyclist
+Dundee City,86,151,1,57.0,0.66,Motorcyclist
+Ealing,359,2474,7,14.5,0.28,Motorcyclist
+East Ayrshire,65,108,14,60.2,12.96,Motorcyclist
+East Cambridgeshire,112,215,18,52.1,8.37,Motorcyclist
+East Devon,161,377,7,42.7,1.86,Motorcyclist
+East Dorset,71,155,3,45.8,1.94,Motorcyclist
+East Dunbartonshire,27,44,2,61.4,4.55,Motorcyclist
+East Hampshire,210,383,9,54.8,2.35,Motorcyclist
+East Hertfordshire,115,270,8,42.6,2.96,Motorcyclist
+East Lindsey,257,604,40,42.5,6.62,Motorcyclist
+East Lothian,77,131,4,58.8,3.05,Motorcyclist
+East Northamptonshire,70,120,3,58.3,2.5,Motorcyclist
+East Renfrewshire,24,52,0,46.2,0.0,Motorcyclist
+East Riding of Yorkshire,491,1057,56,46.5,5.3,Motorcyclist
+East Staffordshire,89,271,11,32.8,4.06,Motorcyclist
+East Suffolk,123,246,7,50.0,2.85,Motorcyclist
+Eastbourne,111,321,7,34.6,2.18,Motorcyclist
+Eastleigh,176,465,2,37.8,0.43,Motorcyclist
+Eden,92,159,10,57.9,6.29,Motorcyclist
+Elmbridge,188,594,3,31.6,0.51,Motorcyclist
+Enfield,274,1803,14,15.2,0.78,Motorcyclist
+Epping Forest,259,557,22,46.5,3.95,Motorcyclist
+Epsom and Ewell,92,306,4,30.1,1.31,Motorcyclist
+Erewash,96,256,5,37.5,1.95,Motorcyclist
+Exeter,109,373,5,29.2,1.34,Motorcyclist
+Falkirk,67,150,5,44.7,3.33,Motorcyclist
+Fareham,195,495,5,39.4,1.01,Motorcyclist
+Fenland,104,238,11,43.7,4.62,Motorcyclist
+Fife,207,372,18,55.6,4.84,Motorcyclist
+Flintshire,155,336,15,46.1,4.46,Motorcyclist
+Forest Heath,38,103,5,36.9,4.85,Motorcyclist
+Forest of Dean,106,179,15,59.2,8.38,Motorcyclist
+Fylde,109,237,4,46.0,1.69,Motorcyclist
+Gateshead,129,332,9,38.9,2.71,Motorcyclist
+Gedling,85,210,7,40.5,3.33,Motorcyclist
+Glasgow City,237,532,14,44.5,2.63,Motorcyclist
+Gloucester,113,278,1,40.6,0.36,Motorcyclist
+Gosport,113,306,2,36.9,0.65,Motorcyclist
+Gravesham,121,378,3,32.0,0.79,Motorcyclist
+Great Yarmouth,114,309,3,36.9,0.97,Motorcyclist
+Greenwich,275,1428,13,19.3,0.91,Motorcyclist
+Guildford,287,770,16,37.3,2.08,Motorcyclist
+Gwynedd,207,346,21,59.8,6.07,Motorcyclist
+Hackney,322,2083,13,15.5,0.62,Motorcyclist
+Halton,101,286,7,35.3,2.45,Motorcyclist
+Hambleton,118,237,12,49.8,5.06,Motorcyclist
+Hammersmith and Fulham,321,2164,4,14.8,0.18,Motorcyclist
+Harborough,73,158,14,46.2,8.86,Motorcyclist
+Haringey,280,2675,7,10.5,0.26,Motorcyclist
+Harlow,88,218,5,40.4,2.29,Motorcyclist
+Harrogate,198,440,15,45.0,3.41,Motorcyclist
+Harrow,147,846,2,17.4,0.24,Motorcyclist
+Hart,126,238,7,52.9,2.94,Motorcyclist
+Hartlepool,58,101,2,57.4,1.98,Motorcyclist
+Hastings,170,446,2,38.1,0.45,Motorcyclist
+Havant,152,422,2,36.0,0.47,Motorcyclist
+Havering,214,820,9,26.1,1.1,Motorcyclist
+"Herefordshire, County of ",227,483,23,47.0,4.76,Motorcyclist
+Hertsmere,100,365,9,27.4,2.47,Motorcyclist
+High Peak,191,351,21,54.4,5.98,Motorcyclist
+Highland,339,619,37,54.8,5.98,Motorcyclist
+Hillingdon,245,1068,14,22.9,1.31,Motorcyclist
+Hinckley and Bosworth,84,184,10,45.7,5.43,Motorcyclist
+Horsham,250,491,11,50.9,2.24,Motorcyclist
+Hounslow,307,1722,13,17.8,0.75,Motorcyclist
+Huntingdonshire,179,427,7,41.9,1.64,Motorcyclist
+Hyndburn,71,179,2,39.7,1.12,Motorcyclist
+Inverclyde,31,62,1,50.0,1.61,Motorcyclist
+Ipswich,123,448,3,27.5,0.67,Motorcyclist
+Isle of Anglesey,52,89,4,58.4,4.49,Motorcyclist
+Isle of Wight,279,664,16,42.0,2.41,Motorcyclist
+Isles of Scilly,3,3,0,100.0,0.0,Motorcyclist
+Islington,275,2020,10,13.6,0.5,Motorcyclist
+Kensington and Chelsea,310,2329,9,13.3,0.39,Motorcyclist
+Kettering,55,118,3,46.6,2.54,Motorcyclist
+King's Lynn and West Norfolk,222,450,21,49.3,4.67,Motorcyclist
+"Kingston upon Hull, City of",359,1082,17,33.2,1.57,Motorcyclist
+Kingston upon Thames,138,789,4,17.5,0.51,Motorcyclist
+Kirklees,352,895,16,39.3,1.79,Motorcyclist
+Knowsley,114,227,5,50.2,2.2,Motorcyclist
+Lambeth,596,3552,17,16.8,0.48,Motorcyclist
+Lancaster,239,448,15,53.3,3.35,Motorcyclist
+Leeds,722,1646,33,43.9,2.0,Motorcyclist
+Leicester,190,586,9,32.4,1.54,Motorcyclist
+Lewes,188,390,8,48.2,2.05,Motorcyclist
+Lewisham,330,2107,8,15.7,0.38,Motorcyclist
+Lichfield,73,223,7,32.7,3.14,Motorcyclist
+Lincoln,94,391,5,24.0,1.28,Motorcyclist
+Liverpool,348,870,14,40.0,1.61,Motorcyclist
+London Airport (Heathrow),6,33,0,18.2,0.0,Motorcyclist
+Luton,120,373,6,32.2,1.61,Motorcyclist
+Maidstone,226,611,11,37.0,1.8,Motorcyclist
+Maldon,102,176,5,58.0,2.84,Motorcyclist
+Malvern Hills,77,180,8,42.8,4.44,Motorcyclist
+Manchester,301,688,18,43.8,2.62,Motorcyclist
+Mansfield,105,285,10,36.8,3.51,Motorcyclist
+Medway,295,871,13,33.9,1.49,Motorcyclist
+Melton,71,121,17,58.7,14.05,Motorcyclist
+Mendip,72,193,14,37.3,7.25,Motorcyclist
+Merthyr Tydfil,28,76,6,36.8,7.89,Motorcyclist
+Merton,229,1277,8,17.9,0.63,Motorcyclist
+Mid Devon,68,175,6,38.9,3.43,Motorcyclist
+Mid Suffolk,105,238,8,44.1,3.36,Motorcyclist
+Mid Sussex,197,459,9,42.9,1.96,Motorcyclist
+Middlesbrough,76,178,2,42.7,1.12,Motorcyclist
+Midlothian,91,169,6,53.8,3.55,Motorcyclist
+Milton Keynes,207,594,9,34.8,1.52,Motorcyclist
+Mole Valley,183,452,7,40.5,1.55,Motorcyclist
+Monmouthshire,111,222,9,50.0,4.05,Motorcyclist
+Moray,83,114,15,72.8,13.16,Motorcyclist
+Neath Port Talbot,86,251,14,34.3,5.58,Motorcyclist
+New Forest,274,591,11,46.4,1.86,Motorcyclist
+Newark and Sherwood,165,394,2,41.9,0.51,Motorcyclist
+Newcastle upon Tyne,171,444,12,38.5,2.7,Motorcyclist
+Newcastle-under-Lyme,70,215,13,32.6,6.05,Motorcyclist
+Newham,293,1650,8,17.8,0.48,Motorcyclist
+Newport,91,265,10,34.3,3.77,Motorcyclist
+North Ayrshire,70,122,5,57.4,4.1,Motorcyclist
+North Devon,157,328,10,47.9,3.05,Motorcyclist
+North Dorset,44,92,7,47.8,7.61,Motorcyclist
+North East Derbyshire,112,243,14,46.1,5.76,Motorcyclist
+North East Lincolnshire,205,491,1,41.8,0.2,Motorcyclist
+North Hertfordshire,118,294,16,40.1,5.44,Motorcyclist
+North Kesteven,136,410,13,33.2,3.17,Motorcyclist
+North Lanarkshire,94,192,7,49.0,3.65,Motorcyclist
+North Lincolnshire,233,508,17,45.9,3.35,Motorcyclist
+North Norfolk,129,282,6,45.7,2.13,Motorcyclist
+North Northamptonshire,125,251,13,49.8,5.18,Motorcyclist
+North Somerset,132,452,12,29.2,2.65,Motorcyclist
+North Tyneside,109,297,6,36.7,2.02,Motorcyclist
+North Warwickshire,156,296,13,52.7,4.39,Motorcyclist
+North West Leicestershire,140,290,13,48.3,4.48,Motorcyclist
+North Yorkshire,194,412,20,47.1,4.85,Motorcyclist
+Northampton,104,271,9,38.4,3.32,Motorcyclist
+Northumberland,349,625,28,55.8,4.48,Motorcyclist
+Norwich,178,565,1,31.5,0.18,Motorcyclist
+Nottingham,272,954,12,28.5,1.26,Motorcyclist
+Nuneaton and Bedworth,143,283,11,50.5,3.89,Motorcyclist
+Oadby and Wigston,13,56,0,23.2,0.0,Motorcyclist
+Oldham,110,234,8,47.0,3.42,Motorcyclist
+Orkney Islands,8,14,3,57.1,21.43,Motorcyclist
+Oxford,112,410,2,27.3,0.49,Motorcyclist
+Pembrokeshire,165,344,13,48.0,3.78,Motorcyclist
+Pendle,65,132,2,49.2,1.52,Motorcyclist
+Perth and Kinross,161,243,21,66.3,8.64,Motorcyclist
+Peterborough,171,514,8,33.3,1.56,Motorcyclist
+Plymouth,318,1117,10,28.5,0.9,Motorcyclist
+Poole,105,332,4,31.6,1.2,Motorcyclist
+Portsmouth,296,827,15,35.8,1.81,Motorcyclist
+Powys,409,683,45,59.9,6.59,Motorcyclist
+Preston,146,360,4,40.6,1.11,Motorcyclist
+Purbeck,50,109,1,45.9,0.92,Motorcyclist
+Reading,113,492,3,23.0,0.61,Motorcyclist
+Redbridge,187,1055,12,17.7,1.14,Motorcyclist
+Redcar and Cleveland,107,168,9,63.7,5.36,Motorcyclist
+Redditch,59,118,5,50.0,4.24,Motorcyclist
+Reigate and Banstead,191,577,6,33.1,1.04,Motorcyclist
+Renfrewshire,80,139,3,57.6,2.16,Motorcyclist
+Rhondda Cynon Taf,90,325,9,27.7,2.77,Motorcyclist
+Ribble Valley,142,228,8,62.3,3.51,Motorcyclist
+Richmond upon Thames,168,936,3,17.9,0.32,Motorcyclist
+Richmondshire,100,192,6,52.1,3.12,Motorcyclist
+Rochdale,129,233,4,55.4,1.72,Motorcyclist
+Rochford,100,233,1,42.9,0.43,Motorcyclist
+Rossendale,54,130,4,41.5,3.08,Motorcyclist
+Rother,290,514,22,56.4,4.28,Motorcyclist
+Rotherham,232,524,24,44.3,4.58,Motorcyclist
+Rugby ,158,310,14,51.0,4.52,Motorcyclist
+Runnymede,142,407,6,34.9,1.47,Motorcyclist
+Rushcliffe,115,258,5,44.6,1.94,Motorcyclist
+Rushmoor,103,283,4,36.4,1.41,Motorcyclist
+Rutland,42,85,3,49.4,3.53,Motorcyclist
+Ryedale,128,245,13,52.2,5.31,Motorcyclist
+Salford,170,359,9,47.4,2.51,Motorcyclist
+Sandwell,215,550,11,39.1,2.0,Motorcyclist
+Scarborough,114,339,10,33.6,2.95,Motorcyclist
+Scottish Borders,188,259,30,72.6,11.58,Motorcyclist
+Sedgemoor,78,252,13,31.0,5.16,Motorcyclist
+Sefton,188,427,5,44.0,1.17,Motorcyclist
+Selby,120,297,14,40.4,4.71,Motorcyclist
+Sevenoaks,161,381,7,42.3,1.84,Motorcyclist
+Sheffield,381,906,27,42.1,2.98,Motorcyclist
+Shepway,164,427,16,38.4,3.75,Motorcyclist
+Shetland Islands,9,19,1,47.4,5.26,Motorcyclist
+Shropshire,387,748,41,51.7,5.48,Motorcyclist
+Slough,108,382,4,28.3,1.05,Motorcyclist
+Solihull,95,222,10,42.8,4.5,Motorcyclist
+Somerset,102,243,20,42.0,8.23,Motorcyclist
+South Ayrshire,88,149,4,59.1,2.68,Motorcyclist
+South Bucks,68,168,5,40.5,2.98,Motorcyclist
+South Cambridgeshire,215,464,15,46.3,3.23,Motorcyclist
+South Derbyshire,129,278,7,46.4,2.52,Motorcyclist
+South Gloucestershire,143,559,9,25.6,1.61,Motorcyclist
+South Hams,152,339,6,44.8,1.77,Motorcyclist
+South Holland,88,293,9,30.0,3.07,Motorcyclist
+South Kesteven,147,419,28,35.1,6.68,Motorcyclist
+South Lakeland,165,327,14,50.5,4.28,Motorcyclist
+South Lanarkshire,135,268,23,50.4,8.58,Motorcyclist
+South Norfolk,194,397,11,48.9,2.77,Motorcyclist
+South Northamptonshire,88,173,8,50.9,4.62,Motorcyclist
+South Oxfordshire,162,337,14,48.1,4.15,Motorcyclist
+South Ribble,128,295,8,43.4,2.71,Motorcyclist
+South Somerset,90,298,10,30.2,3.36,Motorcyclist
+South Staffordshire,75,226,12,33.2,5.31,Motorcyclist
+South Tyneside,97,237,5,40.9,2.11,Motorcyclist
+Southampton ,339,1012,14,33.5,1.38,Motorcyclist
+Southend-on-Sea,192,483,4,39.8,0.83,Motorcyclist
+Southwark,424,2574,13,16.5,0.51,Motorcyclist
+Spelthorne,138,467,3,29.6,0.64,Motorcyclist
+St Albans,129,369,6,35.0,1.63,Motorcyclist
+St Edmundsbury,60,137,7,43.8,5.11,Motorcyclist
+St. Helens,129,331,5,39.0,1.51,Motorcyclist
+Stafford,82,241,7,34.0,2.9,Motorcyclist
+Staffordshire Moorlands,72,166,6,43.4,3.61,Motorcyclist
+Stevenage,48,168,1,28.6,0.6,Motorcyclist
+Stirling,139,201,18,69.2,8.96,Motorcyclist
+Stockport,126,282,9,44.7,3.19,Motorcyclist
+Stockton-on-Tees,131,227,10,57.7,4.41,Motorcyclist
+Stoke-on-Trent,127,527,10,24.1,1.9,Motorcyclist
+Stratford-on-Avon,199,383,23,52.0,6.01,Motorcyclist
+Stroud,126,217,7,58.1,3.23,Motorcyclist
+Suffolk Coastal,66,223,9,29.6,4.04,Motorcyclist
+Sunderland,169,386,9,43.8,2.33,Motorcyclist
+Surrey Heath,130,359,8,36.2,2.23,Motorcyclist
+Sutton,157,833,7,18.8,0.84,Motorcyclist
+Swale,196,503,16,39.0,3.18,Motorcyclist
+Swansea,137,466,7,29.4,1.5,Motorcyclist
+Swindon,192,669,16,28.7,2.39,Motorcyclist
+Tameside,153,298,9,51.3,3.02,Motorcyclist
+Tamworth,40,104,5,38.5,4.81,Motorcyclist
+Tandridge,139,348,9,39.9,2.59,Motorcyclist
+Taunton Deane,35,118,3,29.7,2.54,Motorcyclist
+Teignbridge,211,456,12,46.3,2.63,Motorcyclist
+Telford and Wrekin,116,270,6,43.0,2.22,Motorcyclist
+Tendring,196,430,15,45.6,3.49,Motorcyclist
+Test Valley,184,375,12,49.1,3.2,Motorcyclist
+Tewkesbury,118,252,11,46.8,4.37,Motorcyclist
+Thanet,203,614,11,33.1,1.79,Motorcyclist
+Three Rivers,77,211,1,36.5,0.47,Motorcyclist
+Thurrock,209,487,12,42.9,2.46,Motorcyclist
+Tonbridge and Malling,181,491,13,36.9,2.65,Motorcyclist
+Torbay,152,456,7,33.3,1.54,Motorcyclist
+Torfaen,49,122,3,40.2,2.46,Motorcyclist
+Torridge,68,159,5,42.8,3.14,Motorcyclist
+Tower Hamlets,436,2818,13,15.5,0.46,Motorcyclist
+Trafford,94,202,12,46.5,5.94,Motorcyclist
+Tunbridge Wells,133,359,8,37.0,2.23,Motorcyclist
+Uttlesford,122,223,5,54.7,2.24,Motorcyclist
+Vale of Glamorgan,63,220,11,28.6,5.0,Motorcyclist
+Vale of White Horse,138,338,13,40.8,3.85,Motorcyclist
+Wakefield,378,864,22,43.8,2.55,Motorcyclist
+Walsall,173,445,7,38.9,1.57,Motorcyclist
+Waltham Forest,185,1209,11,15.3,0.91,Motorcyclist
+Wandsworth,491,3396,14,14.5,0.41,Motorcyclist
+Warrington,184,563,11,32.7,1.95,Motorcyclist
+Warwick,120,290,6,41.4,2.07,Motorcyclist
+Watford,82,311,0,26.4,0.0,Motorcyclist
+Waveney,68,201,3,33.8,1.49,Motorcyclist
+Waverley,136,362,11,37.6,3.04,Motorcyclist
+Wealden,322,669,23,48.1,3.44,Motorcyclist
+Wellingborough,46,118,4,39.0,3.39,Motorcyclist
+Welwyn Hatfield,105,271,10,38.7,3.69,Motorcyclist
+West Berkshire,140,374,10,37.4,2.67,Motorcyclist
+West Devon,114,220,6,51.8,2.73,Motorcyclist
+West Dorset,75,185,9,40.5,4.86,Motorcyclist
+West Dunbartonshire,41,67,3,61.2,4.48,Motorcyclist
+West Lancashire,159,296,10,53.7,3.38,Motorcyclist
+West Lindsey,180,403,32,44.7,7.94,Motorcyclist
+West Lothian,98,202,8,48.5,3.96,Motorcyclist
+West Northamptonshire,104,266,14,39.1,5.26,Motorcyclist
+West Oxfordshire,131,277,9,47.3,3.25,Motorcyclist
+West Somerset,17,39,2,43.6,5.13,Motorcyclist
+West Suffolk,70,146,3,47.9,2.05,Motorcyclist
+Westminster,533,3655,10,14.6,0.27,Motorcyclist
+Westmorland and Furness,79,125,6,63.2,4.8,Motorcyclist
+Weymouth and Portland,45,116,3,38.8,2.59,Motorcyclist
+Wigan,182,363,19,50.1,5.23,Motorcyclist
+Wiltshire,564,1459,47,38.7,3.22,Motorcyclist
+Winchester,323,640,24,50.5,3.75,Motorcyclist
+Windsor and Maidenhead,135,398,11,33.9,2.76,Motorcyclist
+Wirral,315,666,18,47.3,2.7,Motorcyclist
+Woking,110,391,2,28.1,0.51,Motorcyclist
+Wokingham,108,332,3,32.5,0.9,Motorcyclist
+Wolverhampton,170,426,5,39.9,1.17,Motorcyclist
+Worcester,47,175,2,26.9,1.14,Motorcyclist
+Worthing,119,364,2,32.7,0.55,Motorcyclist
+Wrexham,130,254,5,51.2,1.97,Motorcyclist
+Wychavon,163,317,15,51.4,4.73,Motorcyclist
+Wycombe,67,199,7,33.7,3.52,Motorcyclist
+Wyre,148,330,9,44.8,2.73,Motorcyclist
+Wyre Forest,105,233,10,45.1,4.29,Motorcyclist
+York,137,602,11,22.8,1.83,Motorcyclist

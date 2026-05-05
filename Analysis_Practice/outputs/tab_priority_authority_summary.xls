@@ -1,0 +1,11 @@
+la_name,base_avg_ksi,recent_avg_ksi,pct_change,ols_slope,ci_lower,ci_upper,r_squared,ci_includes_zero,dominant_road_user,dominant_ru_pct,top_speed_zone,top_road_type,urban_pct,rural_pct,peak_hour,group
+Leeds,413.7,642.0,55.2,24.28,2.03,46.53,0.404,False,Car occupant,51.8,30 mph,Single carriageway,76.7,23.3,17:00,worsening
+Bradford,228.7,414.3,81.2,22.42,8.8,36.04,0.606,False,Car occupant,56.6,30 mph,Single carriageway,86.0,14.0,16:00,worsening
+Southwark,114.7,215.3,87.8,14.76,8.64,20.89,0.768,False,Cyclist,39.0,20 mph,Single carriageway,99.7,0.3,15:00,worsening
+Highland,121.7,238.0,95.6,14.57,8.49,20.66,0.765,False,Car occupant,62.2,60 mph,Single carriageway,9.2,90.8,16:00,worsening
+Lambeth,158.3,235.0,48.4,12.63,3.98,21.28,0.548,False,Cyclist,28.7,20 mph,Single carriageway,99.6,0.4,16:00,worsening
+Liverpool,287.3,219.3,-23.7,-12.09,-20.77,-3.41,0.524,False,Pedestrian,36.9,30 mph,Single carriageway,98.8,1.2,15:00,improving
+Wiltshire,324.7,272.0,-16.2,-9.65,-21.41,2.1,0.277,True,Car occupant,57.2,60 mph,Single carriageway,16.1,83.9,15:00,improving
+Cheshire East,231.3,184.7,-20.2,-9.58,-17.87,-1.29,0.432,False,Car occupant,52.7,30 mph,Single carriageway,36.6,63.4,17:00,improving
+Cheshire West and Chester,188.0,140.7,-25.2,-9.23,-16.33,-2.12,0.49,False,Car occupant,50.9,30 mph,Single carriageway,32.5,67.5,16:00,improving
+Milton Keynes,136.3,78.7,-42.3,-9.2,-12.17,-6.23,0.845,False,Car occupant,55.1,60 mph,Single carriageway,44.9,55.1,16:00,improving

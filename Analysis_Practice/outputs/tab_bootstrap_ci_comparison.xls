@@ -1,0 +1,6 @@
+la_name,ols_slope,analytical_ci_lo,analytical_ci_hi,bootstrap_ci_lo,bootstrap_ci_hi,ci_diverges
+Leeds,24.28,2.03,46.53,7.06,41.38,False
+Bradford,22.42,8.8,36.04,7.43,37.25,False
+Southwark,14.76,8.64,20.89,9.32,17.88,False
+Highland,14.57,8.49,20.66,8.72,18.72,False
+Lambeth,12.63,3.98,21.28,3.83,20.42,False
