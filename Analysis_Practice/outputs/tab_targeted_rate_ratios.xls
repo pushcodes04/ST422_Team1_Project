@@ -1,5 +1,0 @@
-Risk Factor,Rate Ratio (95% CI),p-value
-Single Carriageway,"2.02 (1.96, 2.08)",< 0.001
-Car Occupant (<= 20 mph),"0.72 (0.67, 0.79)",< 0.001
-Bus/Coach (>= 50 mph),"4.62 (3.78, 5.65)",< 0.001
-Van/Goods (>= 50 mph),"3.57 (3.20, 3.98)",< 0.001
