@@ -67,4 +67,5 @@ examples/*
 
 test.jsonl
 
-*:Zone.Identifier
+*:Zone.IdentifierFinal_Workflow/Data_Prep/Data/dft-road-casualty-statistics-*.csv
+Final_Workflow/Data_Prep/Data/dft-road-casualty-statistics-*.csv
