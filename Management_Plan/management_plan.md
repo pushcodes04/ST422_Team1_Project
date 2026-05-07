@@ -48,7 +48,7 @@ Internal deadlines are scheduled at least one week before they become critical, 
 | Draft recommendations prepared | Recommendation and supporting rationale drafted. | Ensures the report remains decision-led rather than descriptive. | 16 Mar | ZA | Closed — Week 10 client-facing report notebook completed with findings and recommendations (A027). Evidence: Draft_work/Week10_Road_Safety.ipynb |
 | First full reproducible build | Report renders from repository root without manual edits. | Identifies reproducibility issues while time remains to address them. | 14 Apr | AS | Closed — DataPrep notebook reproduced on clean machine. 31 of 32 checks passed (A032). Evidence: Quality_Assurance/README_DataPrep.md; commit 16084c6 |
 | Peer review completed | Sections reviewed by non-authors and comments addressed. | Improves clarity and reduces avoidable errors. | 14 Apr | AS | Closed — QA notebook and README uploaded (A033, A034). Evidence: Quality_Assurance/; commit 8414b2e |
-| Final submission | Portfolio submitted to Moodle. | Hard deadline. | 27 Apr 1pm | All | Closed |
+| Final submission | Portfolio submitted to Moodle. | Hard deadline. | 27 Apr 1pm | All | Open |
 
 ---
 
