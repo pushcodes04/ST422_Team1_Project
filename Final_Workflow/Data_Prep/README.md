@@ -42,7 +42,8 @@ dft-road-casualty-statistics-vehicle-1979-latest-published-year.csv
 dft-road-casualty-statistics-collision-provisional-2025.csv
 dft-road-casualty-statistics-casualty-provisional-2025.csv
 dft-road-casualty-statistics-vehicle-provisional-2025.csv
-local-authority-ons-district-names.csv
+local-authority-ons-district-names.csv     ← already in repo, do not download
+ons_la_population_2024.csv                 ← already in repo, do not download
 ```
 
 Download the historical and provisional files from:
