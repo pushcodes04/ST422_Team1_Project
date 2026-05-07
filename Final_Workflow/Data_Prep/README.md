@@ -1,6 +1,6 @@
 # ST422 Brief 8 — Data Preparation Pipeline
 
-This notebook (`ST422_DataPrep.ipynb`) loads the raw STATS19 DfT CSVs, filters to a configurable year window, appends the provisional year, cleans coded fields, applies label maps, builds a combined casualties + vehicles + collision-context table, and writes four CSVs to `Cleaned/`.
+This notebook (`data_cleaning.ipynb`) loads the raw STATS19 DfT CSVs, filters to a configurable year window, appends the provisional year, cleans coded fields, applies label maps, builds a combined casualties + vehicles + collision-context table, and writes four CSVs to `Cleaned/`.
 
 ---
 
@@ -9,15 +9,15 @@ This notebook (`ST422_DataPrep.ipynb`) loads the raw STATS19 DfT CSVs, filters t
 Before running, ensure your project is organised as follows:
 
 ```
-ST422/
-├── ST422_DataPrep.ipynb        ← this notebook
-├── requirements.txt            ← Python dependencies
+Final_Workflow/Data_Prep/
+├── data_cleaning.ipynb         ← this notebook
+├── requirements.txt            ← Python dependencies (pandas, numpy)
 ├── README.md                   ← this file
 ├── Data/                       ← place all raw DfT CSVs here (see below)
 └── Cleaned/                    ← output CSVs written here automatically
 ```
 
-> **Note:** Do not commit the `Data/` or `Cleaned/` folders to Git — the raw and cleaned CSVs are too large. Add them to `.gitignore`.
+> **Note:** The `Data/` folder contains only the two lookup CSVs committed to the repo. Raw DfT STATS19 CSVs must be downloaded separately (see below) and are excluded via `.gitignore`. The `Cleaned/` folder is generated on run and is not committed.
 
 ---
 
@@ -25,7 +25,7 @@ ST422/
 
 ### 1. Install dependencies
 
-In your terminal, navigate to the project root and run:
+In your terminal, navigate to `Final_Workflow/Data_Prep/` and run:
 
 ```bash
 pip install -r requirements.txt
@@ -52,14 +52,14 @@ The `local-authority-ons-district-names.csv` lookup file is already included in 
 
 ### 3. Paths
 
-No path editing is required. The notebook automatically detects its location using `os.getcwd()` and builds all paths relative to the project root. As long as your folder structure matches the layout above, it will work on any machine without any changes.
+No path editing is required. The notebook automatically detects its location using `os.getcwd()` and builds all paths relative to the notebook directory. As long as your folder structure matches the layout above, it will work on any machine without any changes.
 
 ---
 
 ## How to run
 
-1. Open Jupyter Notebook and navigate to the project root folder
-2. Open `ST422_DataPrep.ipynb`
+1. Open Jupyter Notebook and navigate to `Final_Workflow/Data_Prep/`
+2. Open `data_cleaning.ipynb`
 3. **Restart the kernel** (Kernel → Restart & Clear Output) to ensure a clean state
 4. Run all cells top to bottom (Cell → Run All)
 
@@ -72,6 +72,8 @@ Written to: .../Cleaned
   vehicles_clean.csv   — x,xxx,xxx rows
   cas_full.csv         — x,xxx,xxx rows
 ```
+
+Once complete, run `Final_Workflow/Data_Analysis/data_analysis.ipynb` next.
 
 ---
 
