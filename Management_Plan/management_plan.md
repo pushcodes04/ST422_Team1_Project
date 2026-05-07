@@ -31,7 +31,7 @@ Each phase concludes with a defined deliverable and clear completion criteria.
 | Analysis | Severity and trend analysis. Hotspot identification. Contributory factor analysis. At least two robustness checks. | Core figures and tables saved to outputs directory. Results notes drafted. | All principal claims supported by a figure or table. | 30 Mar 2026 |
 | Interpretation | Translate findings into decision-relevant insights. Draft limitations and uncertainty framing. Agree recommendations. | Draft findings section with recommendations and rationale. | Recommendations follow directly from evidence. Limitations framed as decision risks. | 6 Apr 2026 |
 | Reporting | Write executive summary, client report, technical report, and traceability table. | Full draft report (Version 1). | Narrative aligns with evidence. Each claim has an anchored figure or table. Traceability table complete. | 13 Apr 2026 |
-| QA and Finalisation | Peer review of claims and figures. Full reproducibility run from a fresh clone. Resolve issues. Prepare submission. | Final report, reproducibility record, QA log. | Fresh run reproduces all outputs. All compliance requirements satisfied. | 20 Apr 2026 |
+| QA and Finalisation | Peer review of claims and figures. Full reproducibility run from a fresh clone. Resolve issues. Prepare submission. | Final report, reproducibility record, QA log. | Fresh run reproduces all outputs. All compliance requirements satisfied. | 05 May 2026 |
 
 ---
 
@@ -48,7 +48,7 @@ Internal deadlines are scheduled at least one week before they become critical, 
 | Draft recommendations prepared | Recommendation and supporting rationale drafted. | Ensures the report remains decision-led rather than descriptive. | 16 Mar | ZA | Closed — Week 10 client-facing report notebook completed with findings and recommendations (A027). Evidence: Draft_work/Week10_Road_Safety.ipynb |
 | First full reproducible build | Report renders from repository root without manual edits. | Identifies reproducibility issues while time remains to address them. | 14 Apr | AS | Closed — DataPrep notebook reproduced on clean machine. 31 of 32 checks passed (A032). Evidence: Quality_Assurance/README_DataPrep.md; commit 16084c6 |
 | Peer review completed | Sections reviewed by non-authors and comments addressed. | Improves clarity and reduces avoidable errors. | 14 Apr | AS | Closed — QA notebook and README uploaded (A033, A034). Evidence: Quality_Assurance/; commit 8414b2e |
-| Final submission | Portfolio submitted to Moodle. | Hard deadline. | 27 Apr 1pm | All | Open |
+| Final submission | Portfolio submitted to Moodle. | Hard deadline. | - | All | Open |
 
 ---
 
