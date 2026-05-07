@@ -83,7 +83,7 @@ This is the single master record of all actions across the entire project. Every
 | A057 | 006     | Update Management Plan: correct delivery approach, close all milestones and risks with evidence, populate reproducibility record, and fill evidence of plan use section | ZA | 2026-05-07 | Closed | Management_Plan/Team1_Management_Plan_ST422.md; commit `2e6ad71` | Management plan reflects actual project delivery. All ZA milestones closed with evidence pointers. |
 | A058 | 006     | Create meeting minutes for 2026-05-05 covering final pipeline ownership, CS/AS integration decision, and repo restructure plan | ZA | 2026-05-07 | Closed | Group_Contact/Meeting_Minutes/minutes_2026-05-05.md | Meeting 006 documented. ZA and PA ownership of final deliverables confirmed. |
 | A059 | 006     | Create root-level requirements.txt covering all dependencies across data_cleaning.ipynb, data_analysis.ipynb, and QA_Data_Load.ipynb | ZA | 2026-05-07 | Closed | requirements.txt | Single install covers full pipeline: pandas, numpy, matplotlib, scipy, statsmodels, geopandas. |
-
+| A060 | 006 | Create root requirements.txt covering all pipeline dependencies and update root README | ZA | 2026-05-07 | Closed | requirements.txt; README.md | Single pip install covers full pipeline. Root README guides marker through full reproducible run. |
 ---
 
 ## Blockers
@@ -112,6 +112,6 @@ This is the single master record of all actions across the entire project. Every
 | ----------- | ----- |
 | Open        | 5     |
 | In Progress | 6     |
-| Closed      | 50    |
+| Closed      | 51    |
 | Blocked     | 0     |
 | **Total**   | **61** |
