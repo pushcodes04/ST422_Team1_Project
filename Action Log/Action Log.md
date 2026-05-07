@@ -3,7 +3,7 @@
 **Module:** ST422 Statistical Consulting  
 **Brief:** Brief 8 — Road Safety Analysis  
 **Team:** Team 1  
-**Last Updated:** April 2026
+**Last Updated:** May 2026
 
 This is the single master record of all actions across the entire project. Every action must have a named owner, a deadline, a status, and a verifiable evidence reference (PR number, commit hash, issue ID, or file path). This document is updated continuously as actions are opened, progressed, and closed.
 
@@ -49,7 +49,7 @@ This is the single master record of all actions across the entire project. Every
 | A023 | 004     | Identify local authorities that have shown improvement in KSI outcomes and analyse potential contributing factors | ZA | 2026-03-16 | Closed | Draft_work/Week10_LA_Trends.ipynb | LA trend analysis completed using OLS regression. Top 5 improving and worsening authorities identified with factor breakdowns. |
 | A024 | 004     | Build Week 10 improving LA analysis notebook with 3-year average comparison and robustness checks | ZA | 2026-03-16 | Closed | Draft_work/Week10_Improving_Analysis.ipynb | Top 5 improving LAs identified with completeness filter and robustness checks across three weighting schemes. |
 | A025 | 004     | Build Week 10 worsening LA analysis notebook with 3-year average comparison and robustness checks | ZA | 2026-03-16 | Closed | Draft_work/Week10_Worsening_Analysis.ipynb | Top 5 worsening LAs identified with completeness filter and robustness checks across three weighting schemes. |
-| A026 | 004     | Add boundary reorganisation completeness filter to data prep pipeline and update README | ZA | 2026-03-16 | Closed | Data_Prep/ST422_DataPrep.ipynb | Filter removes 53 LAs with incomplete data across analysis windows. README updated with reproducibility notes. |
+| A026 | 004     | Add boundary reorganisation completeness filter to data prep pipeline and update README | ZA | 2026-03-16 | Closed | Data_Analysis/data_analysis.ipynb §1.4 (filter logic moved from prep to analysis as a methodological gate) | Filter removes 53 LAs with incomplete data across analysis windows. README updated with reproducibility notes. |
 | A027 | 004     | Build Week 10 road safety report notebook in client-facing format           | ZA    | 2026-03-16 | Closed      | Draft_work/Week10_Road_Safety.ipynb   | Week 10 report notebook completed with findings and recommendations in plain English. |
 | A028 | 004     | Investigate policy interventions available to local authorities              | AS    | 2026-03-18 | Open        | docs/policy_review.md                 | [To be completed on close] |
 | A029 | 004     | Analyse factors affecting worst-performing local authorities                 | CS    | 2026-03-18 | Open        | notebooks/LA_factor_analysis.ipynb    | [To be completed on close] |
@@ -70,6 +70,11 @@ This is the single master record of all actions across the entire project. Every
 | A044 | 007     | Add MLE vs OLS comparison to justify estimation procedure                   | AS    | 2026-04-20 | Closed      | ST422_Analysis_v2.ipynb section 10; commit `e8cb49d` (Delete Final_Notebook/ST422_Analysis_v2 (1).ipynb, 20 Apr 2026) | MLE fitted via numerical optimisation. Confirmed identical point estimates to OLS for normal linear model. OLS retained on grounds of interpretability. |
 | A045 | 007     | Add bootstrap confidence intervals as non-parametric uncertainty check      | AS    | 2026-04-20 | Closed      | ST422_Analysis_v2.ipynb section 10; commit `d3cd723` (Delete Final_Notebook/ST422_Analysis_v2.ipynb, 20 Apr 2026) | 1000-iteration bootstrap run for raw and adjusted KSI slopes. Bootstrap CIs match analytical OLS CIs confirming assumptions are reasonable. |
 | A046 | 007     | Add threats to validity, alternatives considered, and traceability sections | AS    | 2026-04-20 | Closed      | ST422_Analysis_v2.ipynb; commit `496fb50` (Delete Final_Notebook/ST422_Analysis_v2 (2).ipynb, 22 Apr 2026) | External validity, construct validity, failure modes, and alternative approaches documented. Traceability table added mapping all client claims to output files. |
+| A047 | 008     | Make analysis pipeline year-over-year reproducible: anchored windows with auto-shift fallback, schema assertion at load, no hardcoded LA names or year literals, all parameters editable from §0 config | ZA | 2026-05-06 | Closed | Data_Analysis/data_analysis.ipynb §0–§1 | Pipeline self-adapts to new STATS19 releases. Status prints make window resolution loud on every run. README documents all configurable parameters. |
+| A048 | 008     | Build auto-generated findings page surfacing every LA flagged by any analytical criterion (C1–C7) with criterion definitions, sorted by evidence strength | ZA | 2026-05-06 | Closed | Data_Analysis/data_analysis.ipynb §13; Outputs/findings.html | Self-contained HTML page surfaces evidence; priority decision left to client analyst. Generalises across years without code changes. |
+| A049 | 008     | Build master analysis notebook integrating Week 8/9/10 analytical core with team methodological extensions (Caleb stepwise GLM, choropleth, three-way exposure, per-LA bootstrap; Akeel diagnostics, traceability, policy framework); resolve parameter defaults; auto-generate traceability table and run metadata | ZA | 2026-05-06 | Closed | Data_Analysis/data_analysis.ipynb | 13 sections, 33 code cells, 20 figures, 12+ tables. Outputs traceability.csv + run_metadata.json on every run. |
+| A050 | 008     | Restructure repo into Final_Workflow/Data_Prep + Data_Analysis with Cleaned/ as the contract between them; archive draft notebooks to Draft_work/ | ZA + PA | 2026-05-06 | Closed | Repo structure | Master deliverable self-contained in two folders. |
+| A051 | 008     | Author analysis notebook README documenting run order, configurable parameters, output inventory, and troubleshooting | ZA | 2026-05-06 | Closed | Data_Analysis/README.md | Single source of truth for re-running the analysis on future STATS19 releases. |
 
 ---
 
@@ -99,6 +104,6 @@ This is the single master record of all actions across the entire project. Every
 | ----------- | ----- |
 | Open        | 5     |
 | In Progress | 6     |
-| Closed      | 37    |
+| Closed      | 42    |
 | Blocked     | 0     |
-| **Total**   | **48** |
+| **Total**   | **53** |
