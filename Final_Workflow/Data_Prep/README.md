@@ -48,7 +48,7 @@ local-authority-ons-district-names.csv
 Download the historical and provisional files from:
 https://www.data.gov.uk/dataset/cb7ae6f0-4be6-4935-9277-47e5ce24a11f/road-safety-data
 
-The `local-authority-ons-district-names.csv` lookup file is already included in the repo under `Data/`.
+The `local-authority-ons-district-names.csv` and `ons_la_population_2024.csv` lookup files are already included in the repo under `Data/`. The population file is used by the downstream analysis notebook (`Data_Analysis/data_analysis.ipynb`) for rate-based LA rankings.
 
 ### 3. Paths
 
