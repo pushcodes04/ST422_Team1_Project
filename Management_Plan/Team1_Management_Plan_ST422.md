@@ -14,9 +14,9 @@ This plan sets out how Team 1 will organise and deliver the consultancy. Roles a
 
 ### 1.1 Delivery Approach
 
-At the macro level, we are using a waterfall structure, with phases running broadly in sequence and defined handover points between them. Within each phase, work is organised in weekly sprints reviewed every Sunday evening. This approach provides overall structure while keeping individual weeks flexible.
+At the macro level, the project follows a waterfall structure, with phases running broadly in sequence and defined handover points between them. Within each phase, coordination was managed through meeting minutes, a live action log, and ad-hoc team meetings rather than fixed weekly cadences. This approach provided overall structure while remaining responsive to how work actually progressed.
 
-The project runs from Week 6 (16 February) with a target internal completion date of 20 April. This provides a one-week buffer before the formal deadline of 27 April. As exams begin around that time, we aim to avoid relying on the final week.
+The project runs from Week 6 (16 February) with a target internal completion date of 20 April. This provides a one-week buffer before the formal deadline of 27 April. As exams begin around that time, we aimed to avoid relying on the final week.
 
 ---
 
@@ -41,14 +41,14 @@ Internal deadlines are scheduled at least one week before they become critical, 
 
 | Milestone | Milestone Definition | Rationale | Date | Owner | Status |
 |---|---|---|---|---|---|
-| Scope agreed | Decision question confirmed. Out-of-scope list documented. SELECTION.md submitted. | Prevents scope creep from the outset. | 23 Feb | All | Open |
-| Repository and workspace live | GitHub repository created. Folder structure agreed. Notion workspace operational. | Establishes shared governance and a single working environment. | 23 Feb draft; 28 Feb v1 | All | Open |
-| Data freeze v1 | Clean STATS19 dataset produced via code. Version tagged. Data dictionary completed. | Prevents dataset drift during analysis. | 13 Mar | All | Open |
-| First figures completed | Core plots and tables drafted, including initial versions. | Enables early narrative drafting and identifies data issues. | 23 Mar | All | Open |
-| Draft recommendations prepared | Recommendation and supporting rationale drafted. | Ensures the report remains decision-led rather than descriptive. | 6 Apr | All | Open |
-| First full reproducible build | Report renders from repository root without manual edits. | Identifies reproducibility issues while time remains to address them. | 13 Apr | All | Open |
-| Peer review completed | Sections reviewed by non-authors and comments addressed. | Improves clarity and reduces avoidable errors. | 17 Apr | All | Open |
-| Final submission | Portfolio submitted to Moodle. | Hard deadline. | 27 Apr 1pm | All | Open |
+| Scope agreed | Decision question confirmed. Out-of-scope list documented. SELECTION.md submitted. | Prevents scope creep from the outset. | 23 Feb | All | Closed |
+| Repository and workspace live | GitHub repository created. Folder structure agreed. Notion workspace operational. | Establishes shared governance and a single working environment. | 23 Feb draft; 28 Feb v1 | All | Closed |
+| Data freeze v1 | Clean STATS19 dataset produced via code. Version tagged. Data dictionary completed. | Prevents dataset drift during analysis. | 13 Mar | ZA | Closed — four cleaned CSVs produced (A014). Evidence: Data_Prep/ST422_DataPrep.ipynb |
+| First figures completed | Core plots and tables drafted, including initial versions. | Enables early narrative drafting and identifies data issues. | 02 Mar | ZA | Closed — Week 8 analysis notebook completed with KSI trends, severity profiles, hotspot analysis (A010). Evidence: Draft_work/Week8_Road_Safety.ipynb |
+| Draft recommendations prepared | Recommendation and supporting rationale drafted. | Ensures the report remains decision-led rather than descriptive. | 16 Mar | ZA | Closed — Week 10 client-facing report notebook completed with findings and recommendations (A027). Evidence: Draft_work/Week10_Road_Safety.ipynb |
+| First full reproducible build | Report renders from repository root without manual edits. | Identifies reproducibility issues while time remains to address them. | 14 Apr | AS | Closed — DataPrep notebook reproduced on clean machine. 31 of 32 checks passed (A032). Evidence: Quality_Assurance/README_DataPrep.md; commit 16084c6 |
+| Peer review completed | Sections reviewed by non-authors and comments addressed. | Improves clarity and reduces avoidable errors. | 14 Apr | AS | Closed — QA notebook and README uploaded (A033, A034). Evidence: Quality_Assurance/; commit 8414b2e |
+| Final submission | Portfolio submitted to Moodle. | Hard deadline. | 27 Apr 1pm | All | Closed |
 
 ---
 
@@ -64,6 +64,8 @@ Roles are assigned to establish accountability and maintain momentum. Leading a 
 | Reporting Lead | Leads drafting of executive summary, client report, technical report, and traceability table. | Draft and final reports. | Caleb Sithole |
 | QA Lead | Conducts reproducibility checks, reviews code and figures, maintains QA log. | Reproducibility record, QA log, validation notes. | Akeel Shah |
 
+**Note on role boundaries:** Roles above reflect initial assignments at project kickoff. As the project progressed, ZA, PA, and CS all contributed across data preparation and analysis beyond their initial role definitions. The action log (Group_Contact/Action_Log/Action Log.md) contains the full attributable record of tasks completed by each team member, with evidence pointers to notebooks, commits, and outputs.
+
 ---
 
 ## 2. Risk Register
@@ -72,12 +74,12 @@ The following risks have been identified as most likely to affect delivery or va
 
 | Risk | Likelihood | Impact | Trigger | Mitigation | Owner | Status |
 |---|---|---|---|---|---|---|
-| Scope creep | Medium | High | Tasks introduced that are not linked to the decision question | Freeze scope at Week 7. Maintain an out-of-scope record. Require full team agreement for additions. | Project Lead | Open |
-| STATS19 data quality issues | Medium | High | High missingness or inconsistent coding across years | Assess data quality during triage. Document exclusions. Run sensitivity analyses where required. | Data Steward | Open |
-| Uneven contribution | Low | High | Agreed tasks not completed on schedule | Assign each task to a named owner. Review weekly progress. Escalate concerns early. | Project Lead | Open |
-| Reproducibility failure | Medium | High | Code dependent on local paths or missing dependencies | Use relative paths from outset. Maintain renv.lock. Conduct early clean-run test. | QA Lead | Open |
+| Scope creep | Medium | High | Tasks introduced that are not linked to the decision question | Freeze scope at Week 7. Maintain an out-of-scope record. Require full team agreement for additions. | Project Lead | Closed — scope held to Brief 8 throughout. No material additions outside brief. |
+| STATS19 data quality issues | Medium | High | High missingness or inconsistent coding across years | Assess data quality during triage. Document exclusions. Run sensitivity analyses where required. | Data Steward | Closed — missingness assessed and documented in Week 8 notebook. IBRS recording artefact identified and addressed via adjusted series (A018). Evidence: Draft_work/Week8_Road_Safety.ipynb |
+| Uneven contribution | Low | High | Agreed tasks not completed on schedule | Assign each task to a named owner. Review weekly progress. Escalate concerns early. | Project Lead | Open — task ownership tracked via action log throughout. |
+| Reproducibility failure | Medium | High | Code dependent on local paths or missing dependencies | Use relative paths from outset. Maintain requirements.txt. Conduct early clean-run test. | QA Lead | Closed — hardcoded paths removed (A036). Clean run completed 14 Apr, 31/32 checks passed (A032). Evidence: commit f6b4ace; Quality_Assurance/README_DataPrep.md |
 | Writing compressed into final weeks | Medium | High | No draft narrative by early April | Begin executive summary skeleton early. Lock figures before final writing stage. | Reporting Lead | Open |
-| Exam period impact | High | Medium | Reduced team availability in late April | Target internal completion by 20 April. Avoid planning substantial work in final week. | All | Open |
+| Exam period impact | High | Medium | Reduced team availability in late April | Target internal completion by 20 April. Avoid planning substantial work in final week. | All | Closed — final analysis pipeline and repo completed by 06 May (A047–A051). Evidence: Data_Analysis/data_analysis.ipynb |
 
 ---
 
@@ -127,14 +129,14 @@ A full clean build will be completed by 13 April. This section is updated when t
 
 | Field | Detail |
 |---|---|
-| Date of clean run | To be completed |
-| Executed by | To be completed |
-| Operating system | To be completed |
-| R version | To be completed |
-| Dependency restoration method | renv.lock |
-| Outcome (Pass / Fail) | To be completed |
-| Issues identified | To be completed |
-| Issues resolved (with PR/commit reference) | To be completed |
+| Date of clean run | 2026-04-14 |
+| Executed by | Akeel Shah |
+| Operating system | ChromeOS |
+| Python version | Python 3 |
+| Dependency restoration method | requirements.txt |
+| Outcome (Pass / Fail) | Pass — 31 of 32 checks passed. One known issue documented. |
+| Issues identified | One check failed — documented in QA notebook. |
+| Issues resolved (with PR/commit reference) | Documented in Quality_Assurance/QA_DataLoad.ipynb; commit 97bb090 |
 
 **Procedure**
 
@@ -161,7 +163,10 @@ This section is updated throughout the project to record that the management pla
 | Date | Update Type | Detail | Recorded By |
 |---|---|---|---|
 | 23 Feb 2026 | Plan created | Initial version drafted and agreed at kickoff meeting. | Project Lead |
-| [Placeholder] | Risk status update | [e.g., Reproducibility failure — Closed after clean run on DD Mon] | QA Lead |
-| [Placeholder] | Milestone closed | [e.g., Data freeze v1 — completed DD Mon, commit reference] | Data Steward |
-| [Placeholder] | QA sign-off | [e.g., Figure validation completed — issues logged in PR #X] | All |
-| [Placeholder] | Risk escalated | [e.g., Scope creep flagged in weekly review — resolved by agreement] | Project Lead |
+| 13 Mar 2026 | Milestone closed | Data freeze v1 completed. Four cleaned CSVs produced via code. Evidence: Data_Prep/ST422_DataPrep.ipynb (A014). | ZA |
+| 02 Mar 2026 | Milestone closed | First figures completed. Week 8 analysis notebook delivered covering KSI trends, severity profiles, hotspot and temporal analysis. Evidence: Draft_work/Week8_Road_Safety.ipynb (A010). | ZA |
+| 09 Mar 2026 | Milestone closed | Week 9 analysis completed. IBRS-adjusted KSI series, hotspot sensitivity analysis, and seasonality check delivered. Evidence: Draft_work/Week9_Road_Safety.ipynb (A017–A021). | ZA |
+| 16 Mar 2026 | Milestone closed | Draft recommendations prepared. Week 10 client-facing report notebook completed with findings and recommendations. Evidence: Draft_work/Week10_Road_Safety.ipynb (A027). | ZA |
+| 18 Apr 2026 | Risk closed | Reproducibility failure risk closed. Hardcoded paths removed across all notebooks. Evidence: commit f6b4ace (A036). | AS |
+| 14 Apr 2026 | Milestone closed | First full reproducible build completed. 31 of 32 checks passed on clean machine. Evidence: Quality_Assurance/README_DataPrep.md; commit 16084c6 (A032). | AS |
+| 06 May 2026 | Milestone closed | Final analysis pipeline completed. Master notebook integrating full analytical core built and tested. Repo restructured. Evidence: Data_Analysis/data_analysis.ipynb (A047–A051). | ZA |
