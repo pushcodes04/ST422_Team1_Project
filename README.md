@@ -110,8 +110,8 @@ The management plan (risk register, QA plan, milestones) is in `Management_Plan/
 
 ## Individual Submission Folders
 
-- `Akeel_Work/` — Akeel Shah's individual working notebooks and submission artefacts
-- `Caleb_Work/` — Caleb Sithole's individual working notebooks and submission artefacts
+- `Akeel_Work/` — Akeel's individual working notebooks and submission artefacts
+- `Caleb_Work/` — Caleb's individual working notebooks and submission artefacts
 
 These are not part of the reproducible pipeline. The final analysis is in `Final_Workflow/` only.
 
