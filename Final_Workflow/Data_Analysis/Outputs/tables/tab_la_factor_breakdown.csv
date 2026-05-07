@@ -1,0 +1,195 @@
+la_name,factor,category,base,recent,delta,pct_delta
+Aberdeenshire,Junction type,Crossroads,23.0,21.0,-2.0,-8.695652173913043
+Aberdeenshire,Junction type,More than 4 arms,0.0,1.0,1.0,
+Aberdeenshire,Junction type,Not at junction,254.0,177.0,-77.0,-30.314960629921263
+Aberdeenshire,Junction type,Other junction,9.0,18.0,9.0,100.0
+Aberdeenshire,Junction type,Private drive or entrance,9.0,6.0,-3.0,-33.33333333333333
+Aberdeenshire,Junction type,T or Y junction,68.0,41.0,-27.0,-39.705882352941174
+Aberdeenshire,Junction type,nan,0.0,1.0,1.0,
+Aberdeenshire,Road type,Dual carriageway,22.0,22.0,0.0,0.0
+Aberdeenshire,Road type,One way street,1.0,1.0,0.0,0.0
+Aberdeenshire,Road type,Roundabout,7.0,2.0,-5.0,-71.42857142857143
+Aberdeenshire,Road type,Single carriageway,333.0,237.0,-96.0,-28.82882882882883
+Aberdeenshire,Road type,Slip road,0.0,3.0,3.0,
+Aberdeenshire,Speed limit,20.0,4.0,4.0,0.0,0.0
+Aberdeenshire,Speed limit,30.0,58.0,38.0,-20.0,-34.48275862068966
+Aberdeenshire,Speed limit,40.0,4.0,12.0,8.0,200.0
+Aberdeenshire,Speed limit,50.0,8.0,3.0,-5.0,-62.5
+Aberdeenshire,Speed limit,60.0,274.0,186.0,-88.0,-32.11678832116788
+Aberdeenshire,Speed limit,70.0,15.0,22.0,7.0,46.666666666666664
+Aberdeenshire,Urban/rural,Rural,327.0,233.0,-94.0,-28.74617737003058
+Aberdeenshire,Urban/rural,Urban,36.0,32.0,-4.0,-11.11111111111111
+Bradford,Junction type,Crossroads,42.0,122.0,80.0,190.47619047619045
+Bradford,Junction type,More than 4 arms,2.0,6.0,4.0,200.0
+Bradford,Junction type,Not at junction,272.0,361.0,89.0,32.720588235294116
+Bradford,Junction type,Other junction,21.0,93.0,72.0,342.85714285714283
+Bradford,Junction type,Private drive or entrance,2.0,12.0,10.0,500.0
+Bradford,Junction type,T or Y junction,173.0,283.0,110.0,63.58381502890174
+Bradford,Junction type,nan,0.0,14.0,14.0,
+Bradford,Road type,Dual carriageway,55.0,93.0,38.0,69.0909090909091
+Bradford,Road type,One way street,5.0,9.0,4.0,80.0
+Bradford,Road type,Roundabout,8.0,12.0,4.0,50.0
+Bradford,Road type,Single carriageway,443.0,754.0,311.0,70.20316027088036
+Bradford,Road type,Slip road,0.0,3.0,3.0,
+Bradford,Road type,Unknown,1.0,20.0,19.0,1900.0
+Bradford,Speed limit,20.0,24.0,67.0,43.0,179.16666666666669
+Bradford,Speed limit,30.0,424.0,711.0,287.0,67.68867924528303
+Bradford,Speed limit,40.0,35.0,71.0,36.0,102.85714285714285
+Bradford,Speed limit,50.0,4.0,7.0,3.0,75.0
+Bradford,Speed limit,60.0,18.0,24.0,6.0,33.33333333333333
+Bradford,Speed limit,70.0,7.0,11.0,4.0,57.14285714285714
+Bradford,Urban/rural,Rural,71.0,116.0,45.0,63.38028169014085
+Bradford,Urban/rural,Urban,441.0,775.0,334.0,75.73696145124717
+Cardiff,Junction type,Crossroads,34.0,6.0,-28.0,-82.35294117647058
+Cardiff,Junction type,More than 4 arms,1.0,0.0,-1.0,-100.0
+Cardiff,Junction type,Not at junction,137.0,49.0,-88.0,-64.23357664233576
+Cardiff,Junction type,Other junction,2.0,7.0,5.0,250.0
+Cardiff,Junction type,Private drive or entrance,7.0,0.0,-7.0,-100.0
+Cardiff,Junction type,T or Y junction,65.0,44.0,-21.0,-32.30769230769231
+Cardiff,Road type,Dual carriageway,57.0,35.0,-22.0,-38.59649122807017
+Cardiff,Road type,One way street,2.0,0.0,-2.0,-100.0
+Cardiff,Road type,Roundabout,11.0,5.0,-6.0,-54.54545454545454
+Cardiff,Road type,Single carriageway,172.0,64.0,-108.0,-62.7906976744186
+Cardiff,Road type,Slip road,4.0,1.0,-3.0,-75.0
+Cardiff,Road type,Unknown,0.0,1.0,1.0,
+Cardiff,Speed limit,20.0,5.0,40.0,35.0,700.0
+Cardiff,Speed limit,30.0,190.0,36.0,-154.0,-81.05263157894737
+Cardiff,Speed limit,40.0,20.0,4.0,-16.0,-80.0
+Cardiff,Speed limit,50.0,8.0,8.0,0.0,0.0
+Cardiff,Speed limit,60.0,6.0,4.0,-2.0,-33.33333333333333
+Cardiff,Speed limit,70.0,17.0,14.0,-3.0,-17.647058823529413
+Cardiff,Urban/rural,Rural,40.0,29.0,-11.0,-27.500000000000004
+Cardiff,Urban/rural,Urban,206.0,77.0,-129.0,-62.62135922330098
+Cheshire East,Junction type,Crossroads,36.0,35.0,-1.0,-2.7777777777777777
+Cheshire East,Junction type,More than 4 arms,1.0,1.0,0.0,0.0
+Cheshire East,Junction type,Not at junction,285.0,220.0,-65.0,-22.807017543859647
+Cheshire East,Junction type,Other junction,6.0,21.0,15.0,250.0
+Cheshire East,Junction type,Private drive or entrance,14.0,10.0,-4.0,-28.57142857142857
+Cheshire East,Junction type,T or Y junction,150.0,100.0,-50.0,-33.33333333333333
+Cheshire East,Junction type,nan,0.0,7.0,7.0,
+Cheshire East,Road type,Dual carriageway,56.0,36.0,-20.0,-35.714285714285715
+Cheshire East,Road type,One way street,8.0,6.0,-2.0,-25.0
+Cheshire East,Road type,Roundabout,13.0,20.0,7.0,53.84615384615385
+Cheshire East,Road type,Single carriageway,413.0,326.0,-87.0,-21.06537530266344
+Cheshire East,Road type,Slip road,0.0,4.0,4.0,
+Cheshire East,Road type,Unknown,2.0,2.0,0.0,0.0
+Cheshire East,Speed limit,20.0,5.0,6.0,1.0,20.0
+Cheshire East,Speed limit,30.0,207.0,190.0,-17.0,-8.212560386473431
+Cheshire East,Speed limit,40.0,36.0,32.0,-4.0,-11.11111111111111
+Cheshire East,Speed limit,50.0,58.0,37.0,-21.0,-36.206896551724135
+Cheshire East,Speed limit,60.0,152.0,103.0,-49.0,-32.23684210526316
+Cheshire East,Speed limit,70.0,34.0,26.0,-8.0,-23.52941176470588
+Cheshire East,Urban/rural,Rural,306.0,232.0,-74.0,-24.18300653594771
+Cheshire East,Urban/rural,Urban,186.0,162.0,-24.0,-12.903225806451612
+Croydon,Junction type,Crossroads,25.0,42.0,17.0,68.0
+Croydon,Junction type,More than 4 arms,2.0,18.0,16.0,800.0
+Croydon,Junction type,Not at junction,100.0,153.0,53.0,53.0
+Croydon,Junction type,Other junction,5.0,49.0,44.0,880.0000000000001
+Croydon,Junction type,Private drive or entrance,2.0,14.0,12.0,600.0
+Croydon,Junction type,T or Y junction,113.0,182.0,69.0,61.06194690265486
+Croydon,Junction type,nan,0.0,12.0,12.0,
+Croydon,Road type,Dual carriageway,25.0,59.0,34.0,136.0
+Croydon,Road type,One way street,12.0,21.0,9.0,75.0
+Croydon,Road type,Roundabout,11.0,24.0,13.0,118.18181818181819
+Croydon,Road type,Single carriageway,198.0,345.0,147.0,74.24242424242425
+Croydon,Road type,Slip road,0.0,12.0,12.0,
+Croydon,Road type,Unknown,1.0,9.0,8.0,800.0
+Croydon,Speed limit,20.0,8.0,151.0,143.0,1787.5
+Croydon,Speed limit,30.0,229.0,295.0,66.0,28.82096069868996
+Croydon,Speed limit,40.0,10.0,23.0,13.0,130.0
+Croydon,Speed limit,60.0,0.0,1.0,1.0,
+Croydon,Urban/rural,Rural,5.0,8.0,3.0,60.0
+Croydon,Urban/rural,Urban,242.0,462.0,220.0,90.9090909090909
+Highland,Junction type,Crossroads,4.0,7.0,3.0,75.0
+Highland,Junction type,More than 4 arms,0.0,4.0,4.0,
+Highland,Junction type,Not at junction,163.0,319.0,156.0,95.70552147239265
+Highland,Junction type,Other junction,12.0,39.0,27.0,225.0
+Highland,Junction type,Private drive or entrance,1.0,12.0,11.0,1100.0
+Highland,Junction type,T or Y junction,28.0,53.0,25.0,89.28571428571429
+Highland,Junction type,nan,0.0,5.0,5.0,
+Highland,Road type,Dual carriageway,10.0,13.0,3.0,30.0
+Highland,Road type,Roundabout,2.0,8.0,6.0,300.0
+Highland,Road type,Single carriageway,196.0,413.0,217.0,110.71428571428572
+Highland,Road type,Slip road,0.0,4.0,4.0,
+Highland,Road type,Unknown,0.0,1.0,1.0,
+Highland,Speed limit,20.0,1.0,26.0,25.0,2500.0
+Highland,Speed limit,30.0,23.0,34.0,11.0,47.82608695652174
+Highland,Speed limit,40.0,11.0,18.0,7.0,63.63636363636363
+Highland,Speed limit,50.0,3.0,15.0,12.0,400.0
+Highland,Speed limit,60.0,167.0,336.0,169.0,101.19760479041918
+Highland,Speed limit,70.0,3.0,10.0,7.0,233.33333333333334
+Highland,Urban/rural,Rural,189.0,391.0,202.0,106.87830687830689
+Highland,Urban/rural,Unallocated,1.0,0.0,-1.0,-100.0
+Highland,Urban/rural,Urban,18.0,48.0,30.0,166.66666666666669
+Leeds,Junction type,Crossroads,90.0,179.0,89.0,98.88888888888889
+Leeds,Junction type,More than 4 arms,1.0,10.0,9.0,900.0
+Leeds,Junction type,Not at junction,495.0,648.0,153.0,30.909090909090907
+Leeds,Junction type,Other junction,34.0,130.0,96.0,282.3529411764706
+Leeds,Junction type,Private drive or entrance,11.0,18.0,7.0,63.63636363636363
+Leeds,Junction type,T or Y junction,289.0,355.0,66.0,22.837370242214533
+Leeds,Junction type,nan,0.0,29.0,29.0,
+Leeds,Road type,Dual carriageway,178.0,258.0,80.0,44.9438202247191
+Leeds,Road type,One way street,22.0,23.0,1.0,4.545454545454546
+Leeds,Road type,Roundabout,28.0,38.0,10.0,35.714285714285715
+Leeds,Road type,Single carriageway,675.0,987.0,312.0,46.22222222222222
+Leeds,Road type,Slip road,7.0,24.0,17.0,242.85714285714283
+Leeds,Road type,Unknown,10.0,39.0,29.0,290.0
+Leeds,Speed limit,20.0,46.0,173.0,127.0,276.0869565217391
+Leeds,Speed limit,30.0,617.0,768.0,151.0,24.473257698541328
+Leeds,Speed limit,40.0,143.0,243.0,100.0,69.93006993006993
+Leeds,Speed limit,50.0,23.0,45.0,22.0,95.65217391304348
+Leeds,Speed limit,60.0,45.0,73.0,28.0,62.22222222222222
+Leeds,Speed limit,70.0,46.0,67.0,21.0,45.65217391304348
+Leeds,Urban/rural,Rural,161.0,254.0,93.0,57.7639751552795
+Leeds,Urban/rural,Urban,759.0,1115.0,356.0,46.9038208168643
+Milton Keynes,Junction type,Crossroads,5.0,4.0,-1.0,-20.0
+Milton Keynes,Junction type,Not at junction,173.0,111.0,-62.0,-35.83815028901734
+Milton Keynes,Junction type,Other junction,1.0,2.0,1.0,100.0
+Milton Keynes,Junction type,Private drive or entrance,8.0,1.0,-7.0,-87.5
+Milton Keynes,Junction type,T or Y junction,66.0,44.0,-22.0,-33.33333333333333
+Milton Keynes,Road type,Dual carriageway,101.0,48.0,-53.0,-52.475247524752476
+Milton Keynes,Road type,Roundabout,1.0,3.0,2.0,200.0
+Milton Keynes,Road type,Single carriageway,151.0,110.0,-41.0,-27.1523178807947
+Milton Keynes,Road type,Unknown,0.0,1.0,1.0,
+Milton Keynes,Speed limit,30.0,77.0,38.0,-39.0,-50.649350649350644
+Milton Keynes,Speed limit,40.0,19.0,11.0,-8.0,-42.10526315789473
+Milton Keynes,Speed limit,60.0,73.0,72.0,-1.0,-1.36986301369863
+Milton Keynes,Speed limit,70.0,84.0,41.0,-43.0,-51.19047619047619
+Milton Keynes,Urban/rural,Rural,127.0,87.0,-40.0,-31.496062992125985
+Milton Keynes,Urban/rural,Urban,126.0,75.0,-51.0,-40.476190476190474
+Southwark,Junction type,Crossroads,45.0,86.0,41.0,91.11111111111111
+Southwark,Junction type,More than 4 arms,2.0,26.0,24.0,1200.0
+Southwark,Junction type,Not at junction,77.0,111.0,34.0,44.15584415584416
+Southwark,Junction type,Other junction,9.0,57.0,48.0,533.3333333333333
+Southwark,Junction type,Private drive or entrance,10.0,5.0,-5.0,-50.0
+Southwark,Junction type,T or Y junction,170.0,272.0,102.0,60.0
+Southwark,Junction type,nan,3.0,20.0,17.0,566.6666666666667
+Southwark,Road type,Dual carriageway,52.0,98.0,46.0,88.46153846153845
+Southwark,Road type,One way street,17.0,42.0,25.0,147.05882352941177
+Southwark,Road type,Roundabout,17.0,10.0,-7.0,-41.17647058823529
+Southwark,Road type,Single carriageway,222.0,394.0,172.0,77.47747747747748
+Southwark,Road type,Slip road,4.0,6.0,2.0,50.0
+Southwark,Road type,Unknown,4.0,27.0,23.0,575.0
+Southwark,Speed limit,20.0,80.0,438.0,358.0,447.49999999999994
+Southwark,Speed limit,30.0,236.0,136.0,-100.0,-42.3728813559322
+Southwark,Speed limit,40.0,0.0,2.0,2.0,
+Southwark,Speed limit,50.0,0.0,1.0,1.0,
+Southwark,Urban/rural,Rural,0.0,2.0,2.0,
+Southwark,Urban/rural,Urban,316.0,575.0,259.0,81.9620253164557
+Swansea,Junction type,Crossroads,15.0,8.0,-7.0,-46.666666666666664
+Swansea,Junction type,Not at junction,106.0,42.0,-64.0,-60.37735849056604
+Swansea,Junction type,Other junction,1.0,1.0,0.0,0.0
+Swansea,Junction type,Private drive or entrance,8.0,0.0,-8.0,-100.0
+Swansea,Junction type,T or Y junction,38.0,27.0,-11.0,-28.947368421052634
+Swansea,Road type,Dual carriageway,30.0,17.0,-13.0,-43.333333333333336
+Swansea,Road type,One way street,1.0,2.0,1.0,100.0
+Swansea,Road type,Roundabout,7.0,2.0,-5.0,-71.42857142857143
+Swansea,Road type,Single carriageway,130.0,57.0,-73.0,-56.15384615384615
+Swansea,Speed limit,20.0,7.0,20.0,13.0,185.71428571428572
+Swansea,Speed limit,30.0,124.0,38.0,-86.0,-69.35483870967742
+Swansea,Speed limit,40.0,16.0,9.0,-7.0,-43.75
+Swansea,Speed limit,50.0,2.0,4.0,2.0,100.0
+Swansea,Speed limit,60.0,12.0,4.0,-8.0,-66.66666666666666
+Swansea,Speed limit,70.0,7.0,3.0,-4.0,-57.14285714285714
+Swansea,Urban/rural,Rural,57.0,21.0,-36.0,-63.1578947368421
+Swansea,Urban/rural,Urban,111.0,57.0,-54.0,-48.64864864864865

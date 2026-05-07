@@ -1,0 +1,46 @@
+local_authority_ons_district,la_name,KSI,road_user
+E08000019,Sheffield,116,Pedestrian
+E09000013,Hammersmith and Fulham,118,Pedestrian
+E09000020,Kensington and Chelsea,119,Pedestrian
+E06000010,"Kingston upon Hull, City of",130,Pedestrian
+E09000019,Islington,134,Pedestrian
+E09000027,Richmond upon Thames,140,Pedestrian
+E08000003,Manchester,144,Pedestrian
+E09000030,Tower Hamlets,147,Pedestrian
+E08000025,Birmingham,149,Pedestrian
+E09000012,Hackney,150,Pedestrian
+E09000022,Lambeth,199,Pedestrian
+E09000032,Wandsworth,201,Pedestrian
+E08000035,Leeds,220,Pedestrian
+E09000028,Southwark,242,Pedestrian
+E09000033,Westminster,260,Pedestrian
+E06000010,"Kingston upon Hull, City of",6,Cyclist
+E09000009,Ealing,6,Cyclist
+E09000033,Westminster,6,Cyclist
+E06000056,Central Bedfordshire,6,Cyclist
+E08000036,Wakefield,7,Cyclist
+E06000015,Derby,7,Cyclist
+E06000016,Leicester,7,Cyclist
+E06000044,Portsmouth,7,Cyclist
+E06000043,Brighton and Hove,7,Cyclist
+E06000035,Medway,7,Cyclist
+E09000020,Kensington and Chelsea,7,Cyclist
+E06000045,Southampton ,8,Cyclist
+E08000035,Leeds,8,Cyclist
+E08000025,Birmingham,10,Cyclist
+E06000052,Cornwall,12,Cyclist
+E09000032,Wandsworth,100,Motorcycle rider
+E08000036,Wakefield,111,Motorcycle rider
+E09000028,Southwark,111,Motorcycle rider
+E09000030,Tower Hamlets,118,Motorcycle rider
+W06000023,Powys,120,Motorcycle rider
+E09000008,Croydon,121,Motorcycle rider
+E09000033,Westminster,121,Motorcycle rider
+E06000047,County Durham,121,Motorcycle rider
+S12000017,Highland,131,Motorcycle rider
+E06000011,East Riding of Yorkshire,133,Motorcycle rider
+E09000022,Lambeth,142,Motorcycle rider
+E08000025,Birmingham,144,Motorcycle rider
+E06000054,Wiltshire,153,Motorcycle rider
+E08000035,Leeds,172,Motorcycle rider
+E06000052,Cornwall,227,Motorcycle rider

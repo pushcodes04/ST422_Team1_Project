@@ -1,0 +1,7 @@
+simpler,richer,lr_stat,df,p_value,significant_at_0.05
+M1 — Year only,M2 — + Urban/Rural,2328.51,2,0.0,True
+M2 — + Urban/Rural,M3 — + Road type + Speed,23637.37,8,0.0,True
+M3 — + Road type + Speed,M4 — + Road user,15482.24,9,0.0,True
+M4 — + Road user,M5 — + Speed × Road user,4171.87,27,0.0,True
+M5 — + Speed × Road user,M6 — + Road type × Urban/Rural,566.68,9,0.0,True
+M6 — + Road type × Urban/Rural,M7 — + Road user × Urban/Rural,949.82,13,0.0,True

@@ -1,0 +1,2425 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><title>ST422 Brief 8 Findings</title>
+<style>
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; max-width: 1200px; margin: 2em auto; padding: 0 2em; color: #222; line-height: 1.5; }
+h1 { border-bottom: 2px solid #2c3e50; padding-bottom: 0.3em; }
+h2 { color: #2c3e50; margin-top: 2em; }
+.meta { background: #f4f6f8; padding: 1em 1.5em; border-left: 4px solid #2c3e50; }
+.crit-table, table.candidates, table.fb { border-collapse: collapse; margin: 1em 0; }
+.crit-table td, .crit-table th { padding: 0.4em 0.8em; border: 1px solid #ddd; }
+table.candidates { width: 100%; }
+table.candidates th, table.candidates td { padding: 0.5em; border-bottom: 1px solid #eee; text-align: center; }
+table.candidates th { background: #2c3e50; color: white; position: sticky; top: 0; }
+table.candidates td.la-name { text-align: left; }
+.la-code { color: #888; font-size: 0.85em; font-family: monospace; }
+.n-flags { font-weight: bold; background: #ecf0f1; }
+.hit { background: #d5f5e3; color: #196f3d; font-weight: bold; cursor: help; }
+.miss { color: #ddd; }
+.detail { background: #fafbfc; }
+.detail ul { margin: 0.5em 0; }
+table.fb { font-size: 0.9em; margin-top: 0.5em; }
+table.fb td, table.fb th { padding: 0.3em 0.6em; border: 1px solid #ddd; }
+button { cursor: pointer; padding: 0 0.6em; }
+.caveats { background: #fef9e7; padding: 1em 1.5em; border-left: 4px solid #f1c40f; margin-top: 2em; }
+</style>
+<script>
+function toggle(id) { var el = document.getElementById('detail-' + id); el.style.display = (el.style.display === 'none') ? 'table-row' : 'none'; }
+</script>
+</head><body>
+<h1>ST422 Brief 8 Road safety findings</h1>
+<div class="meta">
+<strong>Run:</strong> 2026-05-07T03:09:17 &nbsp;&middot;&nbsp;
+<strong>Confirmed years:</strong> 2014-2024 &nbsp;&middot;&nbsp;
+<strong>Provisional:</strong> 2025 &nbsp;&middot;&nbsp;
+<strong>Base:</strong> 2015-2017 &nbsp;&middot;&nbsp;
+<strong>Recent:</strong> 2022-2024 &nbsp;&middot;&nbsp;
+<strong>LAs in scope:</strong> 296 eligible / 340 passing completeness (52 dropped)
+</div>
+<h2>How to read this page</h2>
+<p>Each authority below was flagged by one or more criteria from the analysis. <strong>Authorities meeting more criteria have stronger combined evidence</strong>, but the priority decision rests with the client analyst local context, delivery capacity, and intervention feasibility are not captured here.</p>
+<p>Hover over a tick to see the underlying value. Click <strong>+</strong> in the right-most column for the LA factor breakdown.</p>
+<h2>Criteria reference</h2>
+<table class="crit-table">
+<tr><td><strong>C1</strong></td><td>Top 15 LA by KSI count over 2022-2024</td></tr>
+<tr><td><strong>C2</strong></td><td>Top 15 LA by KSI rate over 2022-2024 (excluding LAs with fewer than 500 total collisions)</td></tr>
+<tr><td><strong>C3</strong></td><td>Significant worsening trend (slope > 0, p < 0.05) over 2014-2024, top 5</td></tr>
+<tr><td><strong>C4</strong></td><td>Significant improving trend (slope < 0, p < 0.05) over 2014-2024, top 5</td></tr>
+<tr><td><strong>C5</strong></td><td>Material change in KSI between 2015-2017 and 2022-2024 (>= 15% in either direction)</td></tr>
+<tr><td><strong>C6</strong></td><td>Pedestrian, cyclist, or motorcyclist hotspot top 15 for that road user</td></tr>
+<tr><td><strong>C7</strong></td><td>Member of the worsening or improving shortlist that survives COVID exclusion AND switching from count to rate as the outcome</td></tr>
+</table>
+<h2>National-level numbers</h2><ul>
+<li>Raw KSI national slope (2016-2024): <strong>+175 per year</strong> (p=0.4504)</li>
+<li>IBRS-adjusted KSI national slope (2016-2024): <strong>-302 per year</strong> (p=0.2918)</li>
+<li>Direction: raw is <strong>rising</strong>, adjusted is <strong>falling</strong></li>
+</ul>
+<h2>Candidate authorities (174)</h2>
+<p>Sorted by number of criteria met (descending), then by LA name.</p>
+<table class="candidates">
+<thead><tr><th>Local Authority</th><th># Crit</th><th>C1</th><th>C2</th><th>C3</th><th>C4</th><th>C5</th><th>C6</th><th>C7</th><th>Detail</th></tr></thead>
+<tbody>
+<tr class="la-row">
+<td class="la-name"><strong>Highland</strong><br><span class="la-code">S12000017</span></td>
+<td class="n-flags">5</td>
+<td class="miss"></td><td class="hit" title="KSI rate = 59.5%">&check;</td><td class="hit" title="slope +9.5 KSI/yr, p=0.0003, R=0.78">&check;</td><td class="miss"></td><td class="hit" title="worsened (+111.1%)">&check;</td><td class="hit" title="Motorcycle rider: 131 KSI">&check;</td><td class="hit" title="stable worsening (resists no-COVID + rate-outcome alternatives)">&check;</td>
+<td><button onclick="toggle('Highland_0')">+</button></td>
+</tr>
+<tr id="detail-Highland_0" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C2:</strong> KSI rate = 59.5%</li>
+<li><strong>C3:</strong> slope +9.5 KSI/yr, p=0.0003, R=0.78</li>
+<li><strong>C5:</strong> worsened (+111.1%)</li>
+<li><strong>C6:</strong> Motorcycle rider: 131 KSI</li>
+<li><strong>C7:</strong> stable worsening (resists no-COVID + rate-outcome alternatives)</li>
+</ul>
+<h4>Factor breakdown base vs recent windows</h4>
+<table class="fb"><tr><th>Factor</th><th>Category</th><th>Base</th><th>Recent</th><th>Delta</th><th>Delta %</th></tr>
+<tr><td>Junction type</td><td>Crossroads</td><td>4</td><td>7</td><td>+3</td><td>+75%</td></tr>
+<tr><td>Junction type</td><td>More than 4 arms</td><td>0</td><td>4</td><td>+4</td><td></td></tr>
+<tr><td>Junction type</td><td>Not at junction</td><td>163</td><td>319</td><td>+156</td><td>+96%</td></tr>
+<tr><td>Junction type</td><td>Other junction</td><td>12</td><td>39</td><td>+27</td><td>+225%</td></tr>
+<tr><td>Junction type</td><td>Private drive or entrance</td><td>1</td><td>12</td><td>+11</td><td>+1100%</td></tr>
+<tr><td>Junction type</td><td>T or Y junction</td><td>28</td><td>53</td><td>+25</td><td>+89%</td></tr>
+<tr><td>Junction type</td><td>nan</td><td>0</td><td>5</td><td>+5</td><td></td></tr>
+<tr><td>Road type</td><td>Dual carriageway</td><td>10</td><td>13</td><td>+3</td><td>+30%</td></tr>
+<tr><td>Road type</td><td>Roundabout</td><td>2</td><td>8</td><td>+6</td><td>+300%</td></tr>
+<tr><td>Road type</td><td>Single carriageway</td><td>196</td><td>413</td><td>+217</td><td>+111%</td></tr>
+<tr><td>Road type</td><td>Slip road</td><td>0</td><td>4</td><td>+4</td><td></td></tr>
+<tr><td>Road type</td><td>Unknown</td><td>0</td><td>1</td><td>+1</td><td></td></tr>
+<tr><td>Speed limit</td><td>20.0</td><td>1</td><td>26</td><td>+25</td><td>+2500%</td></tr>
+<tr><td>Speed limit</td><td>30.0</td><td>23</td><td>34</td><td>+11</td><td>+48%</td></tr>
+<tr><td>Speed limit</td><td>40.0</td><td>11</td><td>18</td><td>+7</td><td>+64%</td></tr>
+<tr><td>Speed limit</td><td>50.0</td><td>3</td><td>15</td><td>+12</td><td>+400%</td></tr>
+<tr><td>Speed limit</td><td>60.0</td><td>167</td><td>336</td><td>+169</td><td>+101%</td></tr>
+<tr><td>Speed limit</td><td>70.0</td><td>3</td><td>10</td><td>+7</td><td>+233%</td></tr>
+<tr><td>Urban/rural</td><td>Rural</td><td>189</td><td>391</td><td>+202</td><td>+107%</td></tr>
+<tr><td>Urban/rural</td><td>Unallocated</td><td>1</td><td>0</td><td>-1</td><td>-100%</td></tr>
+</table>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Leeds</strong><br><span class="la-code">E08000035</span></td>
+<td class="n-flags">4</td>
+<td class="hit" title="KSI count = 1,369">&check;</td><td class="miss"></td><td class="hit" title="slope +15.7 KSI/yr, p=0.0333, R=0.41">&check;</td><td class="miss"></td><td class="hit" title="worsened (+48.8%)">&check;</td><td class="hit" title="Motorcycle rider: 172 KSI">&check;</td><td class="miss"></td>
+<td><button onclick="toggle('Leeds_1')">+</button></td>
+</tr>
+<tr id="detail-Leeds_1" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C1:</strong> KSI count = 1,369</li>
+<li><strong>C3:</strong> slope +15.7 KSI/yr, p=0.0333, R=0.41</li>
+<li><strong>C5:</strong> worsened (+48.8%)</li>
+<li><strong>C6:</strong> Motorcycle rider: 172 KSI</li>
+</ul>
+<h4>Factor breakdown base vs recent windows</h4>
+<table class="fb"><tr><th>Factor</th><th>Category</th><th>Base</th><th>Recent</th><th>Delta</th><th>Delta %</th></tr>
+<tr><td>Junction type</td><td>Crossroads</td><td>90</td><td>179</td><td>+89</td><td>+99%</td></tr>
+<tr><td>Junction type</td><td>More than 4 arms</td><td>1</td><td>10</td><td>+9</td><td>+900%</td></tr>
+<tr><td>Junction type</td><td>Not at junction</td><td>495</td><td>648</td><td>+153</td><td>+31%</td></tr>
+<tr><td>Junction type</td><td>Other junction</td><td>34</td><td>130</td><td>+96</td><td>+282%</td></tr>
+<tr><td>Junction type</td><td>Private drive or entrance</td><td>11</td><td>18</td><td>+7</td><td>+64%</td></tr>
+<tr><td>Junction type</td><td>T or Y junction</td><td>289</td><td>355</td><td>+66</td><td>+23%</td></tr>
+<tr><td>Junction type</td><td>nan</td><td>0</td><td>29</td><td>+29</td><td></td></tr>
+<tr><td>Road type</td><td>Dual carriageway</td><td>178</td><td>258</td><td>+80</td><td>+45%</td></tr>
+<tr><td>Road type</td><td>One way street</td><td>22</td><td>23</td><td>+1</td><td>+5%</td></tr>
+<tr><td>Road type</td><td>Roundabout</td><td>28</td><td>38</td><td>+10</td><td>+36%</td></tr>
+<tr><td>Road type</td><td>Single carriageway</td><td>675</td><td>987</td><td>+312</td><td>+46%</td></tr>
+<tr><td>Road type</td><td>Slip road</td><td>7</td><td>24</td><td>+17</td><td>+243%</td></tr>
+<tr><td>Road type</td><td>Unknown</td><td>10</td><td>39</td><td>+29</td><td>+290%</td></tr>
+<tr><td>Speed limit</td><td>20.0</td><td>46</td><td>173</td><td>+127</td><td>+276%</td></tr>
+<tr><td>Speed limit</td><td>30.0</td><td>617</td><td>768</td><td>+151</td><td>+24%</td></tr>
+<tr><td>Speed limit</td><td>40.0</td><td>143</td><td>243</td><td>+100</td><td>+70%</td></tr>
+<tr><td>Speed limit</td><td>50.0</td><td>23</td><td>45</td><td>+22</td><td>+96%</td></tr>
+<tr><td>Speed limit</td><td>60.0</td><td>45</td><td>73</td><td>+28</td><td>+62%</td></tr>
+<tr><td>Speed limit</td><td>70.0</td><td>46</td><td>67</td><td>+21</td><td>+46%</td></tr>
+<tr><td>Urban/rural</td><td>Rural</td><td>161</td><td>254</td><td>+93</td><td>+58%</td></tr>
+</table>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Southwark</strong><br><span class="la-code">E09000028</span></td>
+<td class="n-flags">4</td>
+<td class="hit" title="KSI count = 577">&check;</td><td class="miss"></td><td class="hit" title="slope +12.9 KSI/yr, p=0.0004, R=0.77">&check;</td><td class="miss"></td><td class="hit" title="worsened (+82.6%)">&check;</td><td class="hit" title="Motorcycle rider: 111 KSI">&check;</td><td class="miss"></td>
+<td><button onclick="toggle('Southwark_2')">+</button></td>
+</tr>
+<tr id="detail-Southwark_2" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C1:</strong> KSI count = 577</li>
+<li><strong>C3:</strong> slope +12.9 KSI/yr, p=0.0004, R=0.77</li>
+<li><strong>C5:</strong> worsened (+82.6%)</li>
+<li><strong>C6:</strong> Motorcycle rider: 111 KSI</li>
+</ul>
+<h4>Factor breakdown base vs recent windows</h4>
+<table class="fb"><tr><th>Factor</th><th>Category</th><th>Base</th><th>Recent</th><th>Delta</th><th>Delta %</th></tr>
+<tr><td>Junction type</td><td>Crossroads</td><td>45</td><td>86</td><td>+41</td><td>+91%</td></tr>
+<tr><td>Junction type</td><td>More than 4 arms</td><td>2</td><td>26</td><td>+24</td><td>+1200%</td></tr>
+<tr><td>Junction type</td><td>Not at junction</td><td>77</td><td>111</td><td>+34</td><td>+44%</td></tr>
+<tr><td>Junction type</td><td>Other junction</td><td>9</td><td>57</td><td>+48</td><td>+533%</td></tr>
+<tr><td>Junction type</td><td>Private drive or entrance</td><td>10</td><td>5</td><td>-5</td><td>-50%</td></tr>
+<tr><td>Junction type</td><td>T or Y junction</td><td>170</td><td>272</td><td>+102</td><td>+60%</td></tr>
+<tr><td>Junction type</td><td>nan</td><td>3</td><td>20</td><td>+17</td><td>+567%</td></tr>
+<tr><td>Road type</td><td>Dual carriageway</td><td>52</td><td>98</td><td>+46</td><td>+88%</td></tr>
+<tr><td>Road type</td><td>One way street</td><td>17</td><td>42</td><td>+25</td><td>+147%</td></tr>
+<tr><td>Road type</td><td>Roundabout</td><td>17</td><td>10</td><td>-7</td><td>-41%</td></tr>
+<tr><td>Road type</td><td>Single carriageway</td><td>222</td><td>394</td><td>+172</td><td>+77%</td></tr>
+<tr><td>Road type</td><td>Slip road</td><td>4</td><td>6</td><td>+2</td><td>+50%</td></tr>
+<tr><td>Road type</td><td>Unknown</td><td>4</td><td>27</td><td>+23</td><td>+575%</td></tr>
+<tr><td>Speed limit</td><td>20.0</td><td>80</td><td>438</td><td>+358</td><td>+447%</td></tr>
+<tr><td>Speed limit</td><td>30.0</td><td>236</td><td>136</td><td>-100</td><td>-42%</td></tr>
+<tr><td>Speed limit</td><td>40.0</td><td>0</td><td>2</td><td>+2</td><td></td></tr>
+<tr><td>Speed limit</td><td>50.0</td><td>0</td><td>1</td><td>+1</td><td></td></tr>
+<tr><td>Urban/rural</td><td>Rural</td><td>0</td><td>2</td><td>+2</td><td></td></tr>
+<tr><td>Urban/rural</td><td>Urban</td><td>316</td><td>575</td><td>+259</td><td>+82%</td></tr>
+</table>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Bradford</strong><br><span class="la-code">E08000032</span></td>
+<td class="n-flags">3</td>
+<td class="hit" title="KSI count = 891">&check;</td><td class="miss"></td><td class="hit" title="slope +14.9 KSI/yr, p=0.0100, R=0.54">&check;</td><td class="miss"></td><td class="hit" title="worsened (+74.0%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('Bradford_3')">+</button></td>
+</tr>
+<tr id="detail-Bradford_3" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C1:</strong> KSI count = 891</li>
+<li><strong>C3:</strong> slope +14.9 KSI/yr, p=0.0100, R=0.54</li>
+<li><strong>C5:</strong> worsened (+74.0%)</li>
+</ul>
+<h4>Factor breakdown base vs recent windows</h4>
+<table class="fb"><tr><th>Factor</th><th>Category</th><th>Base</th><th>Recent</th><th>Delta</th><th>Delta %</th></tr>
+<tr><td>Junction type</td><td>Crossroads</td><td>42</td><td>122</td><td>+80</td><td>+190%</td></tr>
+<tr><td>Junction type</td><td>More than 4 arms</td><td>2</td><td>6</td><td>+4</td><td>+200%</td></tr>
+<tr><td>Junction type</td><td>Not at junction</td><td>272</td><td>361</td><td>+89</td><td>+33%</td></tr>
+<tr><td>Junction type</td><td>Other junction</td><td>21</td><td>93</td><td>+72</td><td>+343%</td></tr>
+<tr><td>Junction type</td><td>Private drive or entrance</td><td>2</td><td>12</td><td>+10</td><td>+500%</td></tr>
+<tr><td>Junction type</td><td>T or Y junction</td><td>173</td><td>283</td><td>+110</td><td>+64%</td></tr>
+<tr><td>Junction type</td><td>nan</td><td>0</td><td>14</td><td>+14</td><td></td></tr>
+<tr><td>Road type</td><td>Dual carriageway</td><td>55</td><td>93</td><td>+38</td><td>+69%</td></tr>
+<tr><td>Road type</td><td>One way street</td><td>5</td><td>9</td><td>+4</td><td>+80%</td></tr>
+<tr><td>Road type</td><td>Roundabout</td><td>8</td><td>12</td><td>+4</td><td>+50%</td></tr>
+<tr><td>Road type</td><td>Single carriageway</td><td>443</td><td>754</td><td>+311</td><td>+70%</td></tr>
+<tr><td>Road type</td><td>Slip road</td><td>0</td><td>3</td><td>+3</td><td></td></tr>
+<tr><td>Road type</td><td>Unknown</td><td>1</td><td>20</td><td>+19</td><td>+1900%</td></tr>
+<tr><td>Speed limit</td><td>20.0</td><td>24</td><td>67</td><td>+43</td><td>+179%</td></tr>
+<tr><td>Speed limit</td><td>30.0</td><td>424</td><td>711</td><td>+287</td><td>+68%</td></tr>
+<tr><td>Speed limit</td><td>40.0</td><td>35</td><td>71</td><td>+36</td><td>+103%</td></tr>
+<tr><td>Speed limit</td><td>50.0</td><td>4</td><td>7</td><td>+3</td><td>+75%</td></tr>
+<tr><td>Speed limit</td><td>60.0</td><td>18</td><td>24</td><td>+6</td><td>+33%</td></tr>
+<tr><td>Speed limit</td><td>70.0</td><td>7</td><td>11</td><td>+4</td><td>+57%</td></tr>
+<tr><td>Urban/rural</td><td>Rural</td><td>71</td><td>116</td><td>+45</td><td>+63%</td></tr>
+</table>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>County Durham</strong><br><span class="la-code">E06000047</span></td>
+<td class="n-flags">3</td>
+<td class="hit" title="KSI count = 543">&check;</td><td class="hit" title="KSI rate = 38.2%">&check;</td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="Motorcycle rider: 121 KSI">&check;</td><td class="miss"></td>
+<td><button onclick="toggle('County_Durham_4')">+</button></td>
+</tr>
+<tr id="detail-County_Durham_4" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C1:</strong> KSI count = 543</li>
+<li><strong>C2:</strong> KSI rate = 38.2%</li>
+<li><strong>C6:</strong> Motorcycle rider: 121 KSI</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Croydon</strong><br><span class="la-code">E09000008</span></td>
+<td class="n-flags">3</td>
+<td class="miss"></td><td class="miss"></td><td class="hit" title="slope +10.8 KSI/yr, p=0.0003, R=0.79">&check;</td><td class="miss"></td><td class="hit" title="worsened (+90.3%)">&check;</td><td class="hit" title="Motorcycle rider: 121 KSI">&check;</td><td class="miss"></td>
+<td><button onclick="toggle('Croydon_5')">+</button></td>
+</tr>
+<tr id="detail-Croydon_5" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C3:</strong> slope +10.8 KSI/yr, p=0.0003, R=0.79</li>
+<li><strong>C5:</strong> worsened (+90.3%)</li>
+<li><strong>C6:</strong> Motorcycle rider: 121 KSI</li>
+</ul>
+<h4>Factor breakdown base vs recent windows</h4>
+<table class="fb"><tr><th>Factor</th><th>Category</th><th>Base</th><th>Recent</th><th>Delta</th><th>Delta %</th></tr>
+<tr><td>Junction type</td><td>Crossroads</td><td>25</td><td>42</td><td>+17</td><td>+68%</td></tr>
+<tr><td>Junction type</td><td>More than 4 arms</td><td>2</td><td>18</td><td>+16</td><td>+800%</td></tr>
+<tr><td>Junction type</td><td>Not at junction</td><td>100</td><td>153</td><td>+53</td><td>+53%</td></tr>
+<tr><td>Junction type</td><td>Other junction</td><td>5</td><td>49</td><td>+44</td><td>+880%</td></tr>
+<tr><td>Junction type</td><td>Private drive or entrance</td><td>2</td><td>14</td><td>+12</td><td>+600%</td></tr>
+<tr><td>Junction type</td><td>T or Y junction</td><td>113</td><td>182</td><td>+69</td><td>+61%</td></tr>
+<tr><td>Junction type</td><td>nan</td><td>0</td><td>12</td><td>+12</td><td></td></tr>
+<tr><td>Road type</td><td>Dual carriageway</td><td>25</td><td>59</td><td>+34</td><td>+136%</td></tr>
+<tr><td>Road type</td><td>One way street</td><td>12</td><td>21</td><td>+9</td><td>+75%</td></tr>
+<tr><td>Road type</td><td>Roundabout</td><td>11</td><td>24</td><td>+13</td><td>+118%</td></tr>
+<tr><td>Road type</td><td>Single carriageway</td><td>198</td><td>345</td><td>+147</td><td>+74%</td></tr>
+<tr><td>Road type</td><td>Slip road</td><td>0</td><td>12</td><td>+12</td><td></td></tr>
+<tr><td>Road type</td><td>Unknown</td><td>1</td><td>9</td><td>+8</td><td>+800%</td></tr>
+<tr><td>Speed limit</td><td>20.0</td><td>8</td><td>151</td><td>+143</td><td>+1788%</td></tr>
+<tr><td>Speed limit</td><td>30.0</td><td>229</td><td>295</td><td>+66</td><td>+29%</td></tr>
+<tr><td>Speed limit</td><td>40.0</td><td>10</td><td>23</td><td>+13</td><td>+130%</td></tr>
+<tr><td>Speed limit</td><td>60.0</td><td>0</td><td>1</td><td>+1</td><td></td></tr>
+<tr><td>Urban/rural</td><td>Rural</td><td>5</td><td>8</td><td>+3</td><td>+60%</td></tr>
+<tr><td>Urban/rural</td><td>Urban</td><td>242</td><td>462</td><td>+220</td><td>+91%</td></tr>
+</table>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Glasgow City</strong><br><span class="la-code">S12000049</span></td>
+<td class="n-flags">3</td>
+<td class="hit" title="KSI count = 654">&check;</td><td class="hit" title="KSI rate = 36.4%">&check;</td><td class="miss"></td><td class="miss"></td><td class="hit" title="worsened (+37.7%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('Glasgow_City_6')">+</button></td>
+</tr>
+<tr id="detail-Glasgow_City_6" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C1:</strong> KSI count = 654</li>
+<li><strong>C2:</strong> KSI rate = 36.4%</li>
+<li><strong>C5:</strong> worsened (+37.7%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Lambeth</strong><br><span class="la-code">E09000022</span></td>
+<td class="n-flags">3</td>
+<td class="hit" title="KSI count = 585">&check;</td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="worsened (+38.6%)">&check;</td><td class="hit" title="Motorcycle rider: 142 KSI">&check;</td><td class="miss"></td>
+<td><button onclick="toggle('Lambeth_7')">+</button></td>
+</tr>
+<tr id="detail-Lambeth_7" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C1:</strong> KSI count = 585</li>
+<li><strong>C5:</strong> worsened (+38.6%)</li>
+<li><strong>C6:</strong> Motorcycle rider: 142 KSI</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Manchester</strong><br><span class="la-code">E08000003</span></td>
+<td class="n-flags">3</td>
+<td class="hit" title="KSI count = 598">&check;</td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="worsened (+35.3%)">&check;</td><td class="hit" title="Pedestrian: 144 KSI">&check;</td><td class="miss"></td>
+<td><button onclick="toggle('Manchester_8')">+</button></td>
+</tr>
+<tr id="detail-Manchester_8" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C1:</strong> KSI count = 598</li>
+<li><strong>C5:</strong> worsened (+35.3%)</li>
+<li><strong>C6:</strong> Pedestrian: 144 KSI</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Sheffield</strong><br><span class="la-code">E08000019</span></td>
+<td class="n-flags">3</td>
+<td class="hit" title="KSI count = 774">&check;</td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="worsened (+29.6%)">&check;</td><td class="hit" title="Pedestrian: 116 KSI">&check;</td><td class="miss"></td>
+<td><button onclick="toggle('Sheffield_9')">+</button></td>
+</tr>
+<tr id="detail-Sheffield_9" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C1:</strong> KSI count = 774</li>
+<li><strong>C5:</strong> worsened (+29.6%)</li>
+<li><strong>C6:</strong> Pedestrian: 116 KSI</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Wakefield</strong><br><span class="la-code">E08000036</span></td>
+<td class="n-flags">3</td>
+<td class="hit" title="KSI count = 546">&check;</td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="worsened (+51.7%)">&check;</td><td class="hit" title="Motorcycle rider: 111 KSI">&check;</td><td class="miss"></td>
+<td><button onclick="toggle('Wakefield_10')">+</button></td>
+</tr>
+<tr id="detail-Wakefield_10" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C1:</strong> KSI count = 546</li>
+<li><strong>C5:</strong> worsened (+51.7%)</li>
+<li><strong>C6:</strong> Motorcycle rider: 111 KSI</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Westminster</strong><br><span class="la-code">E09000033</span></td>
+<td class="n-flags">3</td>
+<td class="hit" title="KSI count = 741">&check;</td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="worsened (+30.5%)">&check;</td><td class="hit" title="Motorcycle rider: 121 KSI">&check;</td><td class="miss"></td>
+<td><button onclick="toggle('Westminster_11')">+</button></td>
+</tr>
+<tr id="detail-Westminster_11" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C1:</strong> KSI count = 741</li>
+<li><strong>C5:</strong> worsened (+30.5%)</li>
+<li><strong>C6:</strong> Motorcycle rider: 121 KSI</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Aberdeenshire</strong></td>
+<td class="n-flags">2</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="slope -6.3 KSI/yr, p=0.0022, R=0.66">&check;</td><td class="hit" title="improved (-27.0%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('Aberdeenshire_12')">+</button></td>
+</tr>
+<tr id="detail-Aberdeenshire_12" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C4:</strong> slope -6.3 KSI/yr, p=0.0022, R=0.66</li>
+<li><strong>C5:</strong> improved (-27.0%)</li>
+</ul>
+<h4>Factor breakdown base vs recent windows</h4>
+<table class="fb"><tr><th>Factor</th><th>Category</th><th>Base</th><th>Recent</th><th>Delta</th><th>Delta %</th></tr>
+<tr><td>Junction type</td><td>Crossroads</td><td>23</td><td>21</td><td>-2</td><td>-9%</td></tr>
+<tr><td>Junction type</td><td>More than 4 arms</td><td>0</td><td>1</td><td>+1</td><td></td></tr>
+<tr><td>Junction type</td><td>Not at junction</td><td>254</td><td>177</td><td>-77</td><td>-30%</td></tr>
+<tr><td>Junction type</td><td>Other junction</td><td>9</td><td>18</td><td>+9</td><td>+100%</td></tr>
+<tr><td>Junction type</td><td>Private drive or entrance</td><td>9</td><td>6</td><td>-3</td><td>-33%</td></tr>
+<tr><td>Junction type</td><td>T or Y junction</td><td>68</td><td>41</td><td>-27</td><td>-40%</td></tr>
+<tr><td>Junction type</td><td>nan</td><td>0</td><td>1</td><td>+1</td><td></td></tr>
+<tr><td>Road type</td><td>Dual carriageway</td><td>22</td><td>22</td><td>+0</td><td>+0%</td></tr>
+<tr><td>Road type</td><td>One way street</td><td>1</td><td>1</td><td>+0</td><td>+0%</td></tr>
+<tr><td>Road type</td><td>Roundabout</td><td>7</td><td>2</td><td>-5</td><td>-71%</td></tr>
+<tr><td>Road type</td><td>Single carriageway</td><td>333</td><td>237</td><td>-96</td><td>-29%</td></tr>
+<tr><td>Road type</td><td>Slip road</td><td>0</td><td>3</td><td>+3</td><td></td></tr>
+<tr><td>Speed limit</td><td>20.0</td><td>4</td><td>4</td><td>+0</td><td>+0%</td></tr>
+<tr><td>Speed limit</td><td>30.0</td><td>58</td><td>38</td><td>-20</td><td>-34%</td></tr>
+<tr><td>Speed limit</td><td>40.0</td><td>4</td><td>12</td><td>+8</td><td>+200%</td></tr>
+<tr><td>Speed limit</td><td>50.0</td><td>8</td><td>3</td><td>-5</td><td>-62%</td></tr>
+<tr><td>Speed limit</td><td>60.0</td><td>274</td><td>186</td><td>-88</td><td>-32%</td></tr>
+<tr><td>Speed limit</td><td>70.0</td><td>15</td><td>22</td><td>+7</td><td>+47%</td></tr>
+<tr><td>Urban/rural</td><td>Rural</td><td>327</td><td>233</td><td>-94</td><td>-29%</td></tr>
+<tr><td>Urban/rural</td><td>Urban</td><td>36</td><td>32</td><td>-4</td><td>-11%</td></tr>
+</table>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Barnsley</strong><br><span class="la-code">E08000016</span></td>
+<td class="n-flags">2</td>
+<td class="miss"></td><td class="hit" title="KSI rate = 37.3%">&check;</td><td class="miss"></td><td class="miss"></td><td class="hit" title="worsened (+34.3%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('Barnsley_13')">+</button></td>
+</tr>
+<tr id="detail-Barnsley_13" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C2:</strong> KSI rate = 37.3%</li>
+<li><strong>C5:</strong> worsened (+34.3%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Birmingham</strong><br><span class="la-code">E08000025</span></td>
+<td class="n-flags">2</td>
+<td class="hit" title="KSI count = 1,336">&check;</td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="Motorcycle rider: 144 KSI">&check;</td><td class="miss"></td>
+<td><button onclick="toggle('Birmingham_14')">+</button></td>
+</tr>
+<tr id="detail-Birmingham_14" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C1:</strong> KSI count = 1,336</li>
+<li><strong>C6:</strong> Motorcycle rider: 144 KSI</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Cardiff</strong></td>
+<td class="n-flags">2</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="slope -6.3 KSI/yr, p=0.0002, R=0.80">&check;</td><td class="hit" title="improved (-56.9%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('Cardiff_15')">+</button></td>
+</tr>
+<tr id="detail-Cardiff_15" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C4:</strong> slope -6.3 KSI/yr, p=0.0002, R=0.80</li>
+<li><strong>C5:</strong> improved (-56.9%)</li>
+</ul>
+<h4>Factor breakdown base vs recent windows</h4>
+<table class="fb"><tr><th>Factor</th><th>Category</th><th>Base</th><th>Recent</th><th>Delta</th><th>Delta %</th></tr>
+<tr><td>Junction type</td><td>Crossroads</td><td>34</td><td>6</td><td>-28</td><td>-82%</td></tr>
+<tr><td>Junction type</td><td>More than 4 arms</td><td>1</td><td>0</td><td>-1</td><td>-100%</td></tr>
+<tr><td>Junction type</td><td>Not at junction</td><td>137</td><td>49</td><td>-88</td><td>-64%</td></tr>
+<tr><td>Junction type</td><td>Other junction</td><td>2</td><td>7</td><td>+5</td><td>+250%</td></tr>
+<tr><td>Junction type</td><td>Private drive or entrance</td><td>7</td><td>0</td><td>-7</td><td>-100%</td></tr>
+<tr><td>Junction type</td><td>T or Y junction</td><td>65</td><td>44</td><td>-21</td><td>-32%</td></tr>
+<tr><td>Road type</td><td>Dual carriageway</td><td>57</td><td>35</td><td>-22</td><td>-39%</td></tr>
+<tr><td>Road type</td><td>One way street</td><td>2</td><td>0</td><td>-2</td><td>-100%</td></tr>
+<tr><td>Road type</td><td>Roundabout</td><td>11</td><td>5</td><td>-6</td><td>-55%</td></tr>
+<tr><td>Road type</td><td>Single carriageway</td><td>172</td><td>64</td><td>-108</td><td>-63%</td></tr>
+<tr><td>Road type</td><td>Slip road</td><td>4</td><td>1</td><td>-3</td><td>-75%</td></tr>
+<tr><td>Road type</td><td>Unknown</td><td>0</td><td>1</td><td>+1</td><td></td></tr>
+<tr><td>Speed limit</td><td>20.0</td><td>5</td><td>40</td><td>+35</td><td>+700%</td></tr>
+<tr><td>Speed limit</td><td>30.0</td><td>190</td><td>36</td><td>-154</td><td>-81%</td></tr>
+<tr><td>Speed limit</td><td>40.0</td><td>20</td><td>4</td><td>-16</td><td>-80%</td></tr>
+<tr><td>Speed limit</td><td>50.0</td><td>8</td><td>8</td><td>+0</td><td>+0%</td></tr>
+<tr><td>Speed limit</td><td>60.0</td><td>6</td><td>4</td><td>-2</td><td>-33%</td></tr>
+<tr><td>Speed limit</td><td>70.0</td><td>17</td><td>14</td><td>-3</td><td>-18%</td></tr>
+<tr><td>Urban/rural</td><td>Rural</td><td>40</td><td>29</td><td>-11</td><td>-28%</td></tr>
+<tr><td>Urban/rural</td><td>Urban</td><td>206</td><td>77</td><td>-129</td><td>-63%</td></tr>
+</table>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Carmarthenshire</strong><br><span class="la-code">W06000010</span></td>
+<td class="n-flags">2</td>
+<td class="miss"></td><td class="hit" title="KSI rate = 35.1%">&check;</td><td class="miss"></td><td class="miss"></td><td class="hit" title="worsened (+27.5%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('Carmarthenshire_16')">+</button></td>
+</tr>
+<tr id="detail-Carmarthenshire_16" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C2:</strong> KSI rate = 35.1%</li>
+<li><strong>C5:</strong> worsened (+27.5%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Cheshire East</strong></td>
+<td class="n-flags">2</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="slope -6.9 KSI/yr, p=0.0176, R=0.48">&check;</td><td class="hit" title="improved (-19.9%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('Cheshire_East_17')">+</button></td>
+</tr>
+<tr id="detail-Cheshire_East_17" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C4:</strong> slope -6.9 KSI/yr, p=0.0176, R=0.48</li>
+<li><strong>C5:</strong> improved (-19.9%)</li>
+</ul>
+<h4>Factor breakdown base vs recent windows</h4>
+<table class="fb"><tr><th>Factor</th><th>Category</th><th>Base</th><th>Recent</th><th>Delta</th><th>Delta %</th></tr>
+<tr><td>Junction type</td><td>Crossroads</td><td>36</td><td>35</td><td>-1</td><td>-3%</td></tr>
+<tr><td>Junction type</td><td>More than 4 arms</td><td>1</td><td>1</td><td>+0</td><td>+0%</td></tr>
+<tr><td>Junction type</td><td>Not at junction</td><td>285</td><td>220</td><td>-65</td><td>-23%</td></tr>
+<tr><td>Junction type</td><td>Other junction</td><td>6</td><td>21</td><td>+15</td><td>+250%</td></tr>
+<tr><td>Junction type</td><td>Private drive or entrance</td><td>14</td><td>10</td><td>-4</td><td>-29%</td></tr>
+<tr><td>Junction type</td><td>T or Y junction</td><td>150</td><td>100</td><td>-50</td><td>-33%</td></tr>
+<tr><td>Junction type</td><td>nan</td><td>0</td><td>7</td><td>+7</td><td></td></tr>
+<tr><td>Road type</td><td>Dual carriageway</td><td>56</td><td>36</td><td>-20</td><td>-36%</td></tr>
+<tr><td>Road type</td><td>One way street</td><td>8</td><td>6</td><td>-2</td><td>-25%</td></tr>
+<tr><td>Road type</td><td>Roundabout</td><td>13</td><td>20</td><td>+7</td><td>+54%</td></tr>
+<tr><td>Road type</td><td>Single carriageway</td><td>413</td><td>326</td><td>-87</td><td>-21%</td></tr>
+<tr><td>Road type</td><td>Slip road</td><td>0</td><td>4</td><td>+4</td><td></td></tr>
+<tr><td>Road type</td><td>Unknown</td><td>2</td><td>2</td><td>+0</td><td>+0%</td></tr>
+<tr><td>Speed limit</td><td>20.0</td><td>5</td><td>6</td><td>+1</td><td>+20%</td></tr>
+<tr><td>Speed limit</td><td>30.0</td><td>207</td><td>190</td><td>-17</td><td>-8%</td></tr>
+<tr><td>Speed limit</td><td>40.0</td><td>36</td><td>32</td><td>-4</td><td>-11%</td></tr>
+<tr><td>Speed limit</td><td>50.0</td><td>58</td><td>37</td><td>-21</td><td>-36%</td></tr>
+<tr><td>Speed limit</td><td>60.0</td><td>152</td><td>103</td><td>-49</td><td>-32%</td></tr>
+<tr><td>Speed limit</td><td>70.0</td><td>34</td><td>26</td><td>-8</td><td>-24%</td></tr>
+<tr><td>Urban/rural</td><td>Rural</td><td>306</td><td>232</td><td>-74</td><td>-24%</td></tr>
+</table>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Cornwall</strong><br><span class="la-code">E06000052</span></td>
+<td class="n-flags">2</td>
+<td class="hit" title="KSI count = 739">&check;</td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="Motorcycle rider: 227 KSI">&check;</td><td class="miss"></td>
+<td><button onclick="toggle('Cornwall_18')">+</button></td>
+</tr>
+<tr id="detail-Cornwall_18" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C1:</strong> KSI count = 739</li>
+<li><strong>C6:</strong> Motorcycle rider: 227 KSI</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Cotswold</strong><br><span class="la-code">E07000079</span></td>
+<td class="n-flags">2</td>
+<td class="miss"></td><td class="hit" title="KSI rate = 37.3%">&check;</td><td class="miss"></td><td class="miss"></td><td class="hit" title="worsened (+24.3%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('Cotswold_19')">+</button></td>
+</tr>
+<tr id="detail-Cotswold_19" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C2:</strong> KSI rate = 37.3%</li>
+<li><strong>C5:</strong> worsened (+24.3%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Derby</strong><br><span class="la-code">E06000015</span></td>
+<td class="n-flags">2</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="worsened (+41.7%)">&check;</td><td class="hit" title="Cyclist: 7 KSI">&check;</td><td class="miss"></td>
+<td><button onclick="toggle('Derby_20')">+</button></td>
+</tr>
+<tr id="detail-Derby_20" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> worsened (+41.7%)</li>
+<li><strong>C6:</strong> Cyclist: 7 KSI</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Doncaster</strong><br><span class="la-code">E08000017</span></td>
+<td class="n-flags">2</td>
+<td class="hit" title="KSI count = 560">&check;</td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="worsened (+34.3%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('Doncaster_21')">+</button></td>
+</tr>
+<tr id="detail-Doncaster_21" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C1:</strong> KSI count = 560</li>
+<li><strong>C5:</strong> worsened (+34.3%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Dumfries and Galloway</strong><br><span class="la-code">S12000006</span></td>
+<td class="n-flags">2</td>
+<td class="miss"></td><td class="hit" title="KSI rate = 39.2%">&check;</td><td class="miss"></td><td class="miss"></td><td class="hit" title="worsened (+33.5%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('Dumfries_and_Galloway_22')">+</button></td>
+</tr>
+<tr id="detail-Dumfries_and_Galloway_22" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C2:</strong> KSI rate = 39.2%</li>
+<li><strong>C5:</strong> worsened (+33.5%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Ealing</strong><br><span class="la-code">E09000009</span></td>
+<td class="n-flags">2</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="worsened (+19.7%)">&check;</td><td class="hit" title="Cyclist: 6 KSI">&check;</td><td class="miss"></td>
+<td><button onclick="toggle('Ealing_23')">+</button></td>
+</tr>
+<tr id="detail-Ealing_23" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> worsened (+19.7%)</li>
+<li><strong>C6:</strong> Cyclist: 6 KSI</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Fife</strong><br><span class="la-code">S12000047</span></td>
+<td class="n-flags">2</td>
+<td class="miss"></td><td class="hit" title="KSI rate = 38.3%">&check;</td><td class="miss"></td><td class="miss"></td><td class="hit" title="worsened (+22.2%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('Fife_24')">+</button></td>
+</tr>
+<tr id="detail-Fife_24" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C2:</strong> KSI rate = 38.3%</li>
+<li><strong>C5:</strong> worsened (+22.2%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Hackney</strong><br><span class="la-code">E09000012</span></td>
+<td class="n-flags">2</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="worsened (+17.2%)">&check;</td><td class="hit" title="Pedestrian: 150 KSI">&check;</td><td class="miss"></td>
+<td><button onclick="toggle('Hackney_25')">+</button></td>
+</tr>
+<tr id="detail-Hackney_25" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> worsened (+17.2%)</li>
+<li><strong>C6:</strong> Pedestrian: 150 KSI</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Hammersmith and Fulham</strong><br><span class="la-code">E09000013</span></td>
+<td class="n-flags">2</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="worsened (+44.2%)">&check;</td><td class="hit" title="Pedestrian: 118 KSI">&check;</td><td class="miss"></td>
+<td><button onclick="toggle('Hammersmith_and_Fulham_26')">+</button></td>
+</tr>
+<tr id="detail-Hammersmith_and_Fulham_26" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> worsened (+44.2%)</li>
+<li><strong>C6:</strong> Pedestrian: 118 KSI</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Kensington and Chelsea</strong><br><span class="la-code">E09000020</span></td>
+<td class="n-flags">2</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="worsened (+54.9%)">&check;</td><td class="hit" title="Cyclist: 7 KSI">&check;</td><td class="miss"></td>
+<td><button onclick="toggle('Kensington_and_Chelsea_27')">+</button></td>
+</tr>
+<tr id="detail-Kensington_and_Chelsea_27" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> worsened (+54.9%)</li>
+<li><strong>C6:</strong> Cyclist: 7 KSI</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Kirklees</strong><br><span class="la-code">E08000034</span></td>
+<td class="n-flags">2</td>
+<td class="hit" title="KSI count = 592">&check;</td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="worsened (+46.2%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('Kirklees_28')">+</button></td>
+</tr>
+<tr id="detail-Kirklees_28" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C1:</strong> KSI count = 592</li>
+<li><strong>C5:</strong> worsened (+46.2%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Leicester</strong><br><span class="la-code">E06000016</span></td>
+<td class="n-flags">2</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="worsened (+21.3%)">&check;</td><td class="hit" title="Cyclist: 7 KSI">&check;</td><td class="miss"></td>
+<td><button onclick="toggle('Leicester_29')">+</button></td>
+</tr>
+<tr id="detail-Leicester_29" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> worsened (+21.3%)</li>
+<li><strong>C6:</strong> Cyclist: 7 KSI</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Liverpool</strong><br><span class="la-code">E08000012</span></td>
+<td class="n-flags">2</td>
+<td class="hit" title="KSI count = 549">&check;</td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="improved (-16.2%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('Liverpool_30')">+</button></td>
+</tr>
+<tr id="detail-Liverpool_30" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C1:</strong> KSI count = 549</li>
+<li><strong>C5:</strong> improved (-16.2%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Medway</strong><br><span class="la-code">E06000035</span></td>
+<td class="n-flags">2</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="worsened (+35.0%)">&check;</td><td class="hit" title="Cyclist: 7 KSI">&check;</td><td class="miss"></td>
+<td><button onclick="toggle('Medway_31')">+</button></td>
+</tr>
+<tr id="detail-Medway_31" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> worsened (+35.0%)</li>
+<li><strong>C6:</strong> Cyclist: 7 KSI</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Milton Keynes</strong></td>
+<td class="n-flags">2</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="slope -4.7 KSI/yr, p=0.0004, R=0.77">&check;</td><td class="hit" title="improved (-36.0%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('Milton_Keynes_32')">+</button></td>
+</tr>
+<tr id="detail-Milton_Keynes_32" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C4:</strong> slope -4.7 KSI/yr, p=0.0004, R=0.77</li>
+<li><strong>C5:</strong> improved (-36.0%)</li>
+</ul>
+<h4>Factor breakdown base vs recent windows</h4>
+<table class="fb"><tr><th>Factor</th><th>Category</th><th>Base</th><th>Recent</th><th>Delta</th><th>Delta %</th></tr>
+<tr><td>Junction type</td><td>Crossroads</td><td>5</td><td>4</td><td>-1</td><td>-20%</td></tr>
+<tr><td>Junction type</td><td>Not at junction</td><td>173</td><td>111</td><td>-62</td><td>-36%</td></tr>
+<tr><td>Junction type</td><td>Other junction</td><td>1</td><td>2</td><td>+1</td><td>+100%</td></tr>
+<tr><td>Junction type</td><td>Private drive or entrance</td><td>8</td><td>1</td><td>-7</td><td>-88%</td></tr>
+<tr><td>Junction type</td><td>T or Y junction</td><td>66</td><td>44</td><td>-22</td><td>-33%</td></tr>
+<tr><td>Road type</td><td>Dual carriageway</td><td>101</td><td>48</td><td>-53</td><td>-52%</td></tr>
+<tr><td>Road type</td><td>Roundabout</td><td>1</td><td>3</td><td>+2</td><td>+200%</td></tr>
+<tr><td>Road type</td><td>Single carriageway</td><td>151</td><td>110</td><td>-41</td><td>-27%</td></tr>
+<tr><td>Road type</td><td>Unknown</td><td>0</td><td>1</td><td>+1</td><td></td></tr>
+<tr><td>Speed limit</td><td>30.0</td><td>77</td><td>38</td><td>-39</td><td>-51%</td></tr>
+<tr><td>Speed limit</td><td>40.0</td><td>19</td><td>11</td><td>-8</td><td>-42%</td></tr>
+<tr><td>Speed limit</td><td>60.0</td><td>73</td><td>72</td><td>-1</td><td>-1%</td></tr>
+<tr><td>Speed limit</td><td>70.0</td><td>84</td><td>41</td><td>-43</td><td>-51%</td></tr>
+<tr><td>Urban/rural</td><td>Rural</td><td>127</td><td>87</td><td>-40</td><td>-31%</td></tr>
+<tr><td>Urban/rural</td><td>Urban</td><td>126</td><td>75</td><td>-51</td><td>-40%</td></tr>
+</table>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>North Lanarkshire</strong><br><span class="la-code">S12000050</span></td>
+<td class="n-flags">2</td>
+<td class="miss"></td><td class="hit" title="KSI rate = 38.1%">&check;</td><td class="miss"></td><td class="miss"></td><td class="hit" title="worsened (+18.7%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('North_Lanarkshire_33')">+</button></td>
+</tr>
+<tr id="detail-North_Lanarkshire_33" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C2:</strong> KSI rate = 38.1%</li>
+<li><strong>C5:</strong> worsened (+18.7%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Pembrokeshire</strong><br><span class="la-code">W06000009</span></td>
+<td class="n-flags">2</td>
+<td class="miss"></td><td class="hit" title="KSI rate = 35.7%">&check;</td><td class="miss"></td><td class="miss"></td><td class="hit" title="worsened (+20.7%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('Pembrokeshire_34')">+</button></td>
+</tr>
+<tr id="detail-Pembrokeshire_34" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C2:</strong> KSI rate = 35.7%</li>
+<li><strong>C5:</strong> worsened (+20.7%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Powys</strong><br><span class="la-code">W06000023</span></td>
+<td class="n-flags">2</td>
+<td class="miss"></td><td class="hit" title="KSI rate = 37.8%">&check;</td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="Motorcycle rider: 120 KSI">&check;</td><td class="miss"></td>
+<td><button onclick="toggle('Powys_35')">+</button></td>
+</tr>
+<tr id="detail-Powys_35" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C2:</strong> KSI rate = 37.8%</li>
+<li><strong>C6:</strong> Motorcycle rider: 120 KSI</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Richmond upon Thames</strong><br><span class="la-code">E09000027</span></td>
+<td class="n-flags">2</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="worsened (+82.9%)">&check;</td><td class="hit" title="Pedestrian: 140 KSI">&check;</td><td class="miss"></td>
+<td><button onclick="toggle('Richmond_upon_Thames_36')">+</button></td>
+</tr>
+<tr id="detail-Richmond_upon_Thames_36" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> worsened (+82.9%)</li>
+<li><strong>C6:</strong> Pedestrian: 140 KSI</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>South Lanarkshire</strong><br><span class="la-code">S12000029</span></td>
+<td class="n-flags">2</td>
+<td class="miss"></td><td class="hit" title="KSI rate = 43.2%">&check;</td><td class="miss"></td><td class="miss"></td><td class="hit" title="worsened (+33.3%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('South_Lanarkshire_37')">+</button></td>
+</tr>
+<tr id="detail-South_Lanarkshire_37" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C2:</strong> KSI rate = 43.2%</li>
+<li><strong>C5:</strong> worsened (+33.3%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Swansea</strong></td>
+<td class="n-flags">2</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="slope -4.5 KSI/yr, p=0.0000, R=0.87">&check;</td><td class="hit" title="improved (-53.6%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('Swansea_38')">+</button></td>
+</tr>
+<tr id="detail-Swansea_38" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C4:</strong> slope -4.5 KSI/yr, p=0.0000, R=0.87</li>
+<li><strong>C5:</strong> improved (-53.6%)</li>
+</ul>
+<h4>Factor breakdown base vs recent windows</h4>
+<table class="fb"><tr><th>Factor</th><th>Category</th><th>Base</th><th>Recent</th><th>Delta</th><th>Delta %</th></tr>
+<tr><td>Junction type</td><td>Crossroads</td><td>15</td><td>8</td><td>-7</td><td>-47%</td></tr>
+<tr><td>Junction type</td><td>Not at junction</td><td>106</td><td>42</td><td>-64</td><td>-60%</td></tr>
+<tr><td>Junction type</td><td>Other junction</td><td>1</td><td>1</td><td>+0</td><td>+0%</td></tr>
+<tr><td>Junction type</td><td>Private drive or entrance</td><td>8</td><td>0</td><td>-8</td><td>-100%</td></tr>
+<tr><td>Junction type</td><td>T or Y junction</td><td>38</td><td>27</td><td>-11</td><td>-29%</td></tr>
+<tr><td>Road type</td><td>Dual carriageway</td><td>30</td><td>17</td><td>-13</td><td>-43%</td></tr>
+<tr><td>Road type</td><td>One way street</td><td>1</td><td>2</td><td>+1</td><td>+100%</td></tr>
+<tr><td>Road type</td><td>Roundabout</td><td>7</td><td>2</td><td>-5</td><td>-71%</td></tr>
+<tr><td>Road type</td><td>Single carriageway</td><td>130</td><td>57</td><td>-73</td><td>-56%</td></tr>
+<tr><td>Speed limit</td><td>20.0</td><td>7</td><td>20</td><td>+13</td><td>+186%</td></tr>
+<tr><td>Speed limit</td><td>30.0</td><td>124</td><td>38</td><td>-86</td><td>-69%</td></tr>
+<tr><td>Speed limit</td><td>40.0</td><td>16</td><td>9</td><td>-7</td><td>-44%</td></tr>
+<tr><td>Speed limit</td><td>50.0</td><td>2</td><td>4</td><td>+2</td><td>+100%</td></tr>
+<tr><td>Speed limit</td><td>60.0</td><td>12</td><td>4</td><td>-8</td><td>-67%</td></tr>
+<tr><td>Speed limit</td><td>70.0</td><td>7</td><td>3</td><td>-4</td><td>-57%</td></tr>
+<tr><td>Urban/rural</td><td>Rural</td><td>57</td><td>21</td><td>-36</td><td>-63%</td></tr>
+<tr><td>Urban/rural</td><td>Urban</td><td>111</td><td>57</td><td>-54</td><td>-49%</td></tr>
+</table>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Tower Hamlets</strong><br><span class="la-code">E09000030</span></td>
+<td class="n-flags">2</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="worsened (+29.0%)">&check;</td><td class="hit" title="Motorcycle rider: 118 KSI">&check;</td><td class="miss"></td>
+<td><button onclick="toggle('Tower_Hamlets_39')">+</button></td>
+</tr>
+<tr id="detail-Tower_Hamlets_39" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> worsened (+29.0%)</li>
+<li><strong>C6:</strong> Motorcycle rider: 118 KSI</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Wandsworth</strong><br><span class="la-code">E09000032</span></td>
+<td class="n-flags">2</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="worsened (+58.0%)">&check;</td><td class="hit" title="Motorcycle rider: 100 KSI">&check;</td><td class="miss"></td>
+<td><button onclick="toggle('Wandsworth_40')">+</button></td>
+</tr>
+<tr id="detail-Wandsworth_40" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> worsened (+58.0%)</li>
+<li><strong>C6:</strong> Motorcycle rider: 100 KSI</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>West Lancashire</strong><br><span class="la-code">E07000127</span></td>
+<td class="n-flags">2</td>
+<td class="miss"></td><td class="hit" title="KSI rate = 37.0%">&check;</td><td class="miss"></td><td class="miss"></td><td class="hit" title="worsened (+23.8%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('West_Lancashire_41')">+</button></td>
+</tr>
+<tr id="detail-West_Lancashire_41" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C2:</strong> KSI rate = 37.0%</li>
+<li><strong>C5:</strong> worsened (+23.8%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Wyre</strong><br><span class="la-code">E07000128</span></td>
+<td class="n-flags">2</td>
+<td class="miss"></td><td class="hit" title="KSI rate = 39.4%">&check;</td><td class="miss"></td><td class="miss"></td><td class="hit" title="worsened (+39.0%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('Wyre_42')">+</button></td>
+</tr>
+<tr id="detail-Wyre_42" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C2:</strong> KSI rate = 39.4%</li>
+<li><strong>C5:</strong> worsened (+39.0%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Aberdeen City</strong></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="improved (-32.3%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('Aberdeen_City_43')">+</button></td>
+</tr>
+<tr id="detail-Aberdeen_City_43" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> improved (-32.3%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Arun</strong></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="worsened (+34.2%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('Arun_44')">+</button></td>
+</tr>
+<tr id="detail-Arun_44" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> worsened (+34.2%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Ashfield</strong></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="worsened (+18.5%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('Ashfield_45')">+</button></td>
+</tr>
+<tr id="detail-Ashfield_45" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> worsened (+18.5%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Ashford</strong></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="worsened (+19.6%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('Ashford_46')">+</button></td>
+</tr>
+<tr id="detail-Ashford_46" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> worsened (+19.6%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Babergh</strong></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="worsened (+37.6%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('Babergh_47')">+</button></td>
+</tr>
+<tr id="detail-Babergh_47" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> worsened (+37.6%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Barnet</strong></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="worsened (+28.9%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('Barnet_48')">+</button></td>
+</tr>
+<tr id="detail-Barnet_48" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> worsened (+28.9%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Bassetlaw</strong></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="worsened (+25.5%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('Bassetlaw_49')">+</button></td>
+</tr>
+<tr id="detail-Bassetlaw_49" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> worsened (+25.5%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Bath and North East Somerset</strong></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="improved (-29.6%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('Bath_and_North_East_Somerset_50')">+</button></td>
+</tr>
+<tr id="detail-Bath_and_North_East_Somerset_50" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> improved (-29.6%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Bexley</strong></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="worsened (+59.8%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('Bexley_51')">+</button></td>
+</tr>
+<tr id="detail-Bexley_51" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> worsened (+59.8%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Blackburn with Darwen</strong></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="worsened (+40.2%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('Blackburn_with_Darwen_52')">+</button></td>
+</tr>
+<tr id="detail-Blackburn_with_Darwen_52" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> worsened (+40.2%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Blackpool</strong></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="worsened (+57.7%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('Blackpool_53')">+</button></td>
+</tr>
+<tr id="detail-Blackpool_53" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> worsened (+57.7%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Brighton and Hove</strong><br><span class="la-code">E06000043</span></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="Cyclist: 7 KSI">&check;</td><td class="miss"></td>
+<td><button onclick="toggle('Brighton_and_Hove_54')">+</button></td>
+</tr>
+<tr id="detail-Brighton_and_Hove_54" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C6:</strong> Cyclist: 7 KSI</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Broadland</strong></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="worsened (+35.6%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('Broadland_55')">+</button></td>
+</tr>
+<tr id="detail-Broadland_55" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> worsened (+35.6%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Bromley</strong></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="worsened (+16.3%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('Bromley_56')">+</button></td>
+</tr>
+<tr id="detail-Bromley_56" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> worsened (+16.3%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Burnley</strong></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="worsened (+17.3%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('Burnley_57')">+</button></td>
+</tr>
+<tr id="detail-Burnley_57" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> worsened (+17.3%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Bury</strong></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="worsened (+37.0%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('Bury_58')">+</button></td>
+</tr>
+<tr id="detail-Bury_58" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> worsened (+37.0%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Caerphilly</strong></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="worsened (+82.8%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('Caerphilly_59')">+</button></td>
+</tr>
+<tr id="detail-Caerphilly_59" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> worsened (+82.8%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Calderdale</strong></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="worsened (+76.7%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('Calderdale_60')">+</button></td>
+</tr>
+<tr id="detail-Calderdale_60" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> worsened (+76.7%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Central Bedfordshire</strong><br><span class="la-code">E06000056</span></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="Cyclist: 6 KSI">&check;</td><td class="miss"></td>
+<td><button onclick="toggle('Central_Bedfordshire_61')">+</button></td>
+</tr>
+<tr id="detail-Central_Bedfordshire_61" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C6:</strong> Cyclist: 6 KSI</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Ceredigion</strong></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="worsened (+39.5%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('Ceredigion_62')">+</button></td>
+</tr>
+<tr id="detail-Ceredigion_62" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> worsened (+39.5%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Cheltenham</strong></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="worsened (+64.0%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('Cheltenham_63')">+</button></td>
+</tr>
+<tr id="detail-Cheltenham_63" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> worsened (+64.0%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Cherwell</strong></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="improved (-17.6%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('Cherwell_64')">+</button></td>
+</tr>
+<tr id="detail-Cherwell_64" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> improved (-17.6%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Cheshire West and Chester</strong></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="improved (-16.9%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('Cheshire_West_and_Chester_65')">+</button></td>
+</tr>
+<tr id="detail-Cheshire_West_and_Chester_65" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> improved (-16.9%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Chorley</strong></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="worsened (+39.1%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('Chorley_66')">+</button></td>
+</tr>
+<tr id="detail-Chorley_66" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> worsened (+39.1%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Conwy</strong></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="improved (-25.5%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('Conwy_67')">+</button></td>
+</tr>
+<tr id="detail-Conwy_67" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> improved (-25.5%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Coventry</strong></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="improved (-25.1%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('Coventry_68')">+</button></td>
+</tr>
+<tr id="detail-Coventry_68" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> improved (-25.1%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Crawley</strong></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="worsened (+53.6%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('Crawley_69')">+</button></td>
+</tr>
+<tr id="detail-Crawley_69" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> worsened (+53.6%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Denbighshire</strong></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="improved (-17.7%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('Denbighshire_70')">+</button></td>
+</tr>
+<tr id="detail-Denbighshire_70" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> improved (-17.7%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Derbyshire Dales</strong></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="worsened (+43.3%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('Derbyshire_Dales_71')">+</button></td>
+</tr>
+<tr id="detail-Derbyshire_Dales_71" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> worsened (+43.3%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Dundee City</strong></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="worsened (+68.7%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('Dundee_City_72')">+</button></td>
+</tr>
+<tr id="detail-Dundee_City_72" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> worsened (+68.7%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>East Ayrshire</strong></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="worsened (+37.0%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('East_Ayrshire_73')">+</button></td>
+</tr>
+<tr id="detail-East_Ayrshire_73" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> worsened (+37.0%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>East Hampshire</strong></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="improved (-21.1%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('East_Hampshire_74')">+</button></td>
+</tr>
+<tr id="detail-East_Hampshire_74" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> improved (-21.1%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>East Riding of Yorkshire</strong><br><span class="la-code">E06000011</span></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="Motorcycle rider: 133 KSI">&check;</td><td class="miss"></td>
+<td><button onclick="toggle('East_Riding_of_Yorkshire_75')">+</button></td>
+</tr>
+<tr id="detail-East_Riding_of_Yorkshire_75" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C6:</strong> Motorcycle rider: 133 KSI</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Eastleigh</strong></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="improved (-15.9%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('Eastleigh_76')">+</button></td>
+</tr>
+<tr id="detail-Eastleigh_76" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> improved (-15.9%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Enfield</strong></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="worsened (+27.8%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('Enfield_77')">+</button></td>
+</tr>
+<tr id="detail-Enfield_77" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> worsened (+27.8%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Epsom and Ewell</strong></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="worsened (+59.1%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('Epsom_and_Ewell_78')">+</button></td>
+</tr>
+<tr id="detail-Epsom_and_Ewell_78" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> worsened (+59.1%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Exeter</strong></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="worsened (+18.7%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('Exeter_79')">+</button></td>
+</tr>
+<tr id="detail-Exeter_79" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> worsened (+18.7%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Fareham</strong></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="improved (-25.8%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('Fareham_80')">+</button></td>
+</tr>
+<tr id="detail-Fareham_80" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> improved (-25.8%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Flintshire</strong></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="worsened (+15.0%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('Flintshire_81')">+</button></td>
+</tr>
+<tr id="detail-Flintshire_81" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> worsened (+15.0%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Forest of Dean</strong></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="worsened (+55.8%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('Forest_of_Dean_82')">+</button></td>
+</tr>
+<tr id="detail-Forest_of_Dean_82" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> worsened (+55.8%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Gloucester</strong></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="worsened (+26.2%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('Gloucester_83')">+</button></td>
+</tr>
+<tr id="detail-Gloucester_83" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> worsened (+26.2%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Great Yarmouth</strong></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="worsened (+39.4%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('Great_Yarmouth_84')">+</button></td>
+</tr>
+<tr id="detail-Great_Yarmouth_84" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> worsened (+39.4%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Greenwich</strong></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="worsened (+65.3%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('Greenwich_85')">+</button></td>
+</tr>
+<tr id="detail-Greenwich_85" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> worsened (+65.3%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Guildford</strong></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="worsened (+22.5%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('Guildford_86')">+</button></td>
+</tr>
+<tr id="detail-Guildford_86" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> worsened (+22.5%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Haringey</strong></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="worsened (+18.2%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('Haringey_87')">+</button></td>
+</tr>
+<tr id="detail-Haringey_87" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> worsened (+18.2%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Hastings</strong></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="worsened (+24.6%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('Hastings_88')">+</button></td>
+</tr>
+<tr id="detail-Hastings_88" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> worsened (+24.6%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Havant</strong></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="improved (-19.0%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('Havant_89')">+</button></td>
+</tr>
+<tr id="detail-Havant_89" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> improved (-19.0%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>High Peak</strong></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="worsened (+41.7%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('High_Peak_90')">+</button></td>
+</tr>
+<tr id="detail-High_Peak_90" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> worsened (+41.7%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Hillingdon</strong></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="worsened (+31.5%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('Hillingdon_91')">+</button></td>
+</tr>
+<tr id="detail-Hillingdon_91" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> worsened (+31.5%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Hounslow</strong></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="worsened (+53.0%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('Hounslow_92')">+</button></td>
+</tr>
+<tr id="detail-Hounslow_92" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> worsened (+53.0%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Hyndburn</strong></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="worsened (+44.6%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('Hyndburn_93')">+</button></td>
+</tr>
+<tr id="detail-Hyndburn_93" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> worsened (+44.6%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Ipswich</strong></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="worsened (+26.0%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('Ipswich_94')">+</button></td>
+</tr>
+<tr id="detail-Ipswich_94" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> worsened (+26.0%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Islington</strong><br><span class="la-code">E09000019</span></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="Pedestrian: 134 KSI">&check;</td><td class="miss"></td>
+<td><button onclick="toggle('Islington_95')">+</button></td>
+</tr>
+<tr id="detail-Islington_95" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C6:</strong> Pedestrian: 134 KSI</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>King's Lynn and West Norfolk</strong></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="worsened (+46.6%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('King_s_Lynn_and_West_Norfolk_96')">+</button></td>
+</tr>
+<tr id="detail-King_s_Lynn_and_West_Norfolk_96" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> worsened (+46.6%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Kingston upon Hull, City of</strong><br><span class="la-code">E06000010</span></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="Cyclist: 6 KSI">&check;</td><td class="miss"></td>
+<td><button onclick="toggle('Kingston_upon_Hull__City_of_97')">+</button></td>
+</tr>
+<tr id="detail-Kingston_upon_Hull__City_of_97" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C6:</strong> Cyclist: 6 KSI</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Kingston upon Thames</strong></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="worsened (+58.6%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('Kingston_upon_Thames_98')">+</button></td>
+</tr>
+<tr id="detail-Kingston_upon_Thames_98" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> worsened (+58.6%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Lancaster</strong><br><span class="la-code">E07000121</span></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="hit" title="KSI rate = 36.4%">&check;</td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('Lancaster_99')">+</button></td>
+</tr>
+<tr id="detail-Lancaster_99" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C2:</strong> KSI rate = 36.4%</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Lewisham</strong></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="worsened (+48.3%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('Lewisham_100')">+</button></td>
+</tr>
+<tr id="detail-Lewisham_100" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> worsened (+48.3%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Lincoln</strong></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="improved (-17.0%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('Lincoln_101')">+</button></td>
+</tr>
+<tr id="detail-Lincoln_101" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> improved (-17.0%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Malvern Hills</strong></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="worsened (+15.6%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('Malvern_Hills_102')">+</button></td>
+</tr>
+<tr id="detail-Malvern_Hills_102" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> worsened (+15.6%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Merton</strong></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="worsened (+78.8%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('Merton_103')">+</button></td>
+</tr>
+<tr id="detail-Merton_103" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> worsened (+78.8%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Mid Suffolk</strong></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="worsened (+16.2%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('Mid_Suffolk_104')">+</button></td>
+</tr>
+<tr id="detail-Mid_Suffolk_104" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> worsened (+16.2%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Middlesbrough</strong></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="worsened (+15.7%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('Middlesbrough_105')">+</button></td>
+</tr>
+<tr id="detail-Middlesbrough_105" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> worsened (+15.7%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Mole Valley</strong></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="worsened (+32.0%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('Mole_Valley_106')">+</button></td>
+</tr>
+<tr id="detail-Mole_Valley_106" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> worsened (+32.0%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Monmouthshire</strong></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="worsened (+53.7%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('Monmouthshire_107')">+</button></td>
+</tr>
+<tr id="detail-Monmouthshire_107" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> worsened (+53.7%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Newark and Sherwood</strong></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="worsened (+18.2%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('Newark_and_Sherwood_108')">+</button></td>
+</tr>
+<tr id="detail-Newark_and_Sherwood_108" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> worsened (+18.2%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Newport</strong></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="worsened (+54.3%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('Newport_109')">+</button></td>
+</tr>
+<tr id="detail-Newport_109" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> worsened (+54.3%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>North Devon</strong></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="improved (-17.6%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('North_Devon_110')">+</button></td>
+</tr>
+<tr id="detail-North_Devon_110" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> improved (-17.6%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>North East Derbyshire</strong></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="worsened (+51.5%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('North_East_Derbyshire_111')">+</button></td>
+</tr>
+<tr id="detail-North_East_Derbyshire_111" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> worsened (+51.5%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>North East Lincolnshire</strong></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="worsened (+29.7%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('North_East_Lincolnshire_112')">+</button></td>
+</tr>
+<tr id="detail-North_East_Lincolnshire_112" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> worsened (+29.7%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>North Hertfordshire</strong></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="improved (-16.8%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('North_Hertfordshire_113')">+</button></td>
+</tr>
+<tr id="detail-North_Hertfordshire_113" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> improved (-16.8%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>North Norfolk</strong></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="worsened (+33.6%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('North_Norfolk_114')">+</button></td>
+</tr>
+<tr id="detail-North_Norfolk_114" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> worsened (+33.6%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Nottingham</strong></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="worsened (+32.9%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('Nottingham_115')">+</button></td>
+</tr>
+<tr id="detail-Nottingham_115" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> worsened (+32.9%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Oxford</strong></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="improved (-16.2%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('Oxford_116')">+</button></td>
+</tr>
+<tr id="detail-Oxford_116" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> improved (-16.2%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Perth and Kinross</strong></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="worsened (+25.6%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('Perth_and_Kinross_117')">+</button></td>
+</tr>
+<tr id="detail-Perth_and_Kinross_117" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> worsened (+25.6%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Plymouth</strong></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="improved (-16.1%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('Plymouth_118')">+</button></td>
+</tr>
+<tr id="detail-Plymouth_118" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> improved (-16.1%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Portsmouth</strong><br><span class="la-code">E06000044</span></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="Cyclist: 7 KSI">&check;</td><td class="miss"></td>
+<td><button onclick="toggle('Portsmouth_119')">+</button></td>
+</tr>
+<tr id="detail-Portsmouth_119" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C6:</strong> Cyclist: 7 KSI</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Preston</strong></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="worsened (+51.6%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('Preston_120')">+</button></td>
+</tr>
+<tr id="detail-Preston_120" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> worsened (+51.6%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Reading</strong></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="improved (-15.9%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('Reading_121')">+</button></td>
+</tr>
+<tr id="detail-Reading_121" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> improved (-15.9%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Redbridge</strong></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="worsened (+39.4%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('Redbridge_122')">+</button></td>
+</tr>
+<tr id="detail-Redbridge_122" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> worsened (+39.4%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Reigate and Banstead</strong></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="worsened (+23.5%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('Reigate_and_Banstead_123')">+</button></td>
+</tr>
+<tr id="detail-Reigate_and_Banstead_123" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> worsened (+23.5%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Renfrewshire</strong></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="worsened (+25.0%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('Renfrewshire_124')">+</button></td>
+</tr>
+<tr id="detail-Renfrewshire_124" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> worsened (+25.0%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Rhondda Cynon Taf</strong></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="improved (-34.2%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('Rhondda_Cynon_Taf_125')">+</button></td>
+</tr>
+<tr id="detail-Rhondda_Cynon_Taf_125" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> improved (-34.2%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Rochdale</strong></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="worsened (+20.5%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('Rochdale_126')">+</button></td>
+</tr>
+<tr id="detail-Rochdale_126" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> worsened (+20.5%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Rotherham</strong></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="worsened (+41.5%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('Rotherham_127')">+</button></td>
+</tr>
+<tr id="detail-Rotherham_127" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> worsened (+41.5%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Rugby </strong></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="improved (-23.0%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('Rugby__128')">+</button></td>
+</tr>
+<tr id="detail-Rugby__128" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> improved (-23.0%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Runnymede</strong></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="worsened (+28.6%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('Runnymede_129')">+</button></td>
+</tr>
+<tr id="detail-Runnymede_129" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> worsened (+28.6%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Rushcliffe</strong></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="worsened (+22.2%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('Rushcliffe_130')">+</button></td>
+</tr>
+<tr id="detail-Rushcliffe_130" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> worsened (+22.2%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Salford</strong></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="worsened (+32.8%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('Salford_131')">+</button></td>
+</tr>
+<tr id="detail-Salford_131" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> worsened (+32.8%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Sefton</strong></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="improved (-24.8%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('Sefton_132')">+</button></td>
+</tr>
+<tr id="detail-Sefton_132" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> improved (-24.8%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Shepway</strong></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="improved (-21.4%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('Shepway_133')">+</button></td>
+</tr>
+<tr id="detail-Shepway_133" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> improved (-21.4%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Slough</strong></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="improved (-27.6%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('Slough_134')">+</button></td>
+</tr>
+<tr id="detail-Slough_134" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> improved (-27.6%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Solihull</strong></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="worsened (+27.5%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('Solihull_135')">+</button></td>
+</tr>
+<tr id="detail-Solihull_135" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> worsened (+27.5%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>South Ayrshire</strong></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="improved (-27.1%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('South_Ayrshire_136')">+</button></td>
+</tr>
+<tr id="detail-South_Ayrshire_136" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> improved (-27.1%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>South Derbyshire</strong></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="worsened (+17.8%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('South_Derbyshire_137')">+</button></td>
+</tr>
+<tr id="detail-South_Derbyshire_137" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> worsened (+17.8%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>South Gloucestershire</strong></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="worsened (+17.7%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('South_Gloucestershire_138')">+</button></td>
+</tr>
+<tr id="detail-South_Gloucestershire_138" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> worsened (+17.7%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>South Hams</strong></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="improved (-20.8%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('South_Hams_139')">+</button></td>
+</tr>
+<tr id="detail-South_Hams_139" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> improved (-20.8%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>South Holland</strong></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="improved (-39.6%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('South_Holland_140')">+</button></td>
+</tr>
+<tr id="detail-South_Holland_140" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> improved (-39.6%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>South Norfolk</strong></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="worsened (+20.9%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('South_Norfolk_141')">+</button></td>
+</tr>
+<tr id="detail-South_Norfolk_141" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> worsened (+20.9%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>South Oxfordshire</strong></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="improved (-28.8%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('South_Oxfordshire_142')">+</button></td>
+</tr>
+<tr id="detail-South_Oxfordshire_142" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> improved (-28.8%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>South Ribble</strong></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="worsened (+25.5%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('South_Ribble_143')">+</button></td>
+</tr>
+<tr id="detail-South_Ribble_143" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> worsened (+25.5%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>South Tyneside</strong></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="improved (-15.1%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('South_Tyneside_144')">+</button></td>
+</tr>
+<tr id="detail-South_Tyneside_144" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> improved (-15.1%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Southampton </strong><br><span class="la-code">E06000045</span></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="Cyclist: 8 KSI">&check;</td><td class="miss"></td>
+<td><button onclick="toggle('Southampton__145')">+</button></td>
+</tr>
+<tr id="detail-Southampton__145" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C6:</strong> Cyclist: 8 KSI</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Spelthorne</strong></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="worsened (+30.8%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('Spelthorne_146')">+</button></td>
+</tr>
+<tr id="detail-Spelthorne_146" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> worsened (+30.8%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Stockport</strong></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="worsened (+19.9%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('Stockport_147')">+</button></td>
+</tr>
+<tr id="detail-Stockport_147" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> worsened (+19.9%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Stoke-on-Trent</strong></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="improved (-16.5%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('Stoke_on_Trent_148')">+</button></td>
+</tr>
+<tr id="detail-Stoke_on_Trent_148" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> improved (-16.5%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Stroud</strong></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="worsened (+34.2%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('Stroud_149')">+</button></td>
+</tr>
+<tr id="detail-Stroud_149" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> worsened (+34.2%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Surrey Heath</strong></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="worsened (+27.5%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('Surrey_Heath_150')">+</button></td>
+</tr>
+<tr id="detail-Surrey_Heath_150" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> worsened (+27.5%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Sutton</strong></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="worsened (+81.5%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('Sutton_151')">+</button></td>
+</tr>
+<tr id="detail-Sutton_151" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> worsened (+81.5%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Swale</strong></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="worsened (+22.7%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('Swale_152')">+</button></td>
+</tr>
+<tr id="detail-Swale_152" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> worsened (+22.7%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Swindon</strong></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="improved (-29.1%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('Swindon_153')">+</button></td>
+</tr>
+<tr id="detail-Swindon_153" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> improved (-29.1%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Tameside</strong></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="worsened (+27.3%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('Tameside_154')">+</button></td>
+</tr>
+<tr id="detail-Tameside_154" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> worsened (+27.3%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Tandridge</strong></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="worsened (+28.4%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('Tandridge_155')">+</button></td>
+</tr>
+<tr id="detail-Tandridge_155" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> worsened (+28.4%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Teignbridge</strong></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="improved (-21.9%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('Teignbridge_156')">+</button></td>
+</tr>
+<tr id="detail-Teignbridge_156" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> improved (-21.9%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Tewkesbury</strong></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="worsened (+34.2%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('Tewkesbury_157')">+</button></td>
+</tr>
+<tr id="detail-Tewkesbury_157" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> worsened (+34.2%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Thurrock</strong></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="improved (-17.5%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('Thurrock_158')">+</button></td>
+</tr>
+<tr id="detail-Thurrock_158" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> improved (-17.5%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Trafford</strong></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="worsened (+20.5%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('Trafford_159')">+</button></td>
+</tr>
+<tr id="detail-Trafford_159" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> worsened (+20.5%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Tunbridge Wells</strong></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="worsened (+34.1%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('Tunbridge_Wells_160')">+</button></td>
+</tr>
+<tr id="detail-Tunbridge_Wells_160" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> worsened (+34.1%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Vale of White Horse</strong></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="improved (-29.1%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('Vale_of_White_Horse_161')">+</button></td>
+</tr>
+<tr id="detail-Vale_of_White_Horse_161" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> improved (-29.1%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Warrington</strong></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="improved (-29.3%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('Warrington_162')">+</button></td>
+</tr>
+<tr id="detail-Warrington_162" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> improved (-29.3%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Warwick</strong></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="improved (-30.9%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('Warwick_163')">+</button></td>
+</tr>
+<tr id="detail-Warwick_163" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> improved (-30.9%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>West Berkshire</strong></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="improved (-17.2%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('West_Berkshire_164')">+</button></td>
+</tr>
+<tr id="detail-West_Berkshire_164" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> improved (-17.2%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>West Devon</strong></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="improved (-18.5%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('West_Devon_165')">+</button></td>
+</tr>
+<tr id="detail-West_Devon_165" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> improved (-18.5%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Wigan</strong></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="worsened (+25.5%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('Wigan_166')">+</button></td>
+</tr>
+<tr id="detail-Wigan_166" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> worsened (+25.5%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Wiltshire</strong><br><span class="la-code">E06000054</span></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="Motorcycle rider: 153 KSI">&check;</td><td class="miss"></td>
+<td><button onclick="toggle('Wiltshire_167')">+</button></td>
+</tr>
+<tr id="detail-Wiltshire_167" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C6:</strong> Motorcycle rider: 153 KSI</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Windsor and Maidenhead</strong></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="improved (-28.7%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('Windsor_and_Maidenhead_168')">+</button></td>
+</tr>
+<tr id="detail-Windsor_and_Maidenhead_168" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> improved (-28.7%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Wirral</strong></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="improved (-21.2%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('Wirral_169')">+</button></td>
+</tr>
+<tr id="detail-Wirral_169" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> improved (-21.2%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Woking</strong></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="worsened (+49.5%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('Woking_170')">+</button></td>
+</tr>
+<tr id="detail-Woking_170" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> worsened (+49.5%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Wokingham</strong></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="improved (-36.6%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('Wokingham_171')">+</button></td>
+</tr>
+<tr id="detail-Wokingham_171" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> improved (-36.6%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>Wyre Forest</strong></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="worsened (+30.3%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('Wyre_Forest_172')">+</button></td>
+</tr>
+<tr id="detail-Wyre_Forest_172" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> worsened (+30.3%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+<tr class="la-row">
+<td class="la-name"><strong>York</strong></td>
+<td class="n-flags">1</td>
+<td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="miss"></td><td class="hit" title="improved (-19.4%)">&check;</td><td class="miss"></td><td class="miss"></td>
+<td><button onclick="toggle('York_173')">+</button></td>
+</tr>
+<tr id="detail-York_173" class="detail" style="display:none">
+<td colspan="10"><ul>
+<li><strong>C5:</strong> improved (-19.4%)</li>
+</ul>
+<em>(factor breakdown only computed for LAs in shortlists)</em>
+</td></tr>
+</tbody></table>
+<div class="caveats"><h3>Caveats</h3><ul>
+<li><strong>IBRS adoption</strong> drives most of the apparent rise in raw serious-injury counts. Use the adjusted series for trend interpretation.</li>
+<li><strong>Provisional data</strong> is partial-year and reporting practice for the latest year may not be stable. Provisional-year rows are excluded from all OLS fits.</li>
+<li><strong>Boundary reorganisation</strong> excluded 52 authorities from longitudinal analysis (no record in every year of base AND recent windows).</li>
+<li><strong>Size threshold</strong>: authorities with mean KSI below 30 or fewer than 6 years of data are excluded from OLS.</li>
+</ul></div>
+</body></html>

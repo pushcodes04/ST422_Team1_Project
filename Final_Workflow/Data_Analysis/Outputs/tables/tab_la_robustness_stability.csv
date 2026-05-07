@@ -1,0 +1,16 @@
+metric,value
+worsening_top_n,5
+improving_top_n,5
+worsening_overlap_no_covid,5
+worsening_overlap_rate_outcome,1
+improving_overlap_no_covid,4
+improving_overlap_rate_outcome,0
+worsening_overlap_min_ksi_10,5
+worsening_overlap_min_ksi_20,5
+worsening_overlap_min_ksi_30,5
+worsening_overlap_min_ksi_50,5
+worsening_overlap_min_ksi_75,5
+worsening_overlap_min_years_4,5
+worsening_overlap_min_years_6,5
+worsening_overlap_min_years_8,5
+worsening_overlap_min_years_10,5

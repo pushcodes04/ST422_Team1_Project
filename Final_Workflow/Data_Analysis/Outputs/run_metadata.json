@@ -1,0 +1,62 @@
+{
+  "run_timestamp": "2026-05-07T03:09:17",
+  "year_start": 2014,
+  "year_end_confirmed": 2024,
+  "provisional_year": 2025,
+  "trend_window": [
+    2014,
+    2024
+  ],
+  "hotspot_window": [
+    2022,
+    2024
+  ],
+  "base_window": [
+    2015,
+    2017
+  ],
+  "recent_window": [
+    2022,
+    2024
+  ],
+  "base_status": "anchor honoured (2015\u20132017)",
+  "recent_status": "anchor honoured (2022\u20132024)",
+  "parameters": {
+    "BASE_WINDOW_ANCHOR": [
+      2015,
+      2017
+    ],
+    "RECENT_WINDOW_ANCHOR": [
+      2022,
+      2024
+    ],
+    "RECENT_N": 3,
+    "HOTSPOT_N": 3,
+    "HOTSPOT_TOP_N": 15,
+    "MIN_KSI_BASE": 30,
+    "MIN_YEARS": 6,
+    "LOW_R2": 0.5,
+    "TOP_N_WORSENING": 5,
+    "TOP_N_IMPROVING": 5,
+    "TOP_N_LINES": 3,
+    "MATERIAL_CHANGE_PCT": 15,
+    "MIN_COLLISIONS": 500,
+    "N_BOOTSTRAP": 1000,
+    "RNG_SEED": 42,
+    "IBRS_START": 2016,
+    "COVID_YEARS": [
+      2020,
+      2021
+    ]
+  },
+  "la_completeness": {
+    "total_in_data": 392,
+    "passed_filter": 340,
+    "dropped": 52
+  },
+  "la_eligibility_for_ols": {
+    "eligible": 296,
+    "min_ksi_base": 30,
+    "min_years": 6
+  }
+}

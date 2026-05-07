@@ -1,0 +1,22 @@
+claim,figure,table,section
+National raw KSI trend,fig03_national_ksi_trend.png,tab_ksi_trend_national.csv,§3b
+Raw vs IBRS-adjusted KSI,fig04_raw_vs_adjusted.png,tab_ksi_raw_vs_adjusted.csv,§3c
+Road user severity profile,fig05_road_user_severity.png,tab_road_user_severity.csv,§4
+Hotspots by KSI count,fig06_hotspots_count_rate.png,tab_la_hotspots_count.csv,§5a
+Hotspots by KSI rate,fig06_hotspots_count_rate.png,tab_la_hotspots_rate.csv,§5a
+Hotspot rank stability,fig06c_rank_comparison.png,tab_la_rank_comparison.csv,§5c
+Three-way exposure robustness,(no fig),tab_three_way_exposure_robustness.csv,§5d
+Road-user-specific hotspots,fig06d_road_user_hotspots.png,tab_road_user_hotspot_overlap.csv,§5e
+KSI by speed and road type,fig07_speed_road.png,tab_ksi_by_speed.csv,§6b
+KSI by day and hour,fig08_day_hour.png,tab_ksi_by_day.csv,§6c
+KSI by junction type,fig09_junction_type.png,tab_ksi_by_junction.csv,§6d
+Worsening LAs (top N),fig10_worsening.png,tab_la_worsening.csv,§7c
+Improving LAs (top N),fig11_improving.png,tab_la_improving.csv,§7d
+LA factor breakdown,(no fig),tab_la_factor_breakdown.csv,§7e
+Robustness shortlist stability,fig12_robustness.png,tab_la_robustness_stability.csv,§8
+OLS residual diagnostics,fig13_residual_diagnostics.png,tab_residual_diagnostics.csv,§9a
+Per-LA bootstrap CI,(no fig),tab_bootstrap_ci_comparison.csv,§9b
+Stepwise GLM comparison,fig14a_glm_stepwise_aic.png,tab_glm_stepwise_comparison.csv,§9c
+GLM LR tests,(no fig),tab_glm_lr_tests.csv,§9c
+Null vs linear vs quadratic AIC/BIC,(no fig),tab_model_comparison.csv,§9d
+Material change flagged LAs,fig17_material_change.png,tab_material_change_flagged.csv,§11

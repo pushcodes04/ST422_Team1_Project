@@ -1,0 +1,8 @@
+model,AIC,deviance,df_resid,pearson_chi2_df,n_params
+M1 — Year only,441517.7,90961.0,87134,2.606,11
+M2 — + Urban/Rural,439193.2,88632.5,87132,2.246,13
+M3 — + Road type + Speed,415571.8,64995.2,87124,1.192,21
+M4 — + Road user,400107.5,49512.9,87115,0.824,30
+M5 — + Speed × Road user,395989.7,45341.1,87088,0.694,57
+M6 — + Road type × Urban/Rural,395441.0,44774.4,87079,0.689,66
+M7 — + Road user × Urban/Rural,394517.2,43824.5,87066,0.675,79
