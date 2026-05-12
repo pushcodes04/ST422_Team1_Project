@@ -27,18 +27,18 @@ This is the single master record of all actions across the entire project. Every
 | A001 | 001     | Finalise and upload Client Brief 8 selection in SELECTION.md                | AS    | 2026-02-22 | In Progress | SELECTION.md                          | [To be completed on close] |
 | A002 | 001     | Review and approve Management Plan against audit structure                  | ZA    | 2026-02-22 | Closed      | management_plan.md                    | Management plan reviewed and approved against audit structure. |
 | A003 | 001     | Establish repository structure, README, data allocation and tracking system | PA    | 2026-02-22 | Closed      | Commits `de10444` (New folder structure with updated files, 2 Mar 2026); `e2b4e95` (Cleaned up files and added gitignore, 2 Mar 2026); `e954a00` (Reorganised workflow, 7 May 2026) | Repository folder structure established. README scaffold created. Final\_Workflow layout confirmed and submission-ready. |
-| A004 | 001     | Prepare and upload draft meeting minutes with updated action log            | CS    | 2026-02-22 | In Progress | Group_Contact/Meeting_Minutes/2026-02-21.md                 | [To be completed on close] |
-| A005 | 001     | Upload client questions to clarify scope and analytical direction           | YS    | 2026-02-22 | Closed | client_questions.md                   | [To be completed on close] |
+| A004 | 001     | Prepare and upload draft meeting minutes with updated action log            | CS    | 2026-02-22 | Closed      | Group_Contact/Meeting_Minutes/2026-02-21.md; minutes/2026-02-20.md | Draft meeting minutes and action log updated. |
+| A005 | 001     | Upload client questions to clarify scope and analytical direction           | YS    | 2026-02-22 | Closed      | client_questions.md                   | [To be completed on close] |
 | A006 | 002     | Set up GitHub collaboration workflow (access, branches, PR template)        | YD    | 2026-03-05 | In Progress | Issue # + CONTRIBUTING.md / README.md | [To be completed on close] |
 | A007 | 002     | Confirm collisions date column name + format (historic + 2025 provisional)  | PA    | 2026-03-05 | Closed      | Commit `1576459` (Dataset analysis, 5 Mar 2026) | Date column name and format confirmed across historical and provisional 2025 collisions CSVs. Consistent with downstream cleaning pipeline. |
-| A008 | 002     | Build merge pipeline: Collisions + Vehicles + Casualties (1979–latest)      | CS    | 2026-03-05 | In Progress | PR # + notebooks/merge_pipeline.ipynb | [To be completed on close] |
+| A008 | 002     | Build merge pipeline: Collisions + Vehicles + Casualties (1979–latest)      | CS    | 2026-03-05 | Closed      | Dataset merge.ipynb; Work.ipynb; Work.Rmd; Commits `9c6a869`, `05f57a9`, `264ef2a`, `ac67275` | Merge pipeline built across Python/R; analysis-ready dataset produced. |
 | A009 | 002     | Clean merged data: drop <2015 rows, remove unnecessary columns              | ZA    | 2026-03-05 | Closed      | Final_Workflow/Data_Prep/data_cleaning.ipynb | Data preparation pipeline built and uploaded to GitHub. Four cleaned CSVs output to Final_Workflow/Data_Prep/Cleaned/. |
 | A010 | 002     | Build Week 8 road safety analysis notebook covering KSI trends, road user profiles, hotspot analysis, and contributory factors | ZA | 2026-03-02 | Closed | Draft_Work/Week8_Road_Safety.ipynb | Week 8 analysis notebook completed and exported to HTML. Covers 2019–2024 window. |
 | A011 | 002     | Run Python EDA on cleaned 2015+ dataset                                     | PA    | 2026-03-05 | Closed      | Commit `1576459` (Dataset analysis, 5 Mar 2026); commit `f348e99` (Added data evidence dir, 6 Mar 2026) | EDA run on cleaned 2015+ dataset. Outputs committed to data evidence directory. |
 | A012 | 002     | Add data dictionary + "columns to keep" list                                | PA    | 2026-03-05 | In Progress | PR # + docs/data_dictionary.md        | [To be completed on close] |
 | A013 | 002     | Commit GLM last-5-years analysis artefact + short interpretation note       | AS    | 2026-03-05 | In Progress | Issue # + notebook cell / script note | [To be completed on close] |
 | A014 | 003     | Combine STATS19 collisions, vehicles, and casualties datasets into one dataset | ZA | 2026-03-13 | Closed | Final_Workflow/Data_Prep/data_cleaning.ipynb | Four cleaned CSVs produced: collisions_clean.csv, casualties_clean.csv, vehicles_clean.csv, and cas_full.csv covering 2014–2025. |
-| A015 | 003     | Investigate issue preventing export of merged dataset to CSV                | CS    | 2026-03-13 | Open        | Issue # + merge script                | [To be completed on close] |
+| A015 | 003     | Investigate issue preventing export of merged dataset to CSV                | CS    | 2026-03-13 | Closed      | Current Dataset Work.Rmd; Commits `ac67275`, `3c958a3` | Alternative write approaches identified and documented. |
 | A016 | 003     | Validate merged dataset and confirm readiness for cleaning pipeline         | PA    | 2026-03-14 | Closed      | Commit `c46f6c5` (Added data cleaning workflow combined with Caleb and Zahid, 7 May 2026) | Merged dataset validated. Combined cleaning workflow confirmed correct. Four cleaned CSVs confirmed ready for analysis pipeline. |
 | A017 | 003     | Build Week 9 road safety analysis notebook covering 2014–2024 with IBRS-adjusted KSI, severity profiles, geographic hotspot analysis, contributory factors, and robustness checks | ZA | 2026-03-09 | Closed | Draft_Work/Week9_Road_Safety.ipynb | Week 9 analysis notebook completed and exported to HTML. Uploaded to Client Resources. |
 | A018 | 003     | Develop IBRS-adjusted KSI series and robustness check comparing raw vs adjusted trend direction | ZA | 2026-03-09 | Closed | Draft_Work/Week9_Road_Safety.ipynb | Adjusted series shows -284.5 KSI/yr vs raw +182.6 KSI/yr. IBRS adoption identified as primary driver of apparent raw KSI rise. |
@@ -52,8 +52,8 @@ This is the single master record of all actions across the entire project. Every
 | A026 | 004     | Add boundary reorganisation completeness filter to data prep pipeline and update README | ZA | 2026-03-16 | Closed | Final_Workflow/Data_Analysis/data_analysis.ipynb §1.4 (filter logic moved from prep to analysis as a methodological gate) | Filter removes 53 LAs with incomplete data across analysis windows. README updated with reproducibility notes. |
 | A027 | 004     | Build Week 10 road safety report notebook in client-facing format           | ZA    | 2026-03-16 | Closed      | Draft_Work/Week10_Road_Safety.ipynb   | Week 10 report notebook completed with findings and recommendations in plain English. |
 | A028 | 004     | Investigate policy interventions available to local authorities              | AS    | 2026-03-18 | Open        | docs/policy_review.md                 | [To be completed on close] |
-| A029 | 004     | Analyse factors affecting worst-performing local authorities                 | CS    | 2026-03-18 | Open        | notebooks/LA_factor_analysis.ipynb    | [To be completed on close] |
-| A030 | 004     | Conduct geographic hotspot analysis for high-KSI locations                  | CS    | 2026-03-18 | Open        | notebooks/geographic_hotspots.ipynb   | [To be completed on close] |
+| A029 | 004     | Analyse factors affecting worst-performing local authorities                 | CS    | 2026-03-18 | Closed      | tab_priority_authority_summary.csv; tab_dominant_rising_group.csv; Commits `80788cd`, `a040a98`, `4b0deb1` | Top 5 worsening LAs profiled across five dimensions. |
+| A030 | 004     | Conduct geographic hotspot analysis for high-KSI locations                  | CS    | 2026-03-18 | Closed      | fig_06_la_hotspots.png; fig_06b_choropleth.png; Commits `80788cd`, `a040a98`, `b0f2135` | Top 20 LAs ranked by count/rate; verified zero overlap in top-15. |
 | A031 | 004     | Perform hypothesis testing comparing Raw KSI trends vs IBRS-adjusted KSI trends | CS | 2026-03-18 | Closed | notebooks/ksi_adjustment_analysis.ipynb | Not required |
 | A032 | 005     | Reproduce DataPrep notebook on local machine and verify all four output CSVs | AS   | 2026-04-14 | Closed      | Quality_Assurance/README_DataPrep.md; commit `16084c6` (Update README_DataPrep.md, 14 Apr 2026) | DataPrep notebook run successfully. All four output files confirmed present and correct. |
 | A033 | 005     | Write and run QA notebook to verify DataPrep outputs                        | AS    | 2026-04-14 | Closed      | Quality_Assurance/QA_DataLoad.ipynb; commit `97bb090` (Add files via upload, 14 Apr 2026) | 31 of 32 checks passed. One known issue documented. Data confirmed ready for analysis. |
@@ -83,6 +83,9 @@ This is the single master record of all actions across the entire project. Every
 | A057 | 006     | Update Management Plan: correct delivery approach, close all milestones and risks with evidence, populate reproducibility record, and fill evidence of plan use section | ZA | 2026-05-07 | Closed | Management_Plan/management_plan.md; commit `2e6ad71` | Management plan reflects actual project delivery. All ZA milestones closed with evidence pointers. |
 | A058 | 006     | Create meeting minutes for 2026-05-05 covering final pipeline ownership, CS/AS integration decision, and repo restructure plan | ZA | 2026-05-07 | Closed | Group_Contact/Meeting_Minutes/minutes_2026-05-05.md | Meeting 006 documented. ZA and PA ownership of final deliverables confirmed. |
 | A059 | 006     | Create root-level requirements.txt covering all dependencies across data_cleaning.ipynb, data_analysis.ipynb, and QA_Data_Load.ipynb | ZA | 2026-05-07 | Closed | requirements.txt | Single install covers full pipeline: pandas, numpy, matplotlib, scipy, statsmodels, geopandas. |
+| A060 | 004     | Build composite LA ranking weighting sensitivity analysis across three weighting schemes | CS | 2026-05-05 | Closed | tab_composite_weighting_sensitivity.csv; Commits `80788cd`, `a040a98` | Rankings confirmed stable across 50/50, 60/40, and 70/30 schemes. |
+| A061 | 004     | Scaffold repository structure and correct population lookup files           | CS    | 2026-04-19 | Closed      | Analysis Practice/; .gitignore; Commits `1bd083d`, `92f4d96`, `65f6386` | Folder scaffolded and population files corrected. |
+| A062 | 002     | Compile LA ONS district lookup for local authority level analyses            | CS    | 2026-03-06 | Closed      | local-authority-ons-districtnames.csv; Commit `d0d10f6` | Enabled all subsequent local authority level analyses. |
 
 ---
 
@@ -90,7 +93,7 @@ This is the single master record of all actions across the entire project. Every
 
 | Action ID | Blocker Description | Raised By | Resolution | Resolved Date |
 | --------- | ------------------- | --------- | ---------- | ------------- |
-| A015 | Unable to export merged dataset to CSV after combining STATS19 tables | CS | Investigate export method and test alternative write approaches | [To be completed] |
+| A015 | Unable to export merged dataset to CSV after combining STATS19 tables | CS | Alternative write approaches identified and documented in Work.Rmd. | 2026-03-15 |
 
 ---
 
@@ -110,8 +113,8 @@ This is the single master record of all actions across the entire project. Every
 
 | Status      | Count |
 | ----------- | ----- |
-| Open        | 5     |
-| In Progress | 4     |
-| Closed      | 55    |
+| Open        | 2     |
+| In Progress | 3     |
+| Closed      | 57    |
 | Blocked     | 0     |
-| **Total**   | **61** |
+| **Total**   | **62** |
