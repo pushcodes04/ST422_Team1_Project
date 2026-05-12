@@ -93,7 +93,7 @@ This is the single master record of all actions across the entire project. Every
 
 | Action ID | Blocker Description | Raised By | Resolution | Resolved Date |
 | --------- | ------------------- | --------- | ---------- | ------------- |
-| A015 | Unable to export merged dataset to CSV after combining STATS19 tables | CS | Alternative write approaches identified and documented in Work.Rmd. | 2026-03-15 |
+| A015 | Unable to export merged dataset to CSV after combining STATS19 tables | CS | Alternative write approaches identified. Export raw file | 2026-03-15 |
 
 ---
 
